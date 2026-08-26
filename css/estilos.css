@@ -509,6 +509,10 @@ h2 {
 
 /* El ancho relativo del drawer evita que supere la pantalla en mobile. */
 #menu-lateral {
+    background: linear-gradient(180deg, rgba(20, 16, 24, 0.96) 0%, rgba(13, 10, 18, 0.96) 100%);
+    border: 1px solid rgba(201, 174, 224, 0.18);
+    border-radius: 0 1.5rem 1.5rem 0;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
     height: 100%;
     left: 0;
     max-height: 100vh;
@@ -528,17 +532,27 @@ h2 {
 }
 
 #close-menu {
+    background: rgba(201, 174, 224, 0.08);
+    border: 1px solid rgba(201, 174, 224, 0.25);
+    border-radius: 999px;
+    color: var(--lilac-light);
     float: right;
+    font-size: 1.3rem;
+    height: 2.4rem;
+    line-height: 1;
+    width: 2.4rem;
 }
 
 #menu-lateral h2 {
     clear: both;
-    padding-top: clamp(2rem, 8vw, 3rem);
+    color: var(--lilac-light);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    padding-top: clamp(2rem, 8vw, 2.8rem);
 }
 
 #menu-lateral nav {
     display: grid;
-    gap: clamp(0.35rem, 2vw, 0.75rem);
+    gap: clamp(0.45rem, 2vw, 0.7rem);
     min-width: 0;
 }
 
@@ -548,57 +562,69 @@ h2 {
 
 .filter-button,
 .gender-button {
-    background: transparent;
-    border: 0;
+    background: rgba(201, 174, 224, 0.05);
+    border: 1px solid transparent;
+    border-radius: 0.9rem;
     color: var(--text);
     overflow-wrap: anywhere;
-    padding: clamp(0.6rem, 3vw, 0.8rem);
+    padding: clamp(0.7rem, 3vw, 0.85rem) clamp(0.8rem, 3vw, 1rem);
     text-align: left;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
     width: 100%;
 }
 
 .filter-button:hover,
 .gender-button:hover {
-    color: var(--lilac);
+    background: rgba(201, 174, 224, 0.12);
+    border-color: rgba(201, 174, 224, 0.26);
+    color: var(--lilac-light);
+    transform: translateX(2px);
 }
 
 .brand-list {
+    border-left: 1px solid rgba(201, 174, 224, 0.18);
     display: grid;
     gap: clamp(0.2rem, 1vw, 0.35rem);
-    margin: 0 0 clamp(0.35rem, 2vw, 0.75rem) clamp(0.5rem, 3vw, 0.8rem);
+    margin: 0 0 clamp(0.45rem, 2vw, 0.8rem) clamp(0.7rem, 3vw, 1rem);
     min-width: 0;
+    padding-left: clamp(0.5rem, 2vw, 0.75rem);
 }
 
 .brand-button {
     background: transparent;
-    border: 0;
+    border: 1px solid transparent;
+    border-radius: 0.7rem;
     color: var(--text-dim);
     overflow-wrap: anywhere;
-    padding: clamp(0.35rem, 2vw, 0.5rem);
+    padding: clamp(0.45rem, 2vw, 0.7rem) clamp(0.55rem, 2vw, 0.8rem);
     text-align: left;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     width: 100%;
 }
 
 .brand-button:hover {
+    background: rgba(201, 174, 224, 0.08);
+    border-color: rgba(201, 174, 224, 0.2);
     color: var(--lilac-light);
 }
 
 .gender-filter {
     border-top: 1px solid var(--hairline);
-    margin-top: clamp(0.75rem, 4vw, 1.25rem);
-    padding-top: clamp(0.4rem, 2vw, 0.75rem);
+    margin-top: clamp(0.9rem, 4vw, 1.4rem);
+    padding-top: clamp(0.8rem, 2vw, 1rem);
 }
 
 .gender-filter h3 {
     color: var(--lilac-light);
     font-size: clamp(1.1rem, 4vw, 1.3rem);
     font-weight: 500;
+    margin-bottom: 0.6rem;
     overflow-wrap: anywhere;
 }
 
 .gender-buttons {
     display: grid;
-    gap: clamp(0.25rem, 2vw, 0.5rem);
+    gap: clamp(0.35rem, 2vw, 0.6rem);
     grid-template-columns: repeat(2, minmax(0, 1fr));
     min-width: 0;
 }
@@ -615,12 +641,15 @@ h2 {
 }
 
 .site-footer {
+    align-items: center;
     border-top: 1px solid var(--hairline);
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 3vw, 1.5rem);
+    justify-content: center;
     padding: clamp(1.75rem, 5vw, 3.25rem) clamp(1rem, 4vw, 2rem) clamp(2.5rem, 7vw, 4rem);
     text-align: center;
+    width: 100%;
 }
 
 .footer-title {
@@ -628,13 +657,18 @@ h2 {
     font-size: clamp(1.15rem, 3vw, 1.7rem);
     font-weight: 500;
     letter-spacing: 0.02em;
+    margin: 0 auto;
+    max-width: 42rem;
 }
 
 .footer-links {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: clamp(0.75rem, 2vw, 1.25rem);
     justify-content: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .footer-links a {
@@ -646,6 +680,7 @@ h2 {
     display: inline-flex;
     gap: 0.7rem;
     justify-content: center;
+    margin: 0 auto;
     min-height: 4.25rem;
     overflow-wrap: anywhere;
     padding: 0.9rem 1.15rem;
@@ -680,6 +715,53 @@ h2 {
 .contact-icon {
     font-size: clamp(1.4rem, 3vw, 2rem);
     line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        align-items: center;
+        gap: 0.9rem;
+        padding: 1.5rem 0.85rem 2.2rem;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+        line-height: 1.45;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-links {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-links a {
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        min-height: 3.5rem;
+        padding: 0.8rem 0.9rem;
+        text-align: center;
+        width: min(100%, 22rem);
+    }
+
+    .footer-links a strong {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer-links a small {
+        font-size: 0.58rem;
+        text-align: center;
+    }
+
+    .contact-icon {
+        font-size: 1.4rem;
+    }
 }
 
 /* En tablet se agregan columnas; el espaciado sigue creciendo de forma gradual. */

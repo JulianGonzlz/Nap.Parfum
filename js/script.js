@@ -273,8 +273,8 @@ function renderizarFiltros() {
 		return `<button class="filter-button" type="button" data-category="${categoria}">${texto}</button><div class="brand-list oculto" data-brands-for="${categoria}"></div>`;
 	}).join("");
 
-	const generos = ["todos", ...new Set(perfumes.map((perfume) => perfume.genero))];
-	genderFilters.innerHTML = generos.map((genero) => `<button class="gender-button" type="button" data-gender="${genero}">${genero === "todos" ? "Todos" : genero}</button>`).join("");
+	const generos = [...new Set(perfumes.map((perfume) => perfume.genero))];
+	genderFilters.innerHTML = generos.map((genero) => `<button class="gender-button" type="button" data-gender="${genero}">${genero}</button>`).join("");
 	conectarFiltros();
 }
 
@@ -363,7 +363,6 @@ cartButton.addEventListener("click", mostrarCarrito);
 cartBackButton.addEventListener("click", cerrarCarrito);
 closeMenuButton.addEventListener("click", cerrarMenu);
 overlay.addEventListener("click", cerrarDrawers);
-document.getElementById("back-button").addEventListener("click", volverAlInicio);
 window.addEventListener("scroll", manejarScroll, { passive: true });
 // El catalogo se carga al inicio para que las dos vistas usen los mismos datos.
 async function cargarPerfumes() {
