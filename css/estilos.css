@@ -614,17 +614,72 @@ h2 {
     z-index: 2;
 }
 
-footer {
+.site-footer {
     border-top: 1px solid var(--hairline);
     display: flex;
-    flex-wrap: wrap;
-    gap: clamp(1rem, 4vw, 1.5rem);
-    padding: clamp(1.5rem, 6vw, 3rem) clamp(1rem, 4vw, 2rem);
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(1.75rem, 5vw, 3.25rem) clamp(1rem, 4vw, 2rem) clamp(2.5rem, 7vw, 4rem);
+    text-align: center;
 }
 
-footer a {
-    color: var(--lilac);
+.footer-title {
+    color: var(--lilac-light);
+    font-size: clamp(1.15rem, 3vw, 1.7rem);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    justify-content: center;
+}
+
+.footer-links a {
+    align-items: center;
+    background: rgba(var(--lilac-rgb), 0.08);
+    border: 1px solid rgba(var(--lilac-rgb), 0.25);
+    border-radius: 18px;
+    color: var(--lilac-light);
+    display: inline-flex;
+    gap: 0.7rem;
+    justify-content: center;
+    min-height: 4.25rem;
     overflow-wrap: anywhere;
+    padding: 0.9rem 1.15rem;
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-links a:hover {
+    border-color: rgba(var(--lilac-rgb), 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
+}
+
+.footer-links a strong,
+.footer-links a small {
+    display: block;
+}
+
+.footer-links a strong {
+    font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+    font-weight: 600;
+}
+
+.footer-links a small {
+    color: var(--text-dim);
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    margin-top: 0.12rem;
+    text-transform: uppercase;
+}
+
+.contact-icon {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1;
 }
 
 /* En tablet se agregan columnas; el espaciado sigue creciendo de forma gradual. */
