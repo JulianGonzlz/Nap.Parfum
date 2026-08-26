@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NAP Parfum: perfumeria arabe, disenador y decants.">
+    <title>NAP Parfum | Perfumeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="glass">
+        <!-- El encabezado reserva el mismo espacio a cada extremo para centrar el logo. -->
+        <div class="header-side header-side-left">
+            <button id="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+        <a class="logo" href="#inicio">NAP Parfum</a>
+        <div class="header-side header-side-right">
+            <button id="cart-button" type="button" aria-label="Abrir carrito" aria-expanded="false">🛒 <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <!-- Menu lateral para navegar y filtrar el catalogo. -->
+    <div id="overlay" class="oculto" aria-hidden="true"></div>
+    <aside id="menu-lateral" class="glass" aria-label="Menu principal" aria-hidden="true">
+        <button id="close-menu" type="button" aria-label="Cerrar menu">×</button>
+        <h2>Explorar</h2>
+        <nav id="category-filters" aria-label="Filtros por categoria"></nav>
+        <div class="gender-filter">
+            <h3>Género</h3>
+            <div id="gender-filters" class="gender-buttons"></div>
+        </div>
+    </aside>
+
+    <main>
+        <section id="inicio">
+            <!-- Hero de bienvenida y presentacion de NAP Parfum. -->
+            <p class="tagline">El arte de encontrar tu aroma</p>
+            <h1>NAP Parfum</h1>
+        </section>
+
+        <section id="destacados">
+            <!-- Seleccion de perfumes destacados para la pagina de inicio. -->
+            <div id="featured-container">
+                <!-- JavaScript inyectara aqui 6 perfumes destacados. -->
+            </div>
+        </section>
+
+        <section id="catalogo" class="oculto">
+            <!-- Vista independiente del catalogo completo filtrable. -->
+            <button id="back-button" type="button">← Volver al inicio</button>
+            <h2 id="catalogo-titulo">Catálogo</h2>
+            <div id="catalogo-container">
+                <!-- JavaScript inyectara aqui los perfumes filtrados. -->
+            </div>
+        </section>
+
+        <!-- Drawer del carrito, sin pago online: el pedido se consulta por WhatsApp. -->
+        <aside id="carrito" class="glass" aria-label="Carrito de compras" aria-hidden="true">
+            <button id="cart-back-button" type="button">← Volver</button>
+            <h2>Tu carrito</h2>
+            <div id="cart-container"></div>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- Datos de contacto: WhatsApp e Instagram. -->
+        <a href="https://wa.me/5492284232681">WhatsApp</a>
+        <a href="https://www.instagram.com/nap.parfum/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
