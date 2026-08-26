@@ -521,6 +521,8 @@ h2 {
     border: 1px solid rgba(201, 174, 224, 0.18);
     border-radius: 0 1.5rem 1.5rem 0;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+    display: flex;
+    flex-direction: column;
     height: 100%;
     left: 0;
     max-height: 100vh;
@@ -556,6 +558,44 @@ h2 {
     color: var(--lilac-light);
     font-size: clamp(1.5rem, 5vw, 2rem);
     padding-top: clamp(2rem, 8vw, 2.8rem);
+}
+
+.menu-contactos {
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: clamp(0.8rem, 3vw, 1.1rem);
+}
+
+.menu-contact {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 0.9rem;
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    padding: 0.7rem 0.8rem;
+    text-align: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.menu-contact:hover {
+    transform: translateX(2px);
+    filter: brightness(1.06);
+}
+
+.whatsapp-contact {
+    background: rgba(37, 211, 102, 0.18);
+    border-color: rgba(37, 211, 102, 0.45);
+    color: #d9ffe8;
+}
+
+.instagram-contact {
+    background: linear-gradient(135deg, rgba(254, 218, 119, 0.18), rgba(193, 53, 132, 0.2), rgba(131, 58, 180, 0.18));
+    border-color: rgba(201, 96, 153, 0.45);
+    color: #ffe6f3;
 }
 
 #menu-lateral nav {
@@ -718,6 +758,14 @@ h2 {
     letter-spacing: 0.03em;
     margin-top: 0.12rem;
     text-transform: uppercase;
+}
+
+.footer-links a[href*="wa.me"] strong {
+    color: #2fe07f;
+}
+
+.footer-links a[href*="instagram.com"] strong {
+    color: #e1306c;
 }
 
 .contact-icon {
