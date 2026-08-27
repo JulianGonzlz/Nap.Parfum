@@ -8,9 +8,9 @@
         "genero": "masculino",
         "descripcion": "Aroma dulce y especiado para la noche.",
         "notas": { "salida": ["bergamota", "manzana"], "corazon": ["canela", "lavanda"], "fondo": ["vainilla", "ambar"] },
-        "precio": 68000,
+        "precio": 168000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 6500 },
+        "decant": { "disponible": true, "precio5ml": 3500, "precio10ml": 6500 },
         "featured": true
     },
     {
@@ -24,7 +24,7 @@
         "notas": { "salida": ["limon", "piña"], "corazon": ["abedul", "jazmin"], "fondo": ["almizcle", "ambar"] },
         "precio": 72000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 7000 },
+        "decant": { "disponible": true, "precio5ml": 3800, "precio10ml": 7000 },
         "featured": true
     },
     {
@@ -38,7 +38,7 @@
         "notas": { "salida": ["canela"], "corazon": ["vainilla"], "fondo": ["ambar", "maderas"] },
         "precio": 64000,
         "stock": false,
-        "decant": { "disponible": true, "precio": 6000 },
+        "decant": { "disponible": true, "precio5ml": 3200, "precio10ml": 6000 },
         "featured": true
     },
     {
@@ -52,7 +52,7 @@
         "notas": { "salida": ["manzana", "bergamota"], "corazon": ["ciruela", "jazmin"], "fondo": ["vainilla", "ambar"] },
         "precio": 70000,
         "stock": true,
-        "decant": { "disponible": false },
+        "decant": { "disponible": true, "precio5ml": 3800, "precio10ml": 7000 },
         "featured": true
     },
     {
@@ -66,7 +66,7 @@
         "notas": { "salida": ["pimienta negra", "tabaco"], "corazon": ["cafe", "iris"], "fondo": ["ambar", "vainilla"] },
         "precio": 45000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 4500 },
+        "decant": { "disponible": true, "precio5ml": 2500, "precio10ml": 4500 },
         "featured": true
     },
     {
@@ -80,7 +80,7 @@
         "notas": { "salida": ["bergamota"], "corazon": ["pimienta"], "fondo": ["ambroxan", "cedro"] },
         "precio": 39000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 4000 },
+        "decant": { "disponible": true, "precio5ml": 2300, "precio10ml": 4000 },
         "featured": false
     },
     {
@@ -94,7 +94,7 @@
         "notas": { "salida": ["pera", "bergamota"], "corazon": ["rosa", "jazmin"], "fondo": ["almizcle", "vainilla"] },
         "precio": 42000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 4200 },
+        "decant": { "disponible": true, "precio5ml": 2400, "precio10ml": 4200 },
         "featured": false
     },
     {
@@ -122,7 +122,7 @@
         "notas": { "salida": ["bergamota", "frutas"], "corazon": ["melon", "piña"], "fondo": ["vainilla", "ambar"] },
         "precio": 78000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 7500 },
+        "decant": { "disponible": true, "precio5ml": 4000, "precio10ml": 7500 },
         "featured": false
     },
     {
@@ -150,7 +150,7 @@
         "notas": { "salida": ["frutos rojos", "citrus"], "corazon": ["canela", "flores"], "fondo": ["maderas", "almizcle"] },
         "precio": 62000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 6000 },
+        "decant": { "disponible": true, "precio5ml": 3200, "precio10ml": 6000 },
         "featured": false
     },
     {
@@ -164,7 +164,7 @@
         "notas": { "salida": ["canela", "bergamota"], "corazon": ["datiles", "praline"], "fondo": ["vainilla", "haba tonka"] },
         "precio": 58000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 5500 },
+        "decant": { "disponible": true, "precio5ml": 3000, "precio10ml": 5500 },
         "featured": false
     },
     {
@@ -178,7 +178,7 @@
         "notas": { "salida": ["bergamota", "manzana"], "corazon": ["lavanda", "canela"], "fondo": ["ambar", "maderas"] },
         "precio": 52000,
         "stock": false,
-        "decant": { "disponible": true, "precio": 5000 },
+        "decant": { "disponible": true, "precio5ml": 2800, "precio10ml": 5000 },
         "featured": false
     },
     {
@@ -192,7 +192,7 @@
         "notas": { "salida": ["lavanda"], "corazon": ["iris", "pera"], "fondo": ["cedro", "vetiver"] },
         "precio": 120000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 11000 },
+        "decant": { "disponible": true, "precio5ml": 6000, "precio10ml": 11000 },
         "featured": false
     },
     {
@@ -220,7 +220,7 @@
         "notas": { "salida": ["castaña", "cardamomo"], "corazon": ["salvia"], "fondo": ["vainilla", "ambar"] },
         "precio": 135000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 12500 },
+        "decant": { "disponible": true, "precio5ml": 6800, "precio10ml": 12500 },
         "featured": false
     },
     {
@@ -234,7 +234,7 @@
         "notas": { "salida": ["bergamota", "notas marinas"], "corazon": ["romero", "salvia"], "fondo": ["incienso", "maderas"] },
         "precio": 145000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 13500 },
+        "decant": { "disponible": true, "precio5ml": 7300, "precio10ml": 13500 },
         "featured": false
     },
     {
@@ -248,7 +248,7 @@
         "notas": { "salida": ["lavanda"], "corazon": ["salvia"], "fondo": ["vainilla", "vetiver"] },
         "precio": 140000,
         "stock": false,
-        "decant": { "disponible": true, "precio": 13000 },
+        "decant": { "disponible": true, "precio5ml": 7000, "precio10ml": 13000 },
         "featured": false
     },
     {
@@ -262,7 +262,7 @@
         "notas": { "salida": ["menta", "manzana", "limon"], "corazon": ["haba tonka", "geranio"], "fondo": ["vainilla", "cedro"] },
         "precio": 115000,
         "stock": true,
-        "decant": { "disponible": true, "precio": 10500 },
+        "decant": { "disponible": true, "precio5ml": 5700, "precio10ml": 10500 },
         "featured": false
     }
 ]

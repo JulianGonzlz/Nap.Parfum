@@ -16,6 +16,7 @@ const cartCount = document.getElementById("cart-count");
 const carrito = document.getElementById("carrito");
 const cartContainer = document.getElementById("cart-container");
 const cartBackButton = document.getElementById("cart-back-button");
+const toastCarrito = document.getElementById("toast-carrito");
 const header = document.querySelector("header");
 let perfumes = [];
 let categoriaActiva = "todos";
@@ -24,11 +25,24 @@ let generoActivo = "todos";
 let ultimaPosicionScroll = window.scrollY;
 let frameScrollPendiente = false;
 let temporizadorHeader;
+let temporizadorToast;
+let temporizadorOcultarToast;
 let scrollHaciaAbajo = false;
+
+function mostrarToast(mensaje) {
+	clearTimeout(temporizadorToast);
+	clearTimeout(temporizadorOcultarToast);
+	toastCarrito.textContent = mensaje;
+	toastCarrito.classList.remove("oculto");
+	requestAnimationFrame(() => toastCarrito.classList.add("visible"));
+	temporizadorToast = setTimeout(() => {
+		toastCarrito.classList.remove("visible");
+		temporizadorOcultarToast = setTimeout(() => toastCarrito.classList.add("oculto"), 300);
+	}, 1800);
+}
 
 // Una sola plantilla evita repetir el marcado de las tarjetas en ambas vistas.
 function crearTarjetaHTML(perfume) {
-	const mensaje = encodeURIComponent(`Hola, quiero consultar por ${perfume.nombre}.`);
 	const estadoStock = perfume.stock ? "Disponible" : "Sin stock";
 	const claseStock = perfume.stock ? "" : " sin-stock";
 	const imagenes = Array.isArray(perfume.imagenes) ? perfume.imagenes : [];
@@ -37,10 +51,10 @@ function crearTarjetaHTML(perfume) {
 		? `<div class="image-container"><img class="perfume-image${imagenes.length > 1 ? " imagen-rotativa" : ""}" src="${imagenes[0]}" alt="${perfume.nombre}" data-id="${perfume.id}" data-indice="0" data-imagenes='${JSON.stringify(imagenes)}'>${indicadorHTML}<div class="image-placeholder oculto" aria-hidden="true">◎</div></div>`
 		: `<div class="image-placeholder" aria-label="Imagen no disponible">◎</div>`;
 	const decantHTML = perfume.decant.disponible
-		? `<p class="decant">Decant disponible desde $${perfume.decant.precio.toLocaleString("es-AR")}</p>`
+		? `<p class="decant">Decants disponibles: 5ml y 10ml</p>`
 		: "";
 	const opcionesHTML = perfume.decant.disponible
-		? `<div class="cart-options oculto"><button class="cart-option" type="button" data-id="${perfume.id}" data-type="completo">Completo · $${perfume.precio.toLocaleString("es-AR")}</button><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant">Decant · $${perfume.decant.precio.toLocaleString("es-AR")}</button></div>`
+		? `<div class="cart-options"><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant5ml">Decant 5ml · $${perfume.decant.precio5ml.toLocaleString("es-AR")}</button><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant10ml">Decant 10ml · $${perfume.decant.precio10ml.toLocaleString("es-AR")}</button></div>`
 		: "";
 	return `
 		<article class="perfume-card${claseStock}">
@@ -56,8 +70,7 @@ function crearTarjetaHTML(perfume) {
 				${opcionesHTML}
 			</div>
 			<div class="card-footer">
-				<span class="price">$${perfume.precio.toLocaleString("es-AR")}</span>
-				<a class="whatsapp-button glass" href="https://wa.me/5492284232681?text=${mensaje}" target="_blank" rel="noopener">Consultar</a>
+				<span class="price">$${perfume.precio.toLocaleString("es-AR")} - Producto entero sellado</span>
 			</div>
 		</article>`;
 }
@@ -90,7 +103,7 @@ function actualizarContadorCarrito() {
 function agregarAlCarrito(perfumeId, tipo) {
 	const perfume = perfumes.find((item) => item.id === perfumeId);
 	if (!perfume) return;
-	const precio = tipo === "decant" ? perfume.decant.precio : perfume.precio;
+	const precio = tipo === "decant5ml" ? perfume.decant.precio5ml : tipo === "decant10ml" ? perfume.decant.precio10ml : perfume.precio;
 	const carritoActual = leerCarrito();
 	const itemExistente = carritoActual.find((item) => item.id === perfumeId && item.tipo === tipo);
 	if (itemExistente) {
@@ -99,19 +112,12 @@ function agregarAlCarrito(perfumeId, tipo) {
 		carritoActual.push({ id: perfume.id, nombre: perfume.nombre, tipo, precio, cantidad: 1 });
 	}
 	guardarCarrito(carritoActual);
-	mostrarCarrito();
-}
-
-// Abre o cierra las dos opciones cuando el producto ofrece perfume completo y decant.
-function alternarOpcionesCarrito(evento) {
-	evento.currentTarget.nextElementSibling.classList.toggle("oculto");
+	mostrarToast(`${perfume.nombre} agregado al carrito`);
 }
 
 function conectarBotonesCarrito(contenedor) {
 	contenedor.querySelectorAll(".add-cart-button").forEach((boton) => boton.addEventListener("click", (evento) => {
-		const opciones = evento.currentTarget.nextElementSibling;
-		if (opciones) alternarOpcionesCarrito(evento);
-		else agregarAlCarrito(evento.currentTarget.dataset.id, "completo");
+		agregarAlCarrito(evento.currentTarget.dataset.id, "completo");
 	}));
 	contenedor.querySelectorAll(".cart-option").forEach((boton) => boton.addEventListener("click", (evento) => {
 		agregarAlCarrito(evento.currentTarget.dataset.id, evento.currentTarget.dataset.type);
@@ -161,12 +167,18 @@ function renderizarCarrito() {
 	const total = carritoActual.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
 	cartContainer.innerHTML = `${carritoActual.map((item, indice) => `
 		<div class="cart-item">
-			<div><h3>${item.nombre}</h3><p>${item.tipo === "decant" ? "Decant" : "Perfume completo"} · $${item.precio.toLocaleString("es-AR")}</p></div>
+			<div><h3>${item.nombre}</h3><p>${obtenerEtiquetaTipo(item.tipo)} · $${item.precio.toLocaleString("es-AR")}</p></div>
 			<div class="cart-item-controls"><button type="button" class="quantity-button" data-index="${indice}" data-change="-1">−</button><span>${item.cantidad}</span><button type="button" class="quantity-button" data-index="${indice}" data-change="1">+</button><button type="button" class="remove-cart-button" data-index="${indice}">Quitar</button></div>
 		</div>`).join("")}
 		<div class="cart-total">Total: $${total.toLocaleString("es-AR")}</div>
 		<a class="whatsapp-button glass cart-whatsapp" href="${crearEnlaceWhatsApp(carritoActual, total)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>`;
 	conectarControlesCarrito();
+}
+
+function obtenerEtiquetaTipo(tipo) {
+	if (tipo === "decant5ml") return "Decant 5ml";
+	if (tipo === "decant10ml") return "Decant 10ml";
+	return "Perfume completo";
 }
 
 // Cambia cantidades, elimina lineas y vuelve a guardar el resultado.
@@ -189,7 +201,7 @@ function conectarControlesCarrito() {
 
 // Construye el pedido completo y lo deja escrito en una conversacion de WhatsApp.
 function crearEnlaceWhatsApp(carritoActual, total) {
-	const detalle = carritoActual.map((item) => `- ${item.nombre} (${item.tipo}), cantidad: ${item.cantidad}, unitario: $${item.precio}`).join("\n");
+	const detalle = carritoActual.map((item) => `- ${item.nombre} (${obtenerEtiquetaTipo(item.tipo)}), cantidad: ${item.cantidad}, unitario: $${item.precio}`).join("\n");
 	const mensaje = `Hola, quiero consultar este pedido:\n${detalle}\nTotal: $${total}`;
 	return `https://wa.me/5492284232681?text=${encodeURIComponent(mensaje)}`;
 }
