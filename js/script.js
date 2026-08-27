@@ -43,16 +43,12 @@ function mostrarToast(mensaje) {
 
 // Una sola plantilla evita repetir el marcado de las tarjetas en ambas vistas.
 function crearTarjetaHTML(perfume) {
-	const estadoStock = perfume.stock ? "Disponible" : "Sin stock";
 	const claseStock = perfume.stock ? "" : " sin-stock";
 	const imagenes = Array.isArray(perfume.imagenes) ? perfume.imagenes : [];
 	const indicadorHTML = imagenes.length > 1 ? `<span class="image-indicator" aria-hidden="true">1/${imagenes.length}</span>` : "";
 	const imagenHTML = imagenes.length
 		? `<div class="image-container"><img class="perfume-image${imagenes.length > 1 ? " imagen-rotativa" : ""}" src="${imagenes[0]}" alt="${perfume.nombre}" data-id="${perfume.id}" data-indice="0" data-imagenes='${JSON.stringify(imagenes)}'>${indicadorHTML}<div class="image-placeholder oculto" aria-hidden="true">◎</div></div>`
 		: `<div class="image-placeholder" aria-label="Imagen no disponible">◎</div>`;
-	const decantHTML = perfume.decant.disponible
-		? `<p class="decant">Decants disponibles: 5ml y 10ml</p>`
-		: "";
 	const opcionesHTML = perfume.decant.disponible
 		? `<div class="cart-options"><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant5ml">Decant 5ml · $${perfume.decant.precio5ml.toLocaleString("es-AR")}</button><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant10ml">Decant 10ml · $${perfume.decant.precio10ml.toLocaleString("es-AR")}</button></div>`
 		: "";
@@ -62,9 +58,6 @@ function crearTarjetaHTML(perfume) {
 			<span class="category">${perfume.categoria} · ${perfume.marca} · ${perfume.genero}</span>
 			<h3 class="perfume-name">${perfume.nombre}</h3>
 			<p class="description">${perfume.descripcion}</p>
-			<p class="notes">Salida: ${perfume.notas.salida.join(", ")}<br>Corazón: ${perfume.notas.corazon.join(", ")}<br>Fondo: ${perfume.notas.fondo.join(", ")}</p>
-			<p class="stock">${estadoStock}</p>
-			${decantHTML}
 			<div class="cart-actions">
 				<button class="add-cart-button glass" type="button" data-id="${perfume.id}">Agregar al carrito</button>
 				${opcionesHTML}
@@ -267,10 +260,10 @@ function nombreCategoria(categoria) {
 // Muestra solo la pantalla de catalogo y conserva los filtros en su titulo.
 function abrirCatalogo() {
 	const lista = obtenerPerfumesFiltrados();
-	let titulo = categoriaActiva === "todos" ? "Todos" : nombreCategoria(categoriaActiva);
-	if (marcaActiva) titulo += ` — ${marcaActiva}`;
-	if (generoActivo !== "todos") titulo += ` — ${generoActivo}`;
-	catalogoTitulo.textContent = `Catálogo — ${titulo}`;
+	const partesRuta = ["Catálogo", categoriaActiva === "todos" ? "Todos" : nombreCategoria(categoriaActiva)];
+	if (marcaActiva) partesRuta.push(marcaActiva);
+	if (generoActivo !== "todos") partesRuta.push(generoActivo);
+	catalogoTitulo.innerHTML = partesRuta.map((parte, indice) => `${indice ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : ""}<span>${parte}</span>`).join("");
 	mostrarPerfumes(lista, catalogoContainer);
 	inicio.classList.add("oculto");
 	destacados.classList.add("oculto");

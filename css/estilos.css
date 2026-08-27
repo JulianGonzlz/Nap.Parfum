@@ -340,7 +340,9 @@ h2 {
 
 .category {
     color: var(--lilac);
+    display: block;
     font-size: clamp(0.7rem, 2vw, 0.8rem);
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
 
@@ -348,6 +350,10 @@ h2 {
 .notes {
     color: var(--text-dim);
     font-size: clamp(0.85rem, 2.5vw, 1rem);
+}
+
+.description {
+    margin-bottom: 0.875rem;
 }
 
 .stock,
@@ -361,12 +367,16 @@ h2 {
 
 .decant {
     color: var(--lilac-light);
+    margin-bottom: 1rem;
+}
+
+.perfume-name {
+    margin-bottom: 0.625rem;
 }
 
 .cart-actions {
     display: grid;
-    gap: 0.5rem;
-    margin-top: 0.9rem;
+    gap: 0.625rem;
 }
 
 .add-cart-button,
@@ -511,7 +521,7 @@ h2 {
     flex-wrap: wrap;
     gap: clamp(0.6rem, 3vw, 1rem);
     justify-content: flex-start;
-    margin-top: clamp(0.75rem, 3vw, 1.25rem);
+    margin-top: 1rem;
     min-width: 0;
 }
 
@@ -564,7 +574,27 @@ h2 {
 }
 
 #catalogo-titulo {
+    border-bottom: 1px solid var(--hairline);
+    color: var(--text-dim);
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    margin: 0 auto 2rem;
+    max-width: 75rem;
     overflow-wrap: anywhere;
+    padding: 0 clamp(1rem, 4vw, 2rem) 0.9rem;
+    text-transform: uppercase;
+}
+
+#catalogo-titulo > span {
+    display: inline;
+}
+
+#catalogo-titulo .breadcrumb-separator {
+    color: var(--lilac);
+    display: inline-block;
+    margin: 0 0.7rem;
+    opacity: 0.55;
 }
 
 #catalogo {

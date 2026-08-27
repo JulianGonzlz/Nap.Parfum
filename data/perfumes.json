@@ -81,7 +81,7 @@
         "precio": 39000,
         "stock": true,
         "decant": { "disponible": true, "precio5ml": 2300, "precio10ml": 4000 },
-        "featured": false
+        "featured": true
     },
     {
         "id": "al-wataniah-sabah-al-ward",
