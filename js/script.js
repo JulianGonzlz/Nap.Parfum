@@ -174,6 +174,12 @@ function obtenerEtiquetaTipo(tipo) {
 	return "Perfume completo";
 }
 
+function obtenerEtiquetaTipoPedido(tipo) {
+	if (tipo === "decant5ml") return "Decant 5ml";
+	if (tipo === "decant10ml") return "Decant 10ml";
+	return "Frasco entero";
+}
+
 // Cambia cantidades, elimina lineas y vuelve a guardar el resultado.
 function conectarControlesCarrito() {
 	cartContainer.querySelectorAll(".quantity-button").forEach((boton) => boton.addEventListener("click", (evento) => {
@@ -194,8 +200,12 @@ function conectarControlesCarrito() {
 
 // Construye el pedido completo y lo deja escrito en una conversacion de WhatsApp.
 function crearEnlaceWhatsApp(carritoActual, total) {
-	const detalle = carritoActual.map((item) => `- ${item.nombre} (${obtenerEtiquetaTipo(item.tipo)}), cantidad: ${item.cantidad}, unitario: $${item.precio}`).join("\n");
-	const mensaje = `Hola, quiero consultar este pedido:\n${detalle}\nTotal: $${total}`;
+	const detalle = carritoActual.map((item) => {
+		const etiqueta = obtenerEtiquetaTipoPedido(item.tipo);
+		const precioLinea = item.precio * item.cantidad;
+		return `- ${item.nombre} (${etiqueta}) x${item.cantidad} - $${precioLinea.toLocaleString("es-AR")}`;
+	}).join("\n");
+	const mensaje = `Hola, te quiero consultar por el siguiente pedido:\n\n${detalle}\n\nTotal: $${total.toLocaleString("es-AR")}\n\nQuedo atento a la confirmación, gracias.`;
 	return `https://wa.me/5492284232681?text=${encodeURIComponent(mensaje)}`;
 }
 
@@ -331,6 +341,15 @@ function volverAlInicio() {
 	destacados.classList.remove("oculto");
 }
 
+function manejarClickLogo(evento) {
+	evento.preventDefault();
+	const yaEnInicio = !inicio.classList.contains("oculto") && catalogo.classList.contains("oculto");
+	if (!yaEnInicio) {
+		volverAlInicio();
+	}
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 // Decide la visibilidad del encabezado considerando a la vez el scroll y los drawers.
 function actualizarVisibilidadHeader() {
 	const hayDrawerAbierto = menuLateral.classList.contains("abierto") || carrito.classList.contains("abierto");
@@ -363,11 +382,15 @@ function manejarScroll() {
 	}, 150);
 }
 
+const logo = document.querySelector(".logo");
 menuButton.addEventListener("click", cambiarMenu);
 cartButton.addEventListener("click", mostrarCarrito);
 cartBackButton.addEventListener("click", cerrarCarrito);
 closeMenuButton.addEventListener("click", cerrarMenu);
 overlay.addEventListener("click", cerrarDrawers);
+if (logo) {
+	logo.addEventListener("click", manejarClickLogo);
+}
 window.addEventListener("scroll", manejarScroll, { passive: true });
 // El catalogo se carga al inicio para que las dos vistas usen los mismos datos.
 async function cargarPerfumes() {

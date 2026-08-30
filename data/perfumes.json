@@ -1,268 +1,1365 @@
 [
     {
-        "id": "afnan-9pm",
+        "id": "angham",
+        "nombre": "Angham",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Angham/c27ebaa1-2a17-4997-8352-2e76c5b9d1a5.png",
+            "assets/Arabes/Femenino/Lattafa/Angham/e83f3561-981c-40d3-8a68-b217806b08c0.png"
+        ],
+        "featured": true
+    },
+    {
+        "id": "eclaire-lattafa",
+        "nombre": "Eclaire Lattafa",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Eclaire Lattafa/Eclaire Lattafa.png",
+            "assets/Arabes/Femenino/Lattafa/Eclaire Lattafa/d399c227-6ea6-4f8d-a207-8acce1e3152d.png"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nebras-lattafa",
+        "nombre": "Nebras Lattafa",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Nebras Lattafa/Nebras Lattafa.png"
+        ],
+        "featured": true
+    },
+    {
+        "id": "noble-blush",
+        "nombre": "Noble Blush",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Noble Blush_/ba371672-c97c-4838-bbee-c579c909732f.png"
+        ],
+        "featured": true
+    },
+    {
+        "id": "sabah-al-ward",
+        "nombre": "Sabah al Ward",
+        "categoria": "arabe",
+        "marca": "Al Wataniah",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Al_Wataniah/Sabah Al Ward/Sabah Al Ward.png"
+        ],
+        "featured": true
+    },
+    {
+        "id": "yara-candy",
+        "nombre": "Yara Candy",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Yara Candy/49c6e564-fb80-41b0-870e-fe9846c13724.png",
+            "assets/Arabes/Femenino/Lattafa/Yara Candy/4c3c193f-3e1b-472b-8048-7a6cec4c0876.png"
+        ],
+        "featured": true
+    },
+    {
+        "id": "yara-elixir",
+        "nombre": "Yara Elixir",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Yara elixir/Yara elixir.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "yara-moi",
+        "nombre": "Yara Moi",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Yara Moi/Yara Moi.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "yara-rosa",
+        "nombre": "Yara Rosa",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Yara Rosa/38c6ddff-6f99-4c6c-81c0-65f9c3f50c13.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "yara-tous",
+        "nombre": "Yara Tous",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Yara Tous/ba696a40-90a2-487e-82b2-bde4ca265c0b.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "9pm",
         "nombre": "9PM",
-        "imagenes": ["assets/Arabes/Masculino/Afnan/9PM/9PM.jpg"],
         "categoria": "arabe",
         "marca": "Afnan",
         "genero": "masculino",
-        "descripcion": "Aroma dulce y especiado para la noche.",
-        "notas": { "salida": ["bergamota", "manzana"], "corazon": ["canela", "lavanda"], "fondo": ["vainilla", "ambar"] },
-        "precio": 168000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 3500, "precio10ml": 6500 },
-        "featured": true
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Afnan/9PM/7c49b825-5ced-4362-9fba-5a14bd9b2474.png",
+            "assets/Arabes/Masculino/Afnan/9PM/9PM.jpg"
+        ],
+        "featured": false
     },
     {
-        "id": "armaf-club-de-nuit",
+        "id": "9pm-elixir",
+        "nombre": "9PM Elixir",
+        "categoria": "arabe",
+        "marca": "Afnan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Afnan/9PM Elixir/9 Pm Elixir.png",
+            "assets/Arabes/Masculino/Afnan/9PM Elixir/9PM Elixir_.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "9pm-night-out",
+        "nombre": "9PM Night Out",
+        "categoria": "arabe",
+        "marca": "Afnan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Afnan/9PM Night Out/9PM Night Out.png",
+            "assets/Arabes/Masculino/Afnan/9PM Night Out/e44eea99-946b-4e68-82fd-c3af828097f1.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "asad",
+        "nombre": "Asad",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Asad/f9dd996e-2340-49d5-9658-0c5f3da403b3.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "asad-bourboun",
+        "nombre": "Asad Bourboun",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Asad Bourboun/0777d61b-000e-44ed-97ee-97bf202c0cd1.png",
+            "assets/Arabes/Masculino/Lattafa/Asad Bourboun/853e7aec-59a5-45a9-9e76-6549bcac0a01.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "asad-elixir",
+        "nombre": "Asad Elixir",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Asad Elixir/23918c1e-ace8-4f96-ab08-8a0c719e604d.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "asad-lattafa",
+        "nombre": "Asad Lattafa",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Asad Lattafa/Asad Lattafa.jpg"
+        ],
+        "featured": false
+    },
+    {
+        "id": "asad-zanazibar-limited-edition",
+        "nombre": "Asad Zanazibar Limited Edition",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/5216ae72-36bb-4336-8ae2-f01219f80727.png",
+            "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/6a16d21e-946d-4e70-90ae-c855c65033e8.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "club-de-nuit-intense-man",
         "nombre": "Club de Nuit Intense Man",
-        "imagenes": ["assets/Arabes/Masculino/Armaf/Club de nuit intense man (Marca Armaf)/Club de nuit intense man (Marca Armaf).png"],
         "categoria": "arabe",
         "marca": "Armaf",
         "genero": "masculino",
-        "descripcion": "Fragancia citrica, ahumada y amaderada.",
-        "notas": { "salida": ["limon", "piña"], "corazon": ["abedul", "jazmin"], "fondo": ["almizcle", "ambar"] },
-        "precio": 72000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 3800, "precio10ml": 7000 },
-        "featured": true
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Armaf/Club de nuit intense man/c5d7e2c9-4498-41dc-9284-1e0763a5d6cf.png"
+        ],
+        "featured": false
     },
     {
-        "id": "french-avenue-liquid-brun",
-        "nombre": "Liquid Brun",
-        "imagenes": ["assets/Arabes/Masculino/French_Avenue/Liquid Brun/Liquid Brun.jpg"],
+        "id": "club-de-nuit-urban-man",
+        "nombre": "Club de Nuit Urban Man",
         "categoria": "arabe",
-        "marca": "French Avenue",
+        "marca": "Armaf",
         "genero": "masculino",
-        "descripcion": "Perfil ambarado con vainilla y especias calidas.",
-        "notas": { "salida": ["canela"], "corazon": ["vainilla"], "fondo": ["ambar", "maderas"] },
-        "precio": 64000,
-        "stock": false,
-        "decant": { "disponible": true, "precio5ml": 3200, "precio10ml": 6000 },
-        "featured": true
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Armaf/Club de nuit Urban man/Club de nuit Urban man elixir.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "dubai-nigth",
+        "nombre": "Dubai Nigth",
+        "categoria": "arabe",
+        "marca": "Al Haramain Amber Oud",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Al Haramain Amber Oud/Dubai Nigth/314ccee0-67a7-456c-b9a7-12437dc29e39.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "fakhar-black",
+        "nombre": "Fakhar Black",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Fakhar Black/ba126c80-45c9-4c30-b44a-5e7107531657.png"
+        ],
+        "featured": false
     },
     {
         "id": "hawas-black",
         "nombre": "Hawas Black",
-        "imagenes": ["assets/Arabes/Masculino/Hawas/Hawas Black/Hawas Black.jpg"],
         "categoria": "arabe",
         "marca": "Hawas",
         "genero": "masculino",
-        "descripcion": "Fragancia intensa con salida fresca y fondo dulce.",
-        "notas": { "salida": ["manzana", "bergamota"], "corazon": ["ciruela", "jazmin"], "fondo": ["vainilla", "ambar"] },
-        "precio": 70000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 3800, "precio10ml": 7000 },
-        "featured": true
-    },
-    {
-        "id": "lattafa-asad",
-        "nombre": "Asad",
-        "imagenes": ["assets/Arabes/Masculino/Lattafa/Asad Lattafa/Asad Lattafa.jpg"],
-        "categoria": "arabe",
-        "marca": "Lattafa",
-        "genero": "masculino",
-        "descripcion": "Perfume especiado, profundo y de gran presencia.",
-        "notas": { "salida": ["pimienta negra", "tabaco"], "corazon": ["cafe", "iris"], "fondo": ["ambar", "vainilla"] },
-        "precio": 45000,
-        "stock": true,
-        "decant": { "disponible": true, "precio5ml": 2500, "precio10ml": 4500 },
-        "featured": true
-    },
-    {
-        "id": "maison-alhambra-salvo",
-        "nombre": "Salvo",
-        "imagenes": ["assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/Salvo.png"],
-        "categoria": "arabe",
-        "marca": "Maison Alhambra",
-        "genero": "masculino",
-        "descripcion": "Aroma fresco y amaderado, ideal para todos los dias.",
-        "notas": { "salida": ["bergamota"], "corazon": ["pimienta"], "fondo": ["ambroxan", "cedro"] },
-        "precio": 39000,
-        "stock": true,
-        "decant": { "disponible": true, "precio5ml": 2300, "precio10ml": 4000 },
-        "featured": true
-    },
-    {
-        "id": "al-wataniah-sabah-al-ward",
-        "nombre": "Sabah Al Ward",
-        "imagenes": ["assets/Arabes/Femenino/Al_Wataniah/Sabah Al Ward/Sabah Al Ward.png"],
-        "categoria": "arabe",
-        "marca": "Al Wataniah",
-        "genero": "femenino",
-        "descripcion": "Fragancia floral y luminosa con un final suave.",
-        "notas": { "salida": ["pera", "bergamota"], "corazon": ["rosa", "jazmin"], "fondo": ["almizcle", "vainilla"] },
-        "precio": 42000,
-        "stock": true,
-        "decant": { "disponible": true, "precio5ml": 2400, "precio10ml": 4200 },
-        "featured": false
-    },
-    {
-        "id": "lattafa-yara",
-        "nombre": "Yara",
-        "imagenes": ["assets/Arabes/Femenino/Lattafa/Yara Moi/Yara Moi.png"],
-        "categoria": "arabe",
-        "marca": "Lattafa",
-        "genero": "femenino",
-        "descripcion": "Aroma cremoso y frutal con una estela delicada.",
-        "notas": { "salida": ["orquidea", "heliotropo"], "corazon": ["frutas tropicales"], "fondo": ["vainilla", "almizcle"] },
-        "precio": 46000,
-        "stock": true,
-        "decant": { "disponible": false },
-        "featured": false
-    },
-    {
-        "id": "aramain-amber-oud",
-        "nombre": "Amber Oud Gold Edition",
-        "imagenes": ["assets/Arabes/Unisex/Aramain/Amber oud Gol edition/Amber oud Gol edition.png"],
-        "categoria": "arabe",
-        "marca": "Aramain",
-        "genero": "unisex",
-        "descripcion": "Composicion frutal, dulce y ambarada.",
-        "notas": { "salida": ["bergamota", "frutas"], "corazon": ["melon", "piña"], "fondo": ["vainilla", "ambar"] },
-        "precio": 78000,
-        "stock": true,
-        "decant": { "disponible": true, "precio5ml": 4000, "precio10ml": 7500 },
-        "featured": false
-    },
-    {
-        "id": "armaf-odyssey-spectra",
-        "nombre": "Odyssey Spectra",
-        "imagenes": ["assets/Arabes/Unisex/Armaf/Odyssey Spectra/IMG-20260613-WA0041.jpg"],
-        "categoria": "arabe",
-        "marca": "Armaf",
-        "genero": "unisex",
-        "descripcion": "Aroma dulce con facetas frutales y amaderadas.",
-        "notas": { "salida": ["mandarina", "canela"], "corazon": ["lavanda", "geranio"], "fondo": ["ambar", "vainilla"] },
-        "precio": 55000,
-        "stock": true,
-        "decant": { "disponible": false },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Black/Hawas Black.jpg"
+        ],
         "featured": false
     },
     {
         "id": "hawas-fire",
         "nombre": "Hawas Fire",
-        "imagenes": ["assets/Arabes/Unisex/Hawas/Hawas Fire/Hawas Fire.png"],
         "categoria": "arabe",
         "marca": "Hawas",
-        "genero": "unisex",
-        "descripcion": "Fragancia vibrante con frutas y maderas suaves.",
-        "notas": { "salida": ["frutos rojos", "citrus"], "corazon": ["canela", "flores"], "fondo": ["maderas", "almizcle"] },
-        "precio": 62000,
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 3200, "precio10ml": 6000 },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Fire/d0f33893-8fe0-42cd-b9cb-77d029ba35d2.png",
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Fire/e869800c-8ce0-4db1-9f85-4f38bf5d361f.png"
+        ],
         "featured": false
     },
     {
-        "id": "lattafa-khamrah",
-        "nombre": "Khamrah",
-        "imagenes": ["assets/Arabes/Masculino/Lattafa/Khamrah/Khamrah.jpg"],
+        "id": "hawas-ice",
+        "nombre": "Hawas Ice",
+        "categoria": "arabe",
+        "marca": "Hawas",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Ice/f1aef159-69b9-47ae-b0f9-2cb8e7c6bb98.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "hawas-malib",
+        "nombre": "Hawas Malibú",
+        "categoria": "arabe",
+        "marca": "Hawas",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Malibú/95442608-39ce-45fc-b66a-9ca370fbbee5.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "hawas-verde",
+        "nombre": "Hawas Verde",
+        "categoria": "arabe",
+        "marca": "Hawas",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Verde/6ca2700c-fa0d-44a8-a959-5d3632424049.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "honor-and-glory",
+        "nombre": "Honor and Glory",
         "categoria": "arabe",
         "marca": "Lattafa",
-        "genero": "unisex",
-        "descripcion": "Acorde gourmand de canela, datiles y vainilla.",
-        "notas": { "salida": ["canela", "bergamota"], "corazon": ["datiles", "praline"], "fondo": ["vainilla", "haba tonka"] },
-        "precio": 58000,
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 3000, "precio10ml": 5500 },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Honor and Glory/3bb69f72-b0bd-4d96-bbd1-f984b930ad18.png",
+            "assets/Arabes/Masculino/Lattafa/Honor and Glory/bb629020-447d-4161-89ed-03c1e7a3b077.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "jen-lowe-inmortel",
+        "nombre": "Jen Lowe Inmortel",
+        "categoria": "arabe",
+        "marca": "Maison Alhambra",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Maison_Alh_Hambra/Jen Lowe inmortel/d45c5955-3ca1-4030-84fe-f9804ad5c6dc.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "khamrah",
+        "nombre": "Khamrah",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Khamrah/Khamrah.jpg",
+            "assets/Arabes/Masculino/Lattafa/Khamrah/Khamrah.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "khamrah-kahwa",
+        "nombre": "Khamrah Kahwa",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Khamrah Kahwa/76cf889a-ae55-4544-9d4c-6bc594fbf1f2.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "liquid-brun",
+        "nombre": "Liquid Brun",
+        "categoria": "arabe",
+        "marca": "French Avenue",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/French_Avenue/Liquid Brun/Liquid Brun.jpg"
+        ],
+        "featured": false
+    },
+    {
+        "id": "mandarin-sky",
+        "nombre": "Mandarin Sky",
+        "categoria": "arabe",
+        "marca": "Armaf",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Armaf/Mandarin Sky_/44ac56d7-c528-4be6-88c9-768a581db4f1.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "oud-for-glory",
+        "nombre": "Oud for Glory",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Oud for Glory/Oud for Glory .jpg",
+            "assets/Arabes/Masculino/Lattafa/Oud for Glory/Oud for Glory .png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "qaed-al-fursan-black",
+        "nombre": "Qaed al Fursan Black",
+        "categoria": "arabe",
+        "marca": "Qaed al Fursan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/0b0bb6d7-5561-4d28-8a3a-f2450b494c8f.png",
+            "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/6edaa38e-8d42-4deb-8852-889878899323.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "rare-carbon",
+        "nombre": "Rare Carbon",
+        "categoria": "arabe",
+        "marca": "Afnan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Afnan/Rare Carbon/Rare Carbon.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "rayhaan-italia",
+        "nombre": "Rayhaan Italia",
+        "categoria": "arabe",
+        "marca": "Rayhaan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/RAYHAAN/RayHaan Italia/5bea1b52-cc79-4c9f-9f84-8cb7979dc0e2.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "salvo",
+        "nombre": "Salvo",
+        "categoria": "arabe",
+        "marca": "Maison Alhambra",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/e3925aff-0c91-44dd-8a89-244da010e904.png",
+            "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/fa0b41ef-1247-43b8-b0c3-9dd64b106dec.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "supremacy-collector-edition",
+        "nombre": "Supremacy Collector Edition",
+        "categoria": "arabe",
+        "marca": "Afnan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Afnan/Supremacy Collector edition/Supremacy Collector edition.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "the-kindom",
+        "nombre": "the Kindom",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Lattafa/The Kindom/6202ee93-6396-43a7-a921-f3d062ec1221.png",
+            "assets/Arabes/Masculino/Lattafa/The Kindom/a06c0a41-3e9c-4bcf-83f1-3163e86d9bdf.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "amber-oud-gold-edition",
+        "nombre": "Amber Oud Gold Edition",
+        "categoria": "arabe",
+        "marca": "Aramain",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Aramain/Amber oud Gol edition/Amber oud Gol edition.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "french-avenui",
+        "nombre": "French Avenui",
+        "categoria": "arabe",
+        "marca": "Unisex",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/French Avenui/3ef521b8-366b-4375-8a3b-69a5ea43423f.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "hawas-fire",
+        "nombre": "Hawas Fire",
+        "categoria": "arabe",
+        "marca": "Hawas",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Hawas/Hawas Fire/Hawas Fire.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "hawas-malib",
+        "nombre": "Hawas Malibú",
+        "categoria": "arabe",
+        "marca": "Hawas",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Hawas/Hawas Malibu/Hawas Malibu.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "odyssey-spectra",
+        "nombre": "Odyssey Spectra",
+        "categoria": "arabe",
+        "marca": "Armaf",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Armaf/Odyssey Spectra/IMG-20260613-WA0041.jpg"
+        ],
+        "featured": false
+    },
+    {
+        "id": "quaed-al-fursan-unlimited",
+        "nombre": "Quaed al Fursan Unlimited",
+        "categoria": "arabe",
+        "marca": "Qued al Fursan",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Qued al Fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png",
+            "assets/Arabes/Unisex/Qued al Fursan/Quaed al fursal Unlimited_/c532b6a7-44ae-4b56-b2b6-619cb68fd444.png"
+        ],
         "featured": false
     },
     {
         "id": "rayhaan-elixir",
         "nombre": "Rayhaan Elixir",
-        "imagenes": ["assets/Arabes/Unisex/Rayhaan/RayHaan Elixir/RayHaan Elixir .jpg"],
         "categoria": "arabe",
         "marca": "Rayhaan",
         "genero": "unisex",
-        "descripcion": "Perfume moderno y calido con un toque frutal.",
-        "notas": { "salida": ["bergamota", "manzana"], "corazon": ["lavanda", "canela"], "fondo": ["ambar", "maderas"] },
-        "precio": 52000,
-        "stock": false,
-        "decant": { "disponible": true, "precio5ml": 2800, "precio10ml": 5000 },
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Rayhaan/RayHaan Elixir/RayHaan Elixir .jpg"
+        ],
         "featured": false
     },
     {
-        "id": "dior-homme-intense",
-        "nombre": "Dior Homme Intense",
-        "imagenes": ["assets/Diseñador/Masculino/Dior/Dior Homme Intense Parfum/Dior Homme Intense Parfum.png"],
+        "id": "the-kindom-lattafa",
+        "nombre": "the Kindom Lattafa",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Lattafa/The Kindom Lattafa/6202ee93-6396-43a7-a921-f3d062ec1221.png",
+            "assets/Arabes/Unisex/Lattafa/The Kindom Lattafa/The Kindom Lattafa.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "aqua-di-gio-parfum",
+        "nombre": "Aqua Di Gio Parfum",
+        "categoria": "disenador",
+        "marca": "Giorgio Armani",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Giorgio_Armani/Aqua di Gio Parfum/Aqua di Gio Parfum.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "dior-homme-intense-parfum",
+        "nombre": "Dior Homme Intense Parfum",
         "categoria": "disenador",
         "marca": "Dior",
         "genero": "masculino",
-        "descripcion": "Perfume elegante con iris, maderas y un fondo ambarado.",
-        "notas": { "salida": ["lavanda"], "corazon": ["iris", "pera"], "fondo": ["cedro", "vetiver"] },
-        "precio": 120000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 6000, "precio10ml": 11000 },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Dior/Dior Homme Intense Parfum/Dior Homme Intense Parfum.png"
+        ],
         "featured": false
     },
     {
         "id": "dumont-nitro-white",
-        "nombre": "Nitro White",
-        "imagenes": ["assets/Diseñador/Masculino/Dumont/Dumont Nitro White/Dumont Nitro White.jpg"],
+        "nombre": "Dumont Nitro White",
         "categoria": "disenador",
         "marca": "Dumont",
         "genero": "masculino",
-        "descripcion": "Aroma fresco y cremoso para uso diario.",
-        "notas": { "salida": ["citrus", "lavanda"], "corazon": ["coco", "jazmin"], "fondo": ["almizcle", "madera"] },
-        "precio": 60000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": false },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Dumont/Dumont Nitro White/Dumont Nitro White.jpg"
+        ],
         "featured": false
     },
     {
-        "id": "emporio-armani-stronger-with-you",
+        "id": "jean-paul-gaultier",
+        "nombre": "Jean Paul Gaultier",
+        "categoria": "disenador",
+        "marca": "Masculino",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Jean Paul Gaultier_/33566c11-32d3-4d0b-8550-5b5a32775161.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "sauvage-dior-edt",
+        "nombre": "Sauvage Dior EDT",
+        "categoria": "disenador",
+        "marca": "Masculino",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Dior/Sauvage Dior edt.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "stronger-with-you",
         "nombre": "Stronger With You",
-        "imagenes": ["assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/8ec1d98e-2cce-4a98-80f6-845e02421385.png", "assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/1886c2da-50c7-48b8-a022-bf47253d3dc3.png"],
         "categoria": "disenador",
         "marca": "Emporio Armani",
         "genero": "masculino",
-        "descripcion": "Fragancia dulce y especiada con gran calidez.",
-        "notas": { "salida": ["castaña", "cardamomo"], "corazon": ["salvia"], "fondo": ["vainilla", "ambar"] },
-        "precio": 135000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 6800, "precio10ml": 12500 },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/1886c2da-50c7-48b8-a022-bf47253d3dc3.png",
+            "assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/8ec1d98e-2cce-4a98-80f6-845e02421385.png"
+        ],
         "featured": false
     },
     {
-        "id": "giorgio-armani-acqua-di-gio",
-        "nombre": "Acqua di Gio Parfum",
-        "imagenes": ["assets/Diseñador/Masculino/Giorgio_Armani/Aqua di Gio Parfum/Aqua di Gio Parfum.png"],
-        "categoria": "disenador",
-        "marca": "Giorgio Armani",
-        "genero": "masculino",
-        "descripcion": "Perfume marino, aromatico y refinado.",
-        "notas": { "salida": ["bergamota", "notas marinas"], "corazon": ["romero", "salvia"], "fondo": ["incienso", "maderas"] },
-        "precio": 145000,
-        "stock": true,
-        "decant": { "disponible": true, "precio5ml": 7300, "precio10ml": 13500 },
-        "featured": false
-    },
-    {
-        "id": "valentino-uomo-born-in-roma",
-        "nombre": "Uomo Born In Roma Intense",
-        "imagenes": ["assets/Diseñador/Masculino/Valentino/Valentin Uomo Born In Roma Intense/foto1.png", "assets/Diseñador/Masculino/Valentino/Valentin Uomo Born In Roma Intense/foto2.png"],
+        "id": "valentino-uomo-born-in-roma-intense",
+        "nombre": "Valentino Uomo Born In Roma Intense",
         "categoria": "disenador",
         "marca": "Valentino",
         "genero": "masculino",
-        "descripcion": "Aroma ambarado y elegante con vainilla intensa.",
-        "notas": { "salida": ["lavanda"], "corazon": ["salvia"], "fondo": ["vainilla", "vetiver"] },
-        "precio": 140000,
-        "stock": false,
-        "decant": { "disponible": true, "precio5ml": 7000, "precio10ml": 13000 },
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Valentino/Valentin Uomo Born In Roma Intense/foto1.png",
+            "assets/Diseñador/Masculino/Valentino/Valentin Uomo Born In Roma Intense/foto2.png"
+        ],
         "featured": false
     },
     {
         "id": "versace-eros",
         "nombre": "Versace Eros",
-        "imagenes": ["assets/Diseñador/Masculino/Versace/Versace Eros/Versace Eros.png"],
         "categoria": "disenador",
         "marca": "Versace",
         "genero": "masculino",
-        "descripcion": "Fragancia fresca y dulce con una base amaderada.",
-        "notas": { "salida": ["menta", "manzana", "limon"], "corazon": ["haba tonka", "geranio"], "fondo": ["vainilla", "cedro"] },
-        "precio": 115000,
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
         "stock": true,
-        "decant": { "disponible": true, "precio5ml": 5700, "precio10ml": 10500 },
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Versace/Versace Eros/Versace Eros.png"
+        ],
         "featured": false
     }
 ]
