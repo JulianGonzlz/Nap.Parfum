@@ -282,9 +282,13 @@ function abrirCatalogo() {
 
 // Las categorias, marcas y generos salen del JSON para aceptar valores nuevos.
 function renderizarFiltros() {
+	const totalPerfumes = new Set(perfumes.map((perfume) => perfume.id)).size;
 	const categorias = ["todos", ...new Set(perfumes.map((perfume) => perfume.categoria))];
 	categoryFilters.innerHTML = categorias.map((categoria) => {
-		const texto = categoria === "todos" ? "Todos" : nombreCategoria(categoria);
+		if (categoria === "todos") {
+			return `<button class="filter-button" type="button" data-category="${categoria}">Todos (${totalPerfumes})</button><div class="brand-list oculto" data-brands-for="${categoria}"></div>`;
+		}
+		const texto = nombreCategoria(categoria);
 		return `<button class="filter-button" type="button" data-category="${categoria}">${texto}</button><div class="brand-list oculto" data-brands-for="${categoria}"></div>`;
 	}).join("");
 
