@@ -22,11 +22,13 @@ let perfumes = [];
 let categoriaActiva = "todos";
 let marcaActiva = "";
 let generoActivo = "todos";
+let textoSearchActivo = "";
 let ultimaPosicionScroll = window.scrollY;
 let frameScrollPendiente = false;
 let temporizadorHeader;
 let temporizadorToast;
 let temporizadorOcultarToast;
+let temporizadorSearch;
 let scrollHaciaAbajo = false;
 
 function mostrarToast(mensaje) {
@@ -138,7 +140,15 @@ function cambiarImagen(evento) {
 
 // Convierte una lista de perfumes en tarjetas dentro del contenedor indicado.
 function mostrarPerfumes(lista, contenedor) {
-	contenedor.innerHTML = lista.length ? lista.map(crearTarjetaHTML).join("") : "<p>No hay perfumes para mostrar.</p>";
+	if (lista.length === 0) {
+		if (textoSearchActivo) {
+			contenedor.innerHTML = "<p>No se encontraron perfumes que coincidan con tu búsqueda.</p>";
+		} else {
+			contenedor.innerHTML = "<p>No hay perfumes para mostrar.</p>";
+		}
+	} else {
+		contenedor.innerHTML = lista.map(crearTarjetaHTML).join("");
+	}
 	// Conecta cada imagen despues de crear las tarjetas para que controle su propio producto.
 	contenedor.querySelectorAll(".perfume-image").forEach((imagen) => {
 		imagen.addEventListener("click", cambiarImagen);
@@ -253,13 +263,17 @@ function cerrarDrawers() {
 	actualizarEstadoDrawers();
 }
 
-// Combina categoria, marca y genero para que todos los filtros funcionen juntos.
+// Combina categoria, marca, genero y texto de busqueda para que todos los filtros funcionen juntos.
 function obtenerPerfumesFiltrados() {
+	const textoMinuscula = textoSearchActivo.toLowerCase();
 	return perfumes.filter((perfume) => {
 		const coincideCategoria = categoriaActiva === "todos" || perfume.categoria === categoriaActiva;
 		const coincideMarca = !marcaActiva || perfume.marca === marcaActiva;
 		const coincideGenero = generoActivo === "todos" || perfume.genero === generoActivo;
-		return coincideCategoria && coincideMarca && coincideGenero;
+		const coincideTexto = !textoMinuscula || 
+			perfume.nombre.toLowerCase().includes(textoMinuscula) || 
+			perfume.marca.toLowerCase().includes(textoMinuscula);
+		return coincideCategoria && coincideMarca && coincideGenero && coincideTexto;
 	});
 }
 
@@ -309,6 +323,8 @@ function alternarMarcas(categoria) {
 function seleccionarMarca(evento) {
 	categoriaActiva = evento.currentTarget.dataset.category;
 	marcaActiva = evento.currentTarget.dataset.brand;
+	textoSearchActivo = "";
+	if (searchInput) searchInput.value = "";
 	cerrarMenu();
 	abrirCatalogo();
 }
@@ -316,6 +332,8 @@ function seleccionarMarca(evento) {
 function seleccionarCategoria(evento) {
 	const categoria = evento.currentTarget.dataset.category;
 	marcaActiva = "";
+	textoSearchActivo = "";
+	if (searchInput) searchInput.value = "";
 	if (categoria === "todos") {
 		categoriaActiva = "todos";
 		cerrarMenu();
@@ -329,6 +347,8 @@ function seleccionarCategoria(evento) {
 
 function seleccionarGenero(evento) {
 	generoActivo = evento.currentTarget.dataset.gender;
+	textoSearchActivo = "";
+	if (searchInput) searchInput.value = "";
 	cerrarMenu();
 	abrirCatalogo();
 }
@@ -386,7 +406,17 @@ function manejarScroll() {
 	}, 150);
 }
 
+// Maneja la búsqueda con debounce simple para evitar filtrados excesivos.
+function manejarBusqueda(evento) {
+	textoSearchActivo = evento.currentTarget.value;
+	clearTimeout(temporizadorSearch);
+	temporizadorSearch = setTimeout(() => {
+		abrirCatalogo();
+	}, 150);
+}
+
 const logo = document.querySelector(".logo");
+const searchInput = document.getElementById("search-input");
 menuButton.addEventListener("click", cambiarMenu);
 cartButton.addEventListener("click", mostrarCarrito);
 cartBackButton.addEventListener("click", cerrarCarrito);
@@ -394,6 +424,9 @@ closeMenuButton.addEventListener("click", cerrarMenu);
 overlay.addEventListener("click", cerrarDrawers);
 if (logo) {
 	logo.addEventListener("click", manejarClickLogo);
+}
+if (searchInput) {
+	searchInput.addEventListener("input", manejarBusqueda);
 }
 window.addEventListener("scroll", manejarScroll, { passive: true });
 // El catalogo se carga al inicio para que las dos vistas usen los mismos datos.
