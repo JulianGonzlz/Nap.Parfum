@@ -366,6 +366,10 @@ function volverAlInicio() {
 	cerrarCarrito();
 	inicio.classList.remove("oculto");
 	destacados.classList.remove("oculto");
+	// Sincroniza los inputs cuando se vuelve al inicio
+	if (searchInput && searchInputHero) {
+		searchInputHero.value = searchInput.value;
+	}
 }
 
 function manejarClickLogo(evento) {
@@ -410,8 +414,17 @@ function manejarScroll() {
 }
 
 // Maneja la búsqueda con debounce simple para evitar filtrados excesivos.
+// Sincroniza ambos inputs (hero y catálogo) cuando se escribe en cualquiera.
 function manejarBusqueda(evento) {
 	textoSearchActivo = evento.currentTarget.value;
+	
+	// Sincroniza el valor entre ambos inputs
+	if (evento.currentTarget.id === "search-input-hero" && searchInput) {
+		searchInput.value = textoSearchActivo;
+	} else if (evento.currentTarget.id === "search-input" && searchInputHero) {
+		searchInputHero.value = textoSearchActivo;
+	}
+	
 	clearTimeout(temporizadorSearch);
 	temporizadorSearch = setTimeout(() => {
 		abrirCatalogo();
@@ -420,6 +433,7 @@ function manejarBusqueda(evento) {
 
 const logo = document.querySelector(".logo");
 const searchInput = document.getElementById("search-input");
+const searchInputHero = document.getElementById("search-input-hero");
 menuButton.addEventListener("click", cambiarMenu);
 cartButton.addEventListener("click", mostrarCarrito);
 cartBackButton.addEventListener("click", cerrarCarrito);
@@ -430,6 +444,9 @@ if (logo) {
 }
 if (searchInput) {
 	searchInput.addEventListener("input", manejarBusqueda);
+}
+if (searchInputHero) {
+	searchInputHero.addEventListener("input", manejarBusqueda);
 }
 window.addEventListener("scroll", manejarScroll, { passive: true });
 // El catalogo se carga al inicio para que las dos vistas usen los mismos datos.
