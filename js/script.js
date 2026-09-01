@@ -269,7 +269,10 @@ function obtenerPerfumesFiltrados() {
 	return perfumes.filter((perfume) => {
 		const coincideCategoria = categoriaActiva === "todos" || perfume.categoria === categoriaActiva;
 		const coincideMarca = !marcaActiva || perfume.marca === marcaActiva;
-		const coincideGenero = generoActivo === "todos" || perfume.genero === generoActivo;
+		// Los perfumes unisex aparecen también en filtros Masculino y Femenino, además de en Unisex y Todos
+		const coincideGenero = generoActivo === "todos" || 
+			perfume.genero === generoActivo || 
+			(perfume.genero === "unisex" && (generoActivo === "masculino" || generoActivo === "femenino"));
 		const coincideTexto = !textoMinuscula || 
 			perfume.nombre.toLowerCase().includes(textoMinuscula) || 
 			perfume.marca.toLowerCase().includes(textoMinuscula);
