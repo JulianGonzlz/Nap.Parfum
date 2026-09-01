@@ -1,0 +1,124 @@
+/* HEADER Y NAVEGACIÓN */
+header {
+    align-items: center;
+    display: flex;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
+    justify-content: space-between;
+    left: 0;
+    padding: clamp(0.75rem, 4vw, 1.5rem);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+header.glass {
+    border-radius: 0;
+}
+
+header.header-oculto {
+    transform: translateY(-100%);
+}
+
+.header-side,
+.logo {
+    flex: 1;
+}
+
+.header-side {
+    align-items: center;
+    display: flex;
+}
+
+.header-side-left {
+    justify-content: flex-start;
+}
+
+.header-side-right {
+    justify-content: flex-end;
+}
+
+.logo {
+    text-align: center;
+}
+
+#cart-button {
+    background: transparent;
+    border: 0;
+    color: var(--lilac-light);
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+    position: relative;
+}
+
+#cart-count {
+    background: var(--lilac);
+    border-radius: 999px;
+    color: var(--black);
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 0.1rem 0.35rem;
+    position: absolute;
+    right: -0.35rem;
+    top: -0.35rem;
+}
+
+.logo,
+h1,
+h2,
+h3,
+.perfume-name {
+    font-family: "Playfair Display", serif;
+}
+
+.logo {
+    color: var(--lilac-light);
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    overflow-wrap: anywhere;
+}
+
+#menu-button,
+#close-menu {
+    background: transparent;
+    border: 0;
+    color: var(--lilac-light);
+    flex: 0 0 auto;
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+}
+
+@keyframes flotar {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+#inicio {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: clamp(16rem, 60vw, 28rem);
+    padding: clamp(3rem, 14vw, 8rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 8vw, 4rem);
+    text-align: center;
+}
+
+.tagline {
+    animation: flotar 4s ease-in-out infinite;
+    color: var(--lilac);
+    font-family: "Cormorant", serif;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-style: italic;
+    overflow-wrap: anywhere;
+}
+
+#inicio h1 {
+    animation: flotar 4s ease-in-out 0.4s infinite;
+    font-size: clamp(1.8rem, 8vw, 3.5rem);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}

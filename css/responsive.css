@@ -1,0 +1,26 @@
+/* MEDIA QUERIES Y RESPONSIVE */
+
+/* En tablet se agregan columnas; el espaciado sigue creciendo de forma gradual. */
+@media (min-width: 768px) {
+    header,
+    #inicio,
+    #destacados,
+    #catalogo,
+    footer {
+        padding-left: clamp(2rem, 8vw, 6rem);
+        padding-right: clamp(2rem, 8vw, 6rem);
+    }
+
+    #featured-container,
+    #catalogo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tres columnas solo cuando el viewport tiene espacio suficiente para tarjetas legibles. */
+@media (min-width: 1100px) {
+    #featured-container,
+    #catalogo-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
