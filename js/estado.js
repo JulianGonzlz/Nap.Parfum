@@ -5,6 +5,7 @@
 // Referencias al DOM - elementos que se reutilizan en múltiples funciones
 const menuButton = document.getElementById("menu-button");
 const closeMenuButton = document.getElementById("close-menu");
+const menuHomeButton = document.getElementById("menu-home-button");
 const menuLateral = document.getElementById("menu-lateral");
 const overlay = document.getElementById("overlay");
 const inicio = document.getElementById("inicio");

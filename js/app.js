@@ -6,6 +6,7 @@ menuButton.addEventListener("click", cambiarMenu);
 cartButton.addEventListener("click", mostrarCarrito);
 cartBackButton.addEventListener("click", cerrarCarrito);
 closeMenuButton.addEventListener("click", cerrarMenu);
+menuHomeButton.addEventListener("click", manejarClickInicioMenu);
 overlay.addEventListener("click", cerrarDrawers);
 
 // Event listeners para header y scroll

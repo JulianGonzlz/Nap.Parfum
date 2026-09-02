@@ -41,6 +41,13 @@ function volverAlInicio() {
 	destacados.classList.remove("oculto");
 }
 
+// Vuelve al inicio desde el menu lateral: cierra el drawer y sube la vista
+function manejarClickInicioMenu() {
+	cerrarMenu();
+	volverAlInicio();
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 // Maneja el click en el logo para volver al inicio con scroll suave
 function manejarClickLogo(evento) {
 	evento.preventDefault();
