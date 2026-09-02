@@ -301,17 +301,22 @@ h2 {
 }
 
 .menu-home {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 #menu-lateral nav {
     display: grid;
-    gap: 0.75rem;
     min-width: 0;
 }
 
 #menu-lateral nav > * {
     min-width: 0;
+}
+
+/* La separacion se aplica por boton para que las sublistas de marcas
+   colapsadas no agreguen espacio extra entre categorias. */
+#menu-lateral nav .filter-button {
+    margin-bottom: 1.5rem;
 }
 
 .filter-button,
@@ -339,7 +344,7 @@ h2 {
     border-left: 1px solid rgba(201, 174, 224, 0.18);
     display: grid;
     gap: clamp(0.2rem, 1vw, 0.35rem);
-    margin: 0 0 clamp(0.45rem, 2vw, 0.8rem) clamp(0.7rem, 3vw, 1rem);
+    margin: 0 0 0 clamp(0.7rem, 3vw, 1rem);
     min-width: 0;
     padding-left: clamp(0.5rem, 2vw, 0.75rem);
     max-height: 0;
@@ -353,6 +358,7 @@ h2 {
     max-height: 1000px;
     opacity: 1;
     pointer-events: auto;
+    margin-bottom: clamp(0.45rem, 2vw, 0.8rem);
 }
 
 .brand-button {
