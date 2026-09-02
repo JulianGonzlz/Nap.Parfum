@@ -11,12 +11,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 58400,
+        "precio": 54600,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 4600,
-            "precio10ml": 9000
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Angham/e83f3561-981c-40d3-8a68-b217806b08c0.png",
@@ -36,12 +36,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 74500,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 7000,
+            "precio10ml": 13500
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Eclaire Lattafa/d399c227-6ea6-4f8d-a207-8acce1e3152d.png",
@@ -61,12 +61,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 65500,
+        "precio": 66000,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Nebras Lattafa/Nebras Lattafa.png"
@@ -85,12 +85,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 54800,
+        "precio": 51000,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 4300,
-            "precio10ml": 8500
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Noble Blush_/ba371672-c97c-4838-bbee-c579c909732f.png"
@@ -109,12 +109,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 45800,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Al_Wataniah/Sabah Al Ward/Sabah Al Ward.png"
@@ -133,12 +133,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 55000,
+        "precio": 53600,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 4300,
-            "precio10ml": 8500
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara Candy/49c6e564-fb80-41b0-870e-fe9846c13724.png",
@@ -162,8 +162,8 @@
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara elixir/Yara elixir.png"
@@ -182,12 +182,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 55000,
+        "precio": 53600,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara Moi/Yara Moi.png"
@@ -353,11 +353,11 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 78400,
+        "precio": 83300,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 6500,
+            "precio5ml": 7500,
             "precio10ml": 12500
         },
         "imagenes": [
@@ -382,8 +382,8 @@
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Asad Elixir/23918c1e-ace8-4f96-ab08-8a0c719e604d.png"
@@ -430,8 +430,8 @@
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 4400,
-            "precio10ml": 8500
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/6a16d21e-946d-4e70-90ae-c855c65033e8.png",
@@ -451,12 +451,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 67800,
+        "precio": 67900,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 7000,
+            "precio10ml": 13500
         },
         "imagenes": [
             "assets/Arabes/Masculino/Armaf/Club de nuit intense man/c5d7e2c9-4498-41dc-9284-1e0763a5d6cf.png"
@@ -475,12 +475,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 70000,
+        "precio": 78900,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 7000,
+            "precio10ml": 13500
         },
         "imagenes": [
             "assets/Arabes/Masculino/Armaf/Club de nuit Urban man/Club de nuit Urban man elixir.png"
@@ -668,12 +668,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 51200,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Honor and Glory/3bb69f72-b0bd-4d96-bbd1-f984b930ad18.png",
@@ -693,12 +693,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 55900,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Maison_Alh_Hambra/Jen Lowe inmortel/d45c5955-3ca1-4030-84fe-f9804ad5c6dc.png"
@@ -722,7 +722,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 13500
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Khamrah/Khamrah.jpg",
@@ -790,12 +790,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 59000,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11500
         },
         "imagenes": [
             "assets/Arabes/Masculino/Armaf/Mandarin Sky_/44ac56d7-c528-4be6-88c9-768a581db4f1.png"
@@ -814,12 +814,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 53300,
+        "precio": 51200,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 4000,
-            "precio10ml": 7500
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Oud for Glory/Oud for Glory .jpg",
@@ -839,12 +839,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 46300,
+        "precio": 43200,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 3800,
-            "precio10ml": 7000
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/0b0bb6d7-5561-4d28-8a3a-f2450b494c8f.png",
@@ -893,7 +893,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 8500,
-            "precio10ml": 15000
+            "precio10ml": 16500
         },
         "imagenes": [
             "assets/Arabes/Masculino/RAYHAAN/RayHaan Italia/5bea1b52-cc79-4c9f-9f84-8cb7979dc0e2.png"
@@ -912,12 +912,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 58900,
+        "precio": 58400,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/e3925aff-0c91-44dd-8a89-244da010e904.png",
@@ -942,7 +942,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 10000,
-            "precio10ml": 18000
+            "precio10ml": 19000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Afnan/Supremacy Collector edition/Supremacy Collector edition.png"
@@ -961,12 +961,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 58800,
+        "precio": 58900,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/The Kindom/6202ee93-6396-43a7-a921-f3d062ec1221.png",
@@ -1058,12 +1058,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 36400,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Unisex/Qued al Fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png",
@@ -1107,12 +1107,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 58800,
+        "precio": 58900,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Unisex/Lattafa/The Kindom Lattafa/The Kindom Lattafa.png",
@@ -1132,12 +1132,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 217600,
+        "precio": 214700,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 18000,
+            "precio10ml": 25500
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Giorgio_Armani/Aqua di Gio Parfum/Aqua di Gio Parfum.png"
@@ -1156,12 +1156,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 218000,
+        "precio": 225600,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 18000,
+            "precio10ml": 35500
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Dior/Dior Homme Intense Parfum/Dior Homme Intense Parfum.png"
@@ -1180,7 +1180,7 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 70000,
+        "precio": 72000,
         "stock": true,
         "decant": {
             "disponible": true,
@@ -1252,12 +1252,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 180000,
+        "precio": 192800,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 16000,
+            "precio10ml": 31000
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/1886c2da-50c7-48b8-a022-bf47253d3dc3.png",
@@ -1277,12 +1277,12 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 259000,
+        "precio": 262900,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 20700,
-            "precio10ml": 39400
+            "precio5ml": 20900,
+            "precio10ml": 40400
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Valentino/Valentin Uomo Born In Roma Intense/foto1.png",
@@ -1302,7 +1302,7 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 150000,
+        "precio": 151200,
         "stock": true,
         "decant": {
             "disponible": true,
