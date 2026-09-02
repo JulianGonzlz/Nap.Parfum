@@ -26,7 +26,11 @@ function nombreCategoria(categoria) {
 // Muestra solo la pantalla de catalogo y conserva los filtros en su titulo.
 function abrirCatalogo() {
 	const lista = obtenerPerfumesFiltrados();
-	const partesRuta = ["Catálogo", categoriaActiva === "todos" ? "Todos" : nombreCategoria(categoriaActiva)];
+	const partesRuta = ["Catálogo"];
+	// "Todos" solo se muestra cuando no hay ningun otro filtro que nombrar,
+	// asi un filtro de genero queda como "Catálogo / Masculino" y no "Catálogo / Todos / Masculino".
+	if (categoriaActiva !== "todos") partesRuta.push(nombreCategoria(categoriaActiva));
+	else if (generoActivo === "todos") partesRuta.push("Todos");
 	if (marcaActiva) partesRuta.push(marcaActiva);
 	if (generoActivo !== "todos") partesRuta.push(generoActivo);
 	catalogoTitulo.innerHTML = partesRuta.map((parte, indice) => `${indice ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : ""}<span>${parte}</span>`).join("");
@@ -53,11 +57,22 @@ function renderizarFiltros() {
 	conectarFiltros();
 }
 
+// Deja todas las sublistas de marcas en su estado por defecto (cerradas).
+// Se usa al resetear la categoria para no dejar visibles marcas de una categoria que ya no esta activa.
+function cerrarMarcas(exceptoCategoria) {
+	categoryFilters.querySelectorAll(".brand-list").forEach((brandList) => {
+		if (brandList.dataset.brandsFor === exceptoCategoria) return;
+		brandList.classList.remove("desplegado");
+	});
+}
+
 // Al abrir una categoria, se muestran sus marcas unicas debajo del boton correspondiente.
 function alternarMarcas(categoria) {
 	const brandList = document.querySelector(`[data-brands-for="${categoria}"]`);
 	const marcas = [...new Set(perfumes.filter((perfume) => perfume.categoria === categoria).map((perfume) => perfume.marca))];
 	brandList.innerHTML = marcas.map((marca) => `<button class="brand-button" type="button" data-category="${categoria}" data-brand="${marca}">${marca}</button>`).join("");
+	// Solo una categoria puede tener su sublista abierta a la vez
+	cerrarMarcas(categoria);
 	// Toggle entre mostrado y ocultado
 	brandList.classList.toggle("desplegado");
 	brandList.querySelectorAll(".brand-button").forEach((boton) => boton.addEventListener("click", seleccionarMarca));
@@ -83,17 +98,22 @@ function seleccionarCategoria(evento) {
 	if (categoria === "todos") {
 		categoriaActiva = "todos";
 		marcaActiva = "";
+		generoActivo = "todos";
 		textoSearchActivo = "";
 		if (searchInput) searchInput.value = "";
+		cerrarMarcas();
 		cerrarMenu();
 		abrirCatalogo();
 		return;
 	}
 
 	// Para categorías específicas (Árabe, Diseñador):
-	// Solo alterna (abre/cierra) el acordeón de marcas, sin cerrar el menú
+	// Elegir categoría se aplica de forma independiente: resetea el género a "Todos".
+	// La marca no se toca acá porque el usuario puede querer elegir una marca de esta categoría a continuación.
+	// Solo alterna (abre/cierra) el acordeón de marcas, sin cerrar el menú.
 	categoriaActiva = categoria;
 	marcaActiva = "";
+	generoActivo = "todos";
 	textoSearchActivo = "";
 	if (searchInput) searchInput.value = "";
 	alternarMarcas(categoria);
@@ -104,9 +124,14 @@ function seleccionarGenero(evento) {
 	// Detiene la propagación del evento para evitar que burbujee hacia el overlay
 	evento.stopPropagation();
 	
+	// El genero se aplica de forma independiente: resetea categoria y marca para
+	// mostrar todos los perfumes de ese genero sin importar categoria ni marca.
 	generoActivo = evento.currentTarget.dataset.gender;
+	categoriaActiva = "todos";
+	marcaActiva = "";
 	textoSearchActivo = "";
 	if (searchInput) searchInput.value = "";
+	cerrarMarcas();
 	cerrarMenu();
 	abrirCatalogo();
 }

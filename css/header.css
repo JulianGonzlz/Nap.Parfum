@@ -22,7 +22,7 @@ header.header-oculto {
 }
 
 .header-side,
-.logo {
+.header-search {
     flex: 1;
 }
 
@@ -39,8 +39,11 @@ header.header-oculto {
     justify-content: flex-end;
 }
 
-.logo {
-    text-align: center;
+/* La barra de busqueda ocupa el centro del header (antes ahi estaba el logo). */
+header .search-container {
+    margin: 0;
+    max-width: none;
+    padding: 0;
 }
 
 #cart-button {
@@ -63,18 +66,11 @@ header.header-oculto {
     top: -0.35rem;
 }
 
-.logo,
 h1,
 h2,
 h3,
 .perfume-name {
     font-family: "Playfair Display", serif;
-}
-
-.logo {
-    color: var(--lilac-light);
-    font-size: clamp(1.1rem, 4vw, 1.5rem);
-    overflow-wrap: anywhere;
 }
 
 #menu-button,
