@@ -1041,9 +1041,9 @@
     },
     {
         "id": "french-avenui",
-        "nombre": "French Avenui",
+        "nombre": "Vulcan Feu",
         "categoria": "arabe",
-        "marca": "Unisex",
+        "marca": "French Avenue",
         "genero": "unisex",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
@@ -1295,7 +1295,7 @@
         "id": "stronger-with-you",
         "nombre": "Stronger With You",
         "categoria": "disenador",
-        "marca": "Emporio Armani",
+        "marca": "Giorgio Armani",
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
@@ -1312,8 +1312,8 @@
             "precio10ml": 31000
         },
         "imagenes": [
-            "assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/1886c2da-50c7-48b8-a022-bf47253d3dc3.png",
-            "assets/Diseñador/Masculino/Emporio_Armani/Stronger Wiht You/8ec1d98e-2cce-4a98-80f6-845e02421385.png"
+            "assets/Diseñador/Masculino/Giorgio_Armani/Stronger Wiht You/1886c2da-50c7-48b8-a022-bf47253d3dc3.png",
+            "assets/Diseñador/Masculino/Giorgio_Armani/Stronger Wiht You/8ec1d98e-2cce-4a98-80f6-845e02421385.png"
         ],
         "featured": false
     },
