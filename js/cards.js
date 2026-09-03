@@ -19,11 +19,8 @@ function crearTarjetaHTML(perfume) {
 			<h3 class="perfume-name">${perfume.nombre}</h3>
 			<p class="description">${perfume.descripcion}</p>
 			<div class="cart-actions">
-				<button class="add-cart-button glass" type="button" data-id="${perfume.id}" aria-label="Agregar ${perfume.nombre} al carrito">$${perfume.precio.toLocaleString("es-AR")}</button>
+				<button class="add-cart-button glass" type="button" data-id="${perfume.id}" aria-label="Agregar ${perfume.nombre} al carrito">Sellado ${perfume.ml}ml · $${perfume.precio.toLocaleString("es-AR")}</button>
 				${opcionesHTML}
-			</div>
-			<div class="card-footer">
-				<span class="price">Producto entero sellado (${perfume.ml} ml)</span>
 			</div>
 		</article>`;
 }

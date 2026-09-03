@@ -12,7 +12,7 @@
             "fondo": []
         },
         "precio": 54600,
-        "ml": 100,
+        "ml": 105,
         "stock": true,
         "decant": {
             "disponible": true,
@@ -1110,8 +1110,8 @@
             "precio10ml": 11000
         },
         "imagenes": [
-            "assets/Arabes/Unisex/Qued al Fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png",
-            "assets/Arabes/Unisex/Qued al Fursan/Quaed al fursal Unlimited_/c532b6a7-44ae-4b56-b2b6-619cb68fd444.png"
+            "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png",
+            "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/c532b6a7-44ae-4b56-b2b6-619cb68fd444.png"
         ],
         "featured": false
     },
@@ -1217,6 +1217,31 @@
         "featured": false
     },
     {
+        "id": "sauvage-dior-edt",
+        "nombre": "Sauvage Dior EDT",
+        "categoria": "disenador",
+        "marca": "Dior",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 0,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 0,
+            "precio10ml": 0
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Dior/Sauvage Dior edt.png"
+        ],
+        "featured": false
+    },
+    {
         "id": "dumont-nitro-white",
         "nombre": "Dumont Nitro White",
         "categoria": "disenador",
@@ -1243,9 +1268,9 @@
     },
     {
         "id": "jean-paul-gaultier",
-        "nombre": "Jean Paul Gaultier",
+        "nombre": "Le Male le Parfum",
         "categoria": "disenador",
-        "marca": "Masculino",
+        "marca": "Jean Paul Gaultier",
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
@@ -1253,41 +1278,16 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 55900,
+        "precio": 164600,
         "ml": 125,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 4400,
-            "precio10ml": 5200
+            "precio5ml": 15000,
+            "precio10ml": 26000
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Jean Paul Gaultier_/33566c11-32d3-4d0b-8550-5b5a32775161.png"
-        ],
-        "featured": false
-    },
-    {
-        "id": "sauvage-dior-edt",
-        "nombre": "Sauvage Dior EDT",
-        "categoria": "disenador",
-        "marca": "Masculino",
-        "genero": "masculino",
-        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
-        "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
-        },
-        "precio": 0,
-        "ml": 100,
-        "stock": true,
-        "decant": {
-            "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
-        },
-        "imagenes": [
-            "assets/Diseñador/Masculino/Dior/Sauvage Dior edt.png"
         ],
         "featured": false
     },
