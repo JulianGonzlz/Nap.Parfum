@@ -12,7 +12,7 @@
             "fondo": []
         },
         "precio": 54600,
-        "ml": 105,
+        "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
@@ -27,7 +27,7 @@
     },
     {
         "id": "eclaire-lattafa",
-        "nombre": "Eclaire Lattafa",
+        "nombre": "Eclaire",
         "categoria": "arabe",
         "marca": "Lattafa",
         "genero": "femenino",
@@ -43,7 +43,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 7000,
-            "precio10ml": 13500
+            "precio10ml": 13000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Eclaire Lattafa/d399c227-6ea6-4f8d-a207-8acce1e3152d.png",
@@ -53,7 +53,7 @@
     },
     {
         "id": "nebras-lattafa",
-        "nombre": "Nebras Lattafa",
+        "nombre": "Nebras Pride",
         "categoria": "arabe",
         "marca": "Lattafa",
         "genero": "femenino",
@@ -68,8 +68,8 @@
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio5ml": 7000,
+            "precio10ml": 12000
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Nebras Lattafa/Nebras Lattafa.png"
@@ -94,7 +94,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Noble Blush_/ba371672-c97c-4838-bbee-c579c909732f.png"
@@ -119,7 +119,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Al_Wataniah/Sabah Al Ward/Sabah Al Ward.png"
@@ -144,7 +144,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara Candy/49c6e564-fb80-41b0-870e-fe9846c13724.png",
@@ -170,7 +170,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara elixir/Yara elixir.png"
@@ -195,7 +195,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara Moi/Yara Moi.png"
@@ -214,13 +214,13 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 59100,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara Rosa/38c6ddff-6f99-4c6c-81c0-65f9c3f50c13.png"
@@ -239,13 +239,13 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 53600,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Yara Tous/ba696a40-90a2-487e-82b2-bde4ca265c0b.png"
@@ -270,7 +270,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11500
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Afnan/9PM/9PM.jpg",
@@ -296,7 +296,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 7000,
-            "precio10ml": 13500
+            "precio10ml": 13000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Afnan/9PM Elixir/9PM Elixir_.png",
@@ -322,7 +322,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 8500,
-            "precio10ml": 16500
+            "precio10ml": 15000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Afnan/9PM Night Out/9PM Night Out.png",
@@ -348,7 +348,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11500
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Asad/f9dd996e-2340-49d5-9658-0c5f3da403b3.png"
@@ -373,7 +373,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 7500,
-            "precio10ml": 12500
+            "precio10ml": 13000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Asad Bourboun/0777d61b-000e-44ed-97ee-97bf202c0cd1.png",
@@ -399,7 +399,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Asad Elixir/23918c1e-ace8-4f96-ab08-8a0c719e604d.png"
