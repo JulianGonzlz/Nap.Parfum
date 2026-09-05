@@ -17,7 +17,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Femenino/Lattafa/Angham/e83f3561-981c-40d3-8a68-b217806b08c0.png",
@@ -828,7 +828,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11500
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Armaf/Mandarin Sky_/44ac56d7-c528-4be6-88c9-768a581db4f1.png"
@@ -955,7 +955,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/e3925aff-0c91-44dd-8a89-244da010e904.png",
@@ -981,7 +981,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 10000,
-            "precio10ml": 19000
+            "precio10ml": 17000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Afnan/Supremacy Collector edition/Supremacy Collector edition.png"
