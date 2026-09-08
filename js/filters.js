@@ -55,8 +55,10 @@ function construirTituloCatalogo() {
 	if (preciosActivos.size) {
 		partes.push(RANGOS_PRECIO.filter((rango) => preciosActivos.has(rango.clave)).map((rango) => rango.etiqueta).join(", "));
 	}
-	// "Todos" solo aparece si no hay ningun otro filtro ni busqueda que nombrar.
-	if (partes.length === 1 && !textoSearchActivo) partes.push("Todos");
+	// La búsqueda no convive con los filtros: si hay texto, es lo único que se nombra.
+	if (textoSearchActivo) partes.push(`"${textoSearchActivo}"`);
+	// "Todos" solo aparece si no hay ningun filtro ni busqueda que nombrar.
+	if (partes.length === 1) partes.push("Todos");
 	return partes;
 }
 
@@ -160,6 +162,11 @@ function manejarCambioFiltro(evento) {
 	const conjunto = conjuntoDeGrupo(input.dataset.grupo);
 	if (input.checked) conjunto.add(input.value);
 	else conjunto.delete(input.value);
+	// Los filtros no conviven con la búsqueda: al tocar un filtro se descarta el texto.
+	if (textoSearchActivo) {
+		textoSearchActivo = "";
+		if (searchInput) searchInput.value = "";
+	}
 	actualizarResumenFiltros();
 }
 
@@ -200,16 +207,21 @@ function limpiarFiltros() {
 	sincronizarCheckboxesFiltro();
 }
 
-// Panel "Filtrar": muestra el catalogo completo sin ningun filtro.
-function verTodosLosPerfumes() {
+// Deja todos los filtros (categoria de Explorar + panel Filtrar) en su estado inicial.
+function reiniciarFiltros() {
 	categoriaActiva = "todos";
 	generosActivos.clear();
 	marcasActivas.clear();
 	preciosActivos.clear();
-	textoSearchActivo = "";
-	if (searchInput) searchInput.value = "";
 	cerrarMarcas();
 	sincronizarCheckboxesFiltro();
+}
+
+// Panel "Filtrar": muestra el catalogo completo sin ningun filtro.
+function verTodosLosPerfumes() {
+	reiniciarFiltros();
+	textoSearchActivo = "";
+	if (searchInput) searchInput.value = "";
 	cerrarMenu();
 	abrirCatalogo();
 }
@@ -222,8 +234,10 @@ function conectarFiltros() {
 }
 
 // Maneja la búsqueda con debounce simple para evitar filtrados excesivos.
+// La barra de búsqueda es independiente de los filtros: al escribir, se reinician.
 function manejarBusqueda(evento) {
 	textoSearchActivo = evento.currentTarget.value;
+	reiniciarFiltros();
 	clearTimeout(temporizadorSearch);
 	temporizadorSearch = setTimeout(() => {
 		abrirCatalogo();
