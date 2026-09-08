@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -36,10 +37,35 @@
         <button id="close-menu" type="button" aria-label="Cerrar menu">×</button>
         <h2>Explorar</h2>
         <button id="menu-home-button" type="button" class="filter-button menu-home">Volver al inicio</button>
+        <button id="menu-faq-button" type="button" class="filter-button menu-faq">Preguntas frecuentes</button>
+        <h3 class="menu-subtitulo">Categoría</h3>
         <nav id="category-filters" aria-label="Filtros por categoria"></nav>
-        <div class="gender-filter">
-            <h3>Género</h3>
-            <div id="gender-filters" class="gender-buttons"></div>
+        <div class="filtrar-panel">
+            <h3>Filtrar</h3>
+            <button id="ver-todos-button" type="button" class="filter-button ver-todos">Ver todos</button>
+            <div class="filtro-grupo" data-grupo="genero">
+                <button class="filtro-toggle" type="button" aria-expanded="false">
+                    <span>Género</span>
+                    <span class="filtro-badge" aria-hidden="true" hidden></span>
+                </button>
+                <div id="filtro-genero" class="filtro-opciones"></div>
+            </div>
+            <div class="filtro-grupo" data-grupo="marca">
+                <button class="filtro-toggle" type="button" aria-expanded="false">
+                    <span>Marca</span>
+                    <span class="filtro-badge" aria-hidden="true" hidden></span>
+                </button>
+                <div id="filtro-marca" class="filtro-opciones"></div>
+            </div>
+            <div class="filtro-grupo" data-grupo="precio">
+                <button class="filtro-toggle" type="button" aria-expanded="false">
+                    <span>Precio</span>
+                    <span class="filtro-badge" aria-hidden="true" hidden></span>
+                </button>
+                <div id="filtro-precio" class="filtro-opciones"></div>
+            </div>
+            <button id="aplicar-filtros-button" type="button" class="filter-button aplicar-filtros" hidden>Ver resultados</button>
+            <button id="limpiar-filtros-button" type="button" class="filtro-limpiar" hidden>Limpiar filtros</button>
         </div>
         <div class="menu-contactos" aria-label="Contactos de NAP Parfum">
             <a class="menu-contact whatsapp-contact" href="https://wa.me/5492284232681" target="_blank" rel="noopener noreferrer">
@@ -72,6 +98,45 @@
             <h2 id="catalogo-titulo">Catálogo</h2>
             <div id="catalogo-container">
                 <!-- JavaScript inyectara aqui los perfumes filtrados. -->
+            </div>
+        </section>
+
+        <section id="preguntas-frecuentes" class="oculto">
+            <!-- Vista independiente con las preguntas frecuentes, se abre desde el menu lateral. -->
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-lista">
+                <details class="faq-item">
+                    <summary>¿Qué es un decant?</summary>
+                    <p>Es una fracción del perfume original trasvasada a un frasco atomizador más pequeño (por ejemplo 5 ml o 10 ml). Te permite probar una fragancia o llevarla en el bolso sin comprar el frasco completo.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Los perfumes son originales?</summary>
+                    <p>Sí. Trabajamos únicamente con perfumes 100% originales, tanto árabes como de diseñador. Los decants se preparan a partir de esos mismos frascos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Hacen envíos?</summary>
+                    <p>Sí, hacemos envíos a todo el país. El costo depende de la localidad y del correo elegido. Coordinamos todo por WhatsApp una vez confirmado el pedido.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cómo hago un pedido?</summary>
+                    <p>Agregá los productos al carrito y envianos la consulta por WhatsApp desde el mismo carrito. Te confirmamos disponibilidad, precio final y forma de envío.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Qué medios de pago aceptan?</summary>
+                    <p>Aceptamos transferencia bancaria y efectivo. El pago se coordina por WhatsApp; no se abona a través de la web.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuánto dura una fragancia en la piel?</summary>
+                    <p>Depende de la concentración y del tipo de piel, pero en general entre 4 y 10 horas. Los perfumes árabes y las versiones Parfum o Extrait suelen tener mayor duración y proyección.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo cambiar o devolver un decant?</summary>
+                    <p>Por tratarse de un producto fraccionado, los decants no tienen cambio. Si tenés dudas sobre una fragancia, escribinos antes de comprar y te asesoramos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Tienen local físico?</summary>
+                    <p>Vendemos de forma online y coordinamos entregas por la zona. Escribinos por WhatsApp o Instagram para consultar puntos de entrega.</p>
+                </details>
             </div>
         </section>
 

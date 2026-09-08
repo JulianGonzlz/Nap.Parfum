@@ -6,16 +6,23 @@
 const menuButton = document.getElementById("menu-button");
 const closeMenuButton = document.getElementById("close-menu");
 const menuHomeButton = document.getElementById("menu-home-button");
+const menuFaqButton = document.getElementById("menu-faq-button");
 const menuLateral = document.getElementById("menu-lateral");
 const overlay = document.getElementById("overlay");
 const inicio = document.getElementById("inicio");
 const destacados = document.getElementById("destacados");
 const catalogo = document.getElementById("catalogo");
+const preguntasFrecuentes = document.getElementById("preguntas-frecuentes");
 const featuredContainer = document.getElementById("featured-container");
 const catalogoContainer = document.getElementById("catalogo-container");
 const catalogoTitulo = document.getElementById("catalogo-titulo");
 const categoryFilters = document.getElementById("category-filters");
-const genderFilters = document.getElementById("gender-filters");
+const filtroGeneroContenedor = document.getElementById("filtro-genero");
+const filtroMarcaContenedor = document.getElementById("filtro-marca");
+const filtroPrecioContenedor = document.getElementById("filtro-precio");
+const verTodosButton = document.getElementById("ver-todos-button");
+const aplicarFiltrosButton = document.getElementById("aplicar-filtros-button");
+const limpiarFiltrosButton = document.getElementById("limpiar-filtros-button");
 const cartButton = document.getElementById("cart-button");
 const cartCount = document.getElementById("cart-count");
 const carrito = document.getElementById("carrito");
@@ -28,9 +35,12 @@ const searchInput = document.getElementById("search-input");
 
 // Estado de la aplicación
 let perfumes = [];
+// categoriaActiva viene del bloque "Explorar" (Árabe / Diseñador). Los demás filtros
+// del panel "Filtrar" son de selección múltiple y se acumulan entre sí.
 let categoriaActiva = "todos";
-let marcaActiva = "";
-let generoActivo = "todos";
+let marcasActivas = new Set();
+let generosActivos = new Set();
+let preciosActivos = new Set();
 let textoSearchActivo = "";
 
 // Estado del scroll y header
