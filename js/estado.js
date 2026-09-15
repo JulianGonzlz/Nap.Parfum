@@ -21,7 +21,6 @@ const filtroGeneroContenedor = document.getElementById("filtro-genero");
 const filtroMarcaContenedor = document.getElementById("filtro-marca");
 const filtroPrecioContenedor = document.getElementById("filtro-precio");
 const verTodosButton = document.getElementById("ver-todos-button");
-const aplicarFiltrosButton = document.getElementById("aplicar-filtros-button");
 const limpiarFiltrosButton = document.getElementById("limpiar-filtros-button");
 const cartButton = document.getElementById("cart-button");
 const cartCount = document.getElementById("cart-count");

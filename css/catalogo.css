@@ -576,24 +576,6 @@ h2 {
     outline-offset: 2px;
 }
 
-.aplicar-filtros {
-    background: var(--brand-gradient);
-    border-color: rgb(var(--lilac-light-rgb) / 0.45);
-    box-shadow: 0 10px 26px rgb(var(--black-rgb) / 0.35);
-    color: var(--black);
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    margin-top: 0.15rem;
-    padding: 0.85rem 1rem;
-    text-align: center;
-}
-
-.aplicar-filtros:hover {
-    color: var(--black);
-    filter: brightness(1.06);
-    transform: translateY(-1px);
-}
-
 .filtro-limpiar {
     background: transparent;
     border: 0;

@@ -157,7 +157,8 @@ function alternarGrupoFiltro(evento) {
 	evento.currentTarget.setAttribute("aria-expanded", String(abierto));
 }
 
-// Panel "Filtrar": marca/desmarca una opcion y actualiza el resumen.
+// Panel "Filtrar": marca/desmarca una opcion y aplica el filtro al instante.
+// El menu queda abierto para seguir combinando filtros.
 function manejarCambioFiltro(evento) {
 	const input = evento.target;
 	if (!input.matches('input[type="checkbox"]')) return;
@@ -170,6 +171,7 @@ function manejarCambioFiltro(evento) {
 		if (searchInput) searchInput.value = "";
 	}
 	actualizarResumenFiltros();
+	abrirCatalogo();
 }
 
 // Refleja el estado de los Set en los checkboxes y en los contadores.
@@ -180,7 +182,7 @@ function sincronizarCheckboxesFiltro() {
 	actualizarResumenFiltros();
 }
 
-// Actualiza los badges por grupo, el conteo de resultados y la visibilidad de las acciones.
+// Actualiza los badges por grupo y muestra "Limpiar filtros" solo si hay alguno activo.
 function actualizarResumenFiltros() {
 	const conteos = { genero: generosActivos.size, marca: marcasActivas.size, precio: preciosActivos.size };
 	document.querySelectorAll(".filtro-grupo").forEach((grupo) => {
@@ -190,23 +192,17 @@ function actualizarResumenFiltros() {
 		badge.hidden = cantidad === 0;
 	});
 	const totalFiltros = conteos.genero + conteos.marca + conteos.precio;
-	aplicarFiltrosButton.textContent = `Ver resultados (${obtenerPerfumesFiltrados().length})`;
-	aplicarFiltrosButton.hidden = totalFiltros === 0;
 	limpiarFiltrosButton.hidden = totalFiltros === 0;
 }
 
-// Panel "Filtrar": aplica la seleccion actual y muestra el catalogo.
-function aplicarFiltros() {
-	cerrarMenu();
-	abrirCatalogo();
-}
-
-// Panel "Filtrar": limpia genero, marca y precio (mantiene la categoria de Explorar).
+// Panel "Filtrar": limpia genero, marca y precio (mantiene la categoria de Explorar)
+// y refresca el catalogo con el resultado.
 function limpiarFiltros() {
 	generosActivos.clear();
 	marcasActivas.clear();
 	preciosActivos.clear();
 	sincronizarCheckboxesFiltro();
+	abrirCatalogo();
 }
 
 // Deja todos los filtros (categoria de Explorar + panel Filtrar) en su estado inicial.

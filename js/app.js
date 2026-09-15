@@ -9,7 +9,6 @@ closeMenuButton.addEventListener("click", cerrarMenu);
 menuHomeButton.addEventListener("click", manejarClickInicioMenu);
 menuFaqButton.addEventListener("click", abrirPreguntasFrecuentes);
 verTodosButton.addEventListener("click", verTodosLosPerfumes);
-aplicarFiltrosButton.addEventListener("click", aplicarFiltros);
 limpiarFiltrosButton.addEventListener("click", limpiarFiltros);
 overlay.addEventListener("click", cerrarDrawers);
 
