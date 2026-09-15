@@ -33,6 +33,12 @@ const header = document.querySelector("header");
 const logo = document.querySelector(".logo");
 const searchInput = document.getElementById("search-input");
 
+// Seguridad: todo texto que se inserte con innerHTML debe pasar por aca para evitar inyeccion de HTML (XSS).
+const ENTIDADES_HTML = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+function escaparHTML(valor) {
+	return String(valor ?? "").replace(/[&<>"']/g, (caracter) => ENTIDADES_HTML[caracter]);
+}
+
 // Estado de la aplicación
 let perfumes = [];
 // categoriaActiva viene del bloque "Explorar" (Árabe / Diseñador). Los demás filtros

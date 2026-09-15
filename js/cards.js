@@ -4,25 +4,34 @@
 // Una sola plantilla evita repetir el marcado de las tarjetas en ambas vistas.
 function crearTarjetaHTML(perfume) {
 	const claseStock = perfume.stock ? "" : " sin-stock";
-	const imagenes = Array.isArray(perfume.imagenes) ? perfume.imagenes : [];
+	const imagenes = Array.isArray(perfume.imagenes) ? perfume.imagenes.map(String) : [];
+	const id = escaparHTML(perfume.id);
+	const nombre = escaparHTML(perfume.nombre);
+	const decant = perfume.decant || {};
 	const indicadorHTML = imagenes.length > 1 ? `<span class="image-indicator" aria-hidden="true">1/${imagenes.length}</span>` : "";
 	const imagenHTML = imagenes.length
-		? `<div class="image-container"><img class="perfume-image${imagenes.length > 1 ? " imagen-rotativa" : ""}" src="${imagenes[0]}" alt="${perfume.nombre}" data-id="${perfume.id}" data-indice="0" data-imagenes='${JSON.stringify(imagenes)}'>${indicadorHTML}<div class="image-placeholder oculto" aria-hidden="true">◎</div></div>`
+		? `<div class="image-container"><img class="perfume-image${imagenes.length > 1 ? " imagen-rotativa" : ""}" src="${escaparHTML(imagenes[0])}" alt="${nombre}" data-id="${id}" data-indice="0" data-imagenes="${escaparHTML(JSON.stringify(imagenes))}">${indicadorHTML}<div class="image-placeholder oculto" aria-hidden="true">◎</div></div>`
 		: `<div class="image-placeholder" aria-label="Imagen no disponible">◎</div>`;
-	const opcionesHTML = perfume.decant.disponible
-		? `<div class="cart-options"><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant5ml">Decant 5ml · $${perfume.decant.precio5ml.toLocaleString("es-AR")}</button><button class="cart-option" type="button" data-id="${perfume.id}" data-type="decant10ml">Decant 10ml · $${perfume.decant.precio10ml.toLocaleString("es-AR")}</button></div>`
+	const opcionesHTML = decant.disponible
+		? `<div class="cart-options"><button class="cart-option" type="button" data-id="${id}" data-type="decant5ml">Decant 5ml · $${formatearPrecio(decant.precio5ml)}</button><button class="cart-option" type="button" data-id="${id}" data-type="decant10ml">Decant 10ml · $${formatearPrecio(decant.precio10ml)}</button></div>`
 		: "";
 	return `
 		<article class="perfume-card${claseStock}">
 			${imagenHTML}
-			<span class="category">${perfume.categoria} · ${perfume.marca} · ${perfume.genero}</span>
-			<h3 class="perfume-name">${perfume.nombre}</h3>
-			<p class="description">${perfume.descripcion}</p>
+			<span class="category">${escaparHTML(perfume.categoria)} · ${escaparHTML(perfume.marca)} · ${escaparHTML(perfume.genero)}</span>
+			<h3 class="perfume-name">${nombre}</h3>
+			<p class="description">${escaparHTML(perfume.descripcion)}</p>
 			<div class="cart-actions">
-				<button class="add-cart-button glass" type="button" data-id="${perfume.id}" aria-label="Agregar ${perfume.nombre} al carrito">Sellado ${perfume.ml}ml · $${perfume.precio.toLocaleString("es-AR")}</button>
+				<button class="add-cart-button glass" type="button" data-id="${id}" aria-label="Agregar ${nombre} al carrito">Sellado ${escaparHTML(perfume.ml)}ml · $${formatearPrecio(perfume.precio)}</button>
 				${opcionesHTML}
 			</div>
 		</article>`;
+}
+
+// Formatea un precio como numero; cualquier valor invalido se muestra como 0.
+function formatearPrecio(valor) {
+	const numero = Number(valor);
+	return (Number.isFinite(numero) ? numero : 0).toLocaleString("es-AR");
 }
 
 // Avanza a la siguiente imagen del producto y vuelve a la primera al llegar al final.

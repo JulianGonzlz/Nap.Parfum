@@ -16,11 +16,45 @@ function mostrarToast(mensaje) {
 
 // Estas dos funciones son las únicas que acceden directamente al carrito guardado en el navegador.
 function leerCarrito() {
+	let guardado;
 	try {
-		return JSON.parse(localStorage.getItem("nap-carrito") || "[]");
+		guardado = JSON.parse(localStorage.getItem("nap-carrito") || "[]");
 	} catch (error) {
 		return [];
 	}
+	return normalizarCarrito(guardado);
+}
+
+// Seguridad: localStorage puede ser editado por cualquiera desde el navegador, asi que
+// se validan tipos y cantidades, y el nombre y precio se toman siempre del catalogo oficial.
+const TIPOS_VALIDOS = ["completo", "decant5ml", "decant10ml"];
+const CANTIDAD_MAXIMA = 99;
+
+function normalizarCarrito(guardado) {
+	if (!Array.isArray(guardado)) return [];
+	return guardado.reduce((resultado, item) => {
+		if (!item || typeof item.id !== "string" || !TIPOS_VALIDOS.includes(item.tipo)) return resultado;
+		const cantidad = Math.min(Math.floor(Number(item.cantidad)), CANTIDAD_MAXIMA);
+		if (!Number.isFinite(cantidad) || cantidad < 1) return resultado;
+		if (!perfumes.length) {
+			// Catalogo aun no cargado: se conserva el item validado, sin confiar en su precio.
+			resultado.push({ id: item.id, nombre: String(item.nombre || ""), tipo: item.tipo, precio: 0, cantidad });
+			return resultado;
+		}
+		const perfume = perfumes.find((producto) => producto.id === item.id);
+		const precio = perfume ? obtenerPrecioCatalogo(perfume, item.tipo) : null;
+		if (precio === null) return resultado;
+		resultado.push({ id: perfume.id, nombre: perfume.nombre, tipo: item.tipo, precio, cantidad });
+		return resultado;
+	}, []);
+}
+
+// Devuelve el precio oficial de la presentacion, o null si no esta disponible.
+function obtenerPrecioCatalogo(perfume, tipo) {
+	const decant = perfume.decant || {};
+	if (tipo !== "completo" && !decant.disponible) return null;
+	const precio = Number(tipo === "decant5ml" ? decant.precio5ml : tipo === "decant10ml" ? decant.precio10ml : perfume.precio);
+	return Number.isFinite(precio) && precio >= 0 ? precio : null;
 }
 
 function guardarCarrito(carritoActual) {
@@ -41,12 +75,13 @@ function actualizarContadorCarrito() {
 // Agrega una presentacion del perfume o aumenta su cantidad si ya existe.
 function agregarAlCarrito(perfumeId, tipo) {
 	const perfume = perfumes.find((item) => item.id === perfumeId);
-	if (!perfume) return;
-	const precio = tipo === "decant5ml" ? perfume.decant.precio5ml : tipo === "decant10ml" ? perfume.decant.precio10ml : perfume.precio;
+	if (!perfume || !TIPOS_VALIDOS.includes(tipo)) return;
+	const precio = obtenerPrecioCatalogo(perfume, tipo);
+	if (precio === null) return;
 	const carritoActual = leerCarrito();
 	const itemExistente = carritoActual.find((item) => item.id === perfumeId && item.tipo === tipo);
 	if (itemExistente) {
-		itemExistente.cantidad += 1;
+		itemExistente.cantidad = Math.min(itemExistente.cantidad + 1, CANTIDAD_MAXIMA);
 	} else {
 		carritoActual.push({ id: perfume.id, nombre: perfume.nombre, tipo, precio, cantidad: 1 });
 	}
@@ -74,11 +109,11 @@ function renderizarCarrito() {
 	const total = carritoActual.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
 	cartContainer.innerHTML = `${carritoActual.map((item, indice) => `
 		<div class="cart-item">
-			<div><h3>${item.nombre}</h3><p>${obtenerEtiquetaTipo(item.tipo)} · $${item.precio.toLocaleString("es-AR")}</p></div>
+			<div><h3>${escaparHTML(item.nombre)}</h3><p>${obtenerEtiquetaTipo(item.tipo)} · $${formatearPrecio(item.precio)}</p></div>
 			<div class="cart-item-controls"><button type="button" class="quantity-button" data-index="${indice}" data-change="-1">−</button><span>${item.cantidad}</span><button type="button" class="quantity-button" data-index="${indice}" data-change="1">+</button><button type="button" class="remove-cart-button" data-index="${indice}">Quitar</button></div>
 		</div>`).join("")}
 		<div class="cart-total">Total: $${total.toLocaleString("es-AR")}</div>
-		<a class="whatsapp-button glass cart-whatsapp" href="${crearEnlaceWhatsApp(carritoActual, total)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>`;
+		<a class="whatsapp-button glass cart-whatsapp" href="${escaparHTML(crearEnlaceWhatsApp(carritoActual, total))}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>`;
 	conectarControlesCarrito();
 }
 
@@ -101,7 +136,7 @@ function conectarControlesCarrito() {
 		const carritoActual = leerCarrito();
 		const item = carritoActual[Number(evento.currentTarget.dataset.index)];
 		if (!item) return;
-		item.cantidad += Number(evento.currentTarget.dataset.change);
+		item.cantidad = Math.min(item.cantidad + Number(evento.currentTarget.dataset.change), CANTIDAD_MAXIMA);
 		guardarCarrito(carritoActual.filter((producto) => producto.cantidad > 0));
 		mostrarCarrito();
 	}));

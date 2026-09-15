@@ -66,7 +66,7 @@ function construirTituloCatalogo() {
 function abrirCatalogo() {
 	const lista = obtenerPerfumesFiltrados();
 	const partes = construirTituloCatalogo();
-	catalogoTitulo.innerHTML = partes.map((parte, indice) => `${indice ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : ""}<span>${parte}</span>`).join("");
+	catalogoTitulo.innerHTML = partes.map((parte, indice) => `${indice ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : ""}<span>${escaparHTML(parte)}</span>`).join("");
 	mostrarPerfumes(lista, catalogoContainer);
 	inicio.classList.add("oculto");
 	destacados.classList.add("oculto");
@@ -76,7 +76,7 @@ function abrirCatalogo() {
 
 // Plantilla de una opcion (checkbox) del panel "Filtrar".
 function opcionFiltroHTML(grupo, valor, etiqueta) {
-	return `<label class="filtro-opcion"><input type="checkbox" data-grupo="${grupo}" value="${valor}"><span>${etiqueta}</span></label>`;
+	return `<label class="filtro-opcion"><input type="checkbox" data-grupo="${escaparHTML(grupo)}" value="${escaparHTML(valor)}"><span>${escaparHTML(etiqueta)}</span></label>`;
 }
 
 // Las categorias, marcas y generos salen del JSON para aceptar valores nuevos.
@@ -85,7 +85,8 @@ function renderizarFiltros() {
 	const categorias = [...new Set(perfumes.map((perfume) => perfume.categoria))];
 	categoryFilters.innerHTML = categorias.map((categoria) => {
 		const texto = nombreCategoria(categoria);
-		return `<button class="filter-button" type="button" data-category="${categoria}">${texto}</button><div class="brand-list" data-brands-for="${categoria}"></div>`;
+		const categoriaSegura = escaparHTML(categoria);
+		return `<button class="filter-button" type="button" data-category="${categoriaSegura}">${escaparHTML(texto)}</button><div class="brand-list" data-brands-for="${categoriaSegura}"></div>`;
 	}).join("");
 
 	// Panel "Filtrar".
@@ -113,9 +114,10 @@ function cerrarMarcas(exceptoCategoria) {
 
 // Al abrir una categoria, se muestran sus marcas unicas debajo del boton correspondiente.
 function alternarMarcas(categoria) {
-	const brandList = document.querySelector(`[data-brands-for="${categoria}"]`);
+	const brandList = document.querySelector(`[data-brands-for="${CSS.escape(categoria)}"]`);
+	if (!brandList) return;
 	const marcas = [...new Set(perfumes.filter((perfume) => perfume.categoria === categoria).map((perfume) => perfume.marca))];
-	brandList.innerHTML = marcas.map((marca) => `<button class="brand-button" type="button" data-category="${categoria}" data-brand="${marca}">${marca}</button>`).join("");
+	brandList.innerHTML = marcas.map((marca) => `<button class="brand-button" type="button" data-category="${escaparHTML(categoria)}" data-brand="${escaparHTML(marca)}">${escaparHTML(marca)}</button>`).join("");
 	// Solo una categoria puede tener su sublista abierta a la vez
 	cerrarMarcas(categoria);
 	// Toggle entre mostrado y ocultado
@@ -249,7 +251,9 @@ async function cargarPerfumes() {
 	try {
 		const respuesta = await fetch("data/perfumes.json");
 		if (!respuesta.ok) throw new Error("No se pudo leer el archivo");
-		perfumes = await respuesta.json();
+		const datos = await respuesta.json();
+		if (!Array.isArray(datos)) throw new Error("Formato de catalogo invalido");
+		perfumes = datos;
 		renderizarFiltros();
 		mostrarPerfumes(perfumes.filter((perfume) => perfume.featured === true), featuredContainer);
 	} catch (error) {
