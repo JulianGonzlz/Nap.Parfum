@@ -1228,13 +1228,14 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 192800,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 17000
+            ,
+            "precio10ml": 31000
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Dior/Sauvage Dior edt.png"
@@ -1284,7 +1285,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 15000,
-            "precio10ml": 26000
+            "precio10ml": 27000
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Jean Paul Gaultier_/33566c11-32d3-4d0b-8550-5b5a32775161.png"
