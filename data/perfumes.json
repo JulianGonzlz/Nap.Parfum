@@ -990,7 +990,7 @@
     },
     {
         "id": "the-kindom",
-        "nombre": "the Kindom",
+        "nombre": "The Kindom",
         "categoria": "arabe",
         "marca": "Lattafa",
         "genero": "masculino",
@@ -1006,7 +1006,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/The Kindom/6202ee93-6396-43a7-a921-f3d062ec1221.png",
@@ -1137,32 +1137,6 @@
         },
         "imagenes": [
             "assets/Arabes/Unisex/Rayhaan/RayHaan Elixir/RayHaan Elixir .jpg"
-        ],
-        "featured": false
-    },
-    {
-        "id": "the-kindom-lattafa",
-        "nombre": "the Kindom Lattafa",
-        "categoria": "arabe",
-        "marca": "Lattafa",
-        "genero": "unisex",
-        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
-        "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
-        },
-        "precio": 58900,
-        "ml": 100,
-        "stock": true,
-        "decant": {
-            "disponible": true,
-            "precio5ml": 6000,
-            "precio10ml": 11000
-        },
-        "imagenes": [
-            "assets/Arabes/Unisex/Lattafa/The Kindom Lattafa/The Kindom Lattafa.png",
-            "assets/Arabes/Unisex/Lattafa/The Kindom Lattafa/6202ee93-6396-43a7-a921-f3d062ec1221.png"
         ],
         "featured": false
     },
