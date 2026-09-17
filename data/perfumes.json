@@ -1207,9 +1207,9 @@
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 17000
+            "precio5ml": 18500
             ,
-            "precio10ml": 31000
+            "precio10ml": 33000
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Dior/Sauvage Dior edt.png"
