@@ -65,6 +65,8 @@ function construirTituloCatalogo() {
 // Muestra solo la pantalla de catalogo y conserva los filtros en su titulo.
 function abrirCatalogo() {
 	const lista = obtenerPerfumesFiltrados();
+	// Con un filtro de precio activo, se ordena de menor a mayor (los más baratos arriba).
+	if (preciosActivos.size) lista.sort((a, b) => a.precio - b.precio);
 	const partes = construirTituloCatalogo();
 	catalogoTitulo.innerHTML = partes.map((parte, indice) => `${indice ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : ""}<span>${escaparHTML(parte)}</span>`).join("");
 	mostrarPerfumes(lista, catalogoContainer);
