@@ -649,8 +649,8 @@
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 11000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Fakhar Black/ba126c80-45c9-4c30-b44a-5e7107531657.png"
@@ -872,13 +872,13 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 58000,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Khamrah Kahwa/76cf889a-ae55-4544-9d4c-6bc594fbf1f2.png"
