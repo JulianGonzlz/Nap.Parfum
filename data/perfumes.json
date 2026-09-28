@@ -197,8 +197,8 @@
             "precio10ml": 10900
         },
         "imagenes": [
-            "assets/Arabes/Femenino/Lattafa/Yara Candy/49c6e564-fb80-41b0-870e-fe9846c13724.png",
-            "assets/Arabes/Femenino/Lattafa/Yara Candy/4c3c193f-3e1b-472b-8048-7a6cec4c0876.png"
+            "assets/Arabes/Femenino/Lattafa/Yara Candy/4c3c193f-3e1b-472b-8048-7a6cec4c0876.png",
+            "assets/Arabes/Femenino/Lattafa/Yara Candy/49c6e564-fb80-41b0-870e-fe9846c13724.png"
         ],
         "featured": true
     },
@@ -349,8 +349,8 @@
             "precio10ml": 13000
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Afnan/9PM Elixir/9PM Elixir_.png",
-            "assets/Arabes/Masculino/Afnan/9PM Elixir/9 Pm Elixir.png"
+            "assets/Arabes/Masculino/Afnan/9PM Elixir/9 Pm Elixir.png",
+            "assets/Arabes/Masculino/Afnan/9PM Elixir/9PM Elixir_.png"
         ],
         "featured": false
     },
@@ -375,8 +375,8 @@
             "precio10ml": 15000
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Afnan/9PM Night Out/9PM Night Out.png",
-            "assets/Arabes/Masculino/Afnan/9PM Night Out/e44eea99-946b-4e68-82fd-c3af828097f1.png"
+            "assets/Arabes/Masculino/Afnan/9PM Night Out/e44eea99-946b-4e68-82fd-c3af828097f1.png",
+            "assets/Arabes/Masculino/Afnan/9PM Night Out/9PM Night Out.png"
         ],
         "featured": false
     },
@@ -502,8 +502,8 @@
             "precio10ml": 11000
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/6a16d21e-946d-4e70-90ae-c855c65033e8.png",
-            "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/5216ae72-36bb-4336-8ae2-f01219f80727.png"
+            "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/5216ae72-36bb-4336-8ae2-f01219f80727.png",
+            "assets/Arabes/Masculino/Lattafa/Asad Zanazibar límited edition_/6a16d21e-946d-4e70-90ae-c855c65033e8.png"
         ],
         "featured": false
     },
@@ -644,13 +644,13 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 56000,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Fakhar Black/ba126c80-45c9-4c30-b44a-5e7107531657.png"
@@ -703,8 +703,8 @@
             "precio10ml": 13500
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Fire/e869800c-8ce0-4db1-9f85-4f38bf5d361f.png",
-            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Fire/d0f33893-8fe0-42cd-b9cb-77d029ba35d2.png"
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Fire/d0f33893-8fe0-42cd-b9cb-77d029ba35d2.png",
+            "assets/Arabes/Masculino/Rasasis (Hawas)/Hawas Fire/e869800c-8ce0-4db1-9f85-4f38bf5d361f.png"
         ],
         "featured": false
     },
@@ -804,8 +804,8 @@
             "precio10ml": 11000
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Lattafa/Honor and Glory/3bb69f72-b0bd-4d96-bbd1-f984b930ad18.png",
-            "assets/Arabes/Masculino/Lattafa/Honor and Glory/bb629020-447d-4161-89ed-03c1e7a3b077.png"
+            "assets/Arabes/Masculino/Lattafa/Honor and Glory/bb629020-447d-4161-89ed-03c1e7a3b077.png",
+            "assets/Arabes/Masculino/Lattafa/Honor and Glory/3bb69f72-b0bd-4d96-bbd1-f984b930ad18.png"
         ],
         "featured": false
     },
@@ -1007,8 +1007,8 @@
             "precio10ml": 11000
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/0b0bb6d7-5561-4d28-8a3a-f2450b494c8f.png",
-            "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/6edaa38e-8d42-4deb-8852-889878899323.png"
+            "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/6edaa38e-8d42-4deb-8852-889878899323.png",
+            "assets/Arabes/Masculino/Lattafa/Qaed al Fursan/Qaed al Fursan Black/0b0bb6d7-5561-4d28-8a3a-f2450b494c8f.png"
         ],
         "featured": false
     },
@@ -1083,8 +1083,8 @@
             "precio10ml": 10900
         },
         "imagenes": [
-            "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/e3925aff-0c91-44dd-8a89-244da010e904.png",
-            "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/fa0b41ef-1247-43b8-b0c3-9dd64b106dec.png"
+            "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/fa0b41ef-1247-43b8-b0c3-9dd64b106dec.png",
+            "assets/Arabes/Masculino/Maison_Alh_Hambra/Salvo/e3925aff-0c91-44dd-8a89-244da010e904.png"
         ],
         "featured": false
     },
@@ -1285,8 +1285,8 @@
             "precio10ml": 10900
         },
         "imagenes": [
-            "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png",
-            "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/c532b6a7-44ae-4b56-b2b6-619cb68fd444.png"
+            "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/c532b6a7-44ae-4b56-b2b6-619cb68fd444.png",
+            "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png"
         ],
         "featured": false
     },
@@ -1328,7 +1328,7 @@
             "fondo": []
         },
         "precio": 214700,
-        "ml": 75,
+        "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
