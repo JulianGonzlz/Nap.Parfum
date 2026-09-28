@@ -26,6 +26,31 @@
         "featured": true
     },
     {
+        "id": "ansaam-gold",
+        "nombre": "Ansaam Gold",
+        "categoria": "arabe",
+        "marca": "Lattafa",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 50500,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 6000,
+            "precio10ml": 10500
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Lattafa/Ansaam Gold/Ansaam Gold.png"
+        ],
+        "featured": false
+    },
+    {
         "id": "eclaire-lattafa",
         "nombre": "Eclaire",
         "categoria": "arabe",
@@ -50,6 +75,31 @@
             "assets/Arabes/Femenino/Lattafa/Eclaire Lattafa/Eclaire Lattafa.png"
         ],
         "featured": true
+    },
+    {
+        "id": "hawas-diva",
+        "nombre": "Hawas Diva",
+        "categoria": "arabe",
+        "marca": "Hawas",
+        "genero": "femenino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 79000,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 7000,
+            "precio10ml": 13000
+        },
+        "imagenes": [
+            "assets/Arabes/Femenino/Rasasis (Hawas)/Hawas Diva/Hawas Diva.png"
+        ],
+        "featured": false
     },
     {
         "id": "nebras-lattafa",
@@ -418,13 +468,13 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 62000,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 6000,
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Masculino/Lattafa/Asad Lattafa/Asad Lattafa.jpg"
@@ -458,6 +508,31 @@
         "featured": false
     },
     {
+        "id": "checkmate-king",
+        "nombre": "Checkmate King",
+        "categoria": "arabe",
+        "marca": "Armaf",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 76000,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 7000,
+            "precio10ml": 13000
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Armaf/Ckeckmate King/3506eea5-099d-43c4-92c9-ff47c6811417.png"
+        ],
+        "featured": false
+    },
+    {
         "id": "club-de-nuit-intense-man",
         "nombre": "Club de Nuit Intense Man",
         "categoria": "arabe",
@@ -479,6 +554,31 @@
         },
         "imagenes": [
             "assets/Arabes/Masculino/Armaf/Club de nuit intense man/c5d7e2c9-4498-41dc-9284-1e0763a5d6cf.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "club-de-nuit-precieux-i",
+        "nombre": "Club de Nuit Precieux I",
+        "categoria": "arabe",
+        "marca": "Armaf",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 103400,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 15000,
+            "precio10ml": 28000
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Armaf/Club de nuit Prexius I/Club de nuit prexius I_.png"
         ],
         "featured": false
     },
@@ -836,6 +936,31 @@
         "featured": false
     },
     {
+        "id": "odyssey-aqua",
+        "nombre": "Odyssey Aqua",
+        "categoria": "arabe",
+        "marca": "Armaf",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 59700,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 6000,
+            "precio10ml": 10900
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Armaf/Odyssey Aqua/Odyssey Aqua.png"
+        ],
+        "featured": false
+    },
+    {
         "id": "oud-for-glory",
         "nombre": "Oud for Glory",
         "categoria": "arabe",
@@ -865,7 +990,7 @@
         "id": "qaed-al-fursan-black",
         "nombre": "Qaed al Fursan Black",
         "categoria": "arabe",
-        "marca": "Qaed al Fursan",
+        "marca": "Lattafa",
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
@@ -899,13 +1024,13 @@
             "corazon": [],
             "fondo": []
         },
-        "precio": 0,
+        "precio": 76000,
         "ml": 100,
-        "stock": true,
+        "stock": false,
         "decant": {
             "disponible": true,
-            "precio5ml": 0,
-            "precio10ml": 0
+            "precio5ml": 7000,
+            "precio10ml": 13000
         },
         "imagenes": [
             "assets/Arabes/Masculino/Afnan/Rare Carbon/Rare Carbon.png"
@@ -1015,6 +1140,31 @@
         "featured": false
     },
     {
+        "id": "turathi-blue",
+        "nombre": "Turathi Blue",
+        "categoria": "arabe",
+        "marca": "Afnan",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 71200,
+        "ml": 90,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 7000,
+            "precio10ml": 13000
+        },
+        "imagenes": [
+            "assets/Arabes/Masculino/Afnan/Turathi Blue/Turathi Blue.png"
+        ],
+        "featured": false
+    },
+    {
         "id": "amber-oud-gold-edition",
         "nombre": "Amber Oud Gold Edition",
         "categoria": "arabe",
@@ -1036,6 +1186,31 @@
         },
         "imagenes": [
             "assets/Arabes/Unisex/Aramain/Amber oud Gol edition/Amber oud Gol edition.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "aqua-dubai",
+        "nombre": "Aqua Dubai",
+        "categoria": "arabe",
+        "marca": "Aramain",
+        "genero": "unisex",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 93100,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 8500,
+            "precio10ml": 15000 
+        },
+        "imagenes": [
+            "assets/Arabes/Unisex/Aramain/Aqua Dubai/Aqua Dubai.png"
         ],
         "featured": false
     },
@@ -1091,9 +1266,9 @@
     },
     {
         "id": "quaed-al-fursan-unlimited",
-        "nombre": "Quaed al Fursan Unlimited",
+        "nombre": "Qaed al Fursan Unlimited",
         "categoria": "arabe",
-        "marca": "Qued al Fursan",
+        "marca": "Lattafa",
         "genero": "unisex",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
@@ -1107,7 +1282,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 6000,
-            "precio10ml": 11000
+            "precio10ml": 10900
         },
         "imagenes": [
             "assets/Arabes/Unisex/Qaed al fursan/Quaed al fursal Unlimited_/6f402af6-25f0-49fe-bacc-8103e28649bd.png",
@@ -1213,6 +1388,31 @@
         },
         "imagenes": [
             "assets/Diseñador/Masculino/Dior/Sauvage Dior edt.png"
+        ],
+        "featured": false
+    },
+    {
+        "id": "dolce-gabbana-king-intense",
+        "nombre": "Dolce & Gabbana King Intense",
+        "categoria": "disenador",
+        "marca": "Dolce & Gabbana",
+        "genero": "masculino",
+        "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        },
+        "precio": 170000,
+        "ml": 100,
+        "stock": true,
+        "decant": {
+            "disponible": true,
+            "precio5ml": 15500,
+            "precio10ml": 28500
+        },
+        "imagenes": [
+            "assets/Diseñador/Masculino/Dolce y Gabbana/King Intense/King Intense.png"
         ],
         "featured": false
     },
