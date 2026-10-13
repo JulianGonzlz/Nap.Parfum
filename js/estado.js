@@ -17,6 +17,7 @@ const featuredContainer = document.getElementById("featured-container");
 const catalogoContainer = document.getElementById("catalogo-container");
 const catalogoTitulo = document.getElementById("catalogo-titulo");
 const categoryFilters = document.getElementById("category-filters");
+const filtroCategoriaContenedor = document.getElementById("filtro-categoria");
 const filtroGeneroContenedor = document.getElementById("filtro-genero");
 const filtroMarcaContenedor = document.getElementById("filtro-marca");
 const filtroPrecioContenedor = document.getElementById("filtro-precio");
@@ -40,9 +41,9 @@ function escaparHTML(valor) {
 
 // Estado de la aplicación
 let perfumes = [];
-// categoriaActiva viene del bloque "Explorar" (Árabe / Diseñador). Los demás filtros
-// del panel "Filtrar" son de selección múltiple y se acumulan entre sí.
-let categoriaActiva = "todos";
+// Los filtros son de selección múltiple y se acumulan entre sí. categoriasActivas
+// (Árabe / Diseñador) se comparte entre el bloque "Explorar" y el panel "Filtrar".
+let categoriasActivas = new Set();
 let marcasActivas = new Set();
 let generosActivos = new Set();
 let preciosActivos = new Set();

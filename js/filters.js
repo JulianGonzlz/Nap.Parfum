@@ -1,6 +1,6 @@
 /* FILTROS Y BÚSQUEDA
    Gestiona el bloque "Explorar" (Árabe / Diseñador con sus marcas) y el panel "Filtrar"
-   de selección múltiple (género, marca, precio), más la búsqueda por texto y la carga de datos. */
+   de selección múltiple (tipo, género, marca, precio), más la búsqueda por texto y la carga de datos. */
 
 // Rangos de precio del frasco sellado. "test" recibe el precio del perfume;
 // los perfumes con precio 0 (sin cargar) quedan fuera de todos los rangos.
@@ -12,6 +12,7 @@ const RANGOS_PRECIO = [
 
 // Devuelve el Set de estado correspondiente a un grupo de filtro del panel.
 function conjuntoDeGrupo(grupo) {
+	if (grupo === "categoria") return categoriasActivas;
 	if (grupo === "genero") return generosActivos;
 	if (grupo === "marca") return marcasActivas;
 	return preciosActivos;
@@ -21,23 +22,37 @@ function capitalizar(texto) {
 	return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-// Combina categoria (Explorar), marca, genero, precio y texto de busqueda.
+const GRUPOS_FILTRO = ["categoria", "genero", "marca", "precio"];
+
+// Indica si un perfume coincide con alguno de los valores (Set) de un grupo de filtro.
+function coincideGrupo(grupo, perfume, valores) {
+	if (grupo === "categoria") return valores.has(perfume.categoria);
+	if (grupo === "marca") return valores.has(perfume.marca);
+	// Los perfumes unisex aparecen también al filtrar Masculino o Femenino.
+	if (grupo === "genero") {
+		return valores.has(perfume.genero) ||
+			(perfume.genero === "unisex" && (valores.has("masculino") || valores.has("femenino")));
+	}
+	return RANGOS_PRECIO.some((rango) => valores.has(rango.clave) && rango.test(perfume.precio));
+}
+
 // Dentro de cada filtro se suma (OR); entre filtros distintos se cruza (AND).
+// "exceptoGrupo" deja un grupo afuera para saber que opciones suyas siguen dando resultados.
+function pasaFiltros(perfume, exceptoGrupo) {
+	return GRUPOS_FILTRO.every((grupo) => {
+		const valores = conjuntoDeGrupo(grupo);
+		return grupo === exceptoGrupo || valores.size === 0 || coincideGrupo(grupo, perfume, valores);
+	});
+}
+
+// Combina categoria, marca, genero, precio y texto de busqueda.
 function obtenerPerfumesFiltrados() {
 	const textoMinuscula = textoSearchActivo.toLowerCase();
 	return perfumes.filter((perfume) => {
-		const coincideCategoria = categoriaActiva === "todos" || perfume.categoria === categoriaActiva;
-		const coincideMarca = marcasActivas.size === 0 || marcasActivas.has(perfume.marca);
-		// Los perfumes unisex aparecen también al filtrar Masculino o Femenino.
-		const coincideGenero = generosActivos.size === 0 ||
-			generosActivos.has(perfume.genero) ||
-			(perfume.genero === "unisex" && (generosActivos.has("masculino") || generosActivos.has("femenino")));
-		const coincidePrecio = preciosActivos.size === 0 ||
-			RANGOS_PRECIO.some((rango) => preciosActivos.has(rango.clave) && rango.test(perfume.precio));
 		const coincideTexto = !textoMinuscula ||
 			perfume.nombre.toLowerCase().includes(textoMinuscula) ||
 			perfume.marca.toLowerCase().includes(textoMinuscula);
-		return coincideCategoria && coincideMarca && coincideGenero && coincidePrecio && coincideTexto;
+		return pasaFiltros(perfume) && coincideTexto;
 	});
 }
 
@@ -49,7 +64,7 @@ function nombreCategoria(categoria) {
 // Arma el breadcrumb del catalogo enumerando los filtros activos.
 function construirTituloCatalogo() {
 	const partes = ["Catálogo"];
-	if (categoriaActiva !== "todos") partes.push(nombreCategoria(categoriaActiva));
+	if (categoriasActivas.size) partes.push([...categoriasActivas].map(nombreCategoria).join(", "));
 	if (marcasActivas.size) partes.push([...marcasActivas].join(", "));
 	if (generosActivos.size) partes.push([...generosActivos].map(capitalizar).join(", "));
 	if (preciosActivos.size) {
@@ -94,6 +109,8 @@ function renderizarFiltros() {
 	// Panel "Filtrar".
 	verTodosButton.textContent = "Ver todos";
 
+	filtroCategoriaContenedor.innerHTML = categorias.map((categoria) => opcionFiltroHTML("categoria", categoria, nombreCategoria(categoria))).join("");
+
 	const generos = [...new Set(perfumes.map((perfume) => perfume.genero))];
 	filtroGeneroContenedor.innerHTML = generos.map((genero) => opcionFiltroHTML("genero", genero, capitalizar(genero))).join("");
 
@@ -104,6 +121,25 @@ function renderizarFiltros() {
 
 	conectarFiltros();
 	sincronizarCheckboxesFiltro();
+}
+
+// Panel "Filtrar": cada grupo muestra solo las opciones que todavia dan resultados
+// segun lo elegido en los demas grupos, y descarta las elegidas que quedaron sin perfumes.
+function actualizarOpcionesDisponibles() {
+	let huboDescarte;
+	// Descartar una opcion elegida amplia los demas grupos, asi que se repite hasta que no cambie nada.
+	do {
+		huboDescarte = false;
+		GRUPOS_FILTRO.forEach((grupo) => {
+			const conjunto = conjuntoDeGrupo(grupo);
+			const candidatos = perfumes.filter((perfume) => pasaFiltros(perfume, grupo));
+			document.querySelectorAll(`.filtro-opciones input[data-grupo="${grupo}"]`).forEach((input) => {
+				const disponible = candidatos.some((perfume) => coincideGrupo(grupo, perfume, new Set([input.value])));
+				if (!disponible && conjunto.delete(input.value)) huboDescarte = true;
+				input.closest(".filtro-opcion").hidden = !disponible;
+			});
+		});
+	} while (huboDescarte);
 }
 
 // Deja todas las sublistas de marcas en su estado por defecto (cerradas).
@@ -130,7 +166,8 @@ function alternarMarcas(categoria) {
 // Explorar > marca: salto directo a esa marca dentro de su categoria.
 function seleccionarMarca(evento) {
 	evento.stopPropagation();
-	categoriaActiva = evento.currentTarget.dataset.category;
+	categoriasActivas.clear();
+	categoriasActivas.add(evento.currentTarget.dataset.category);
 	marcasActivas.clear();
 	marcasActivas.add(evento.currentTarget.dataset.brand);
 	textoSearchActivo = "";
@@ -144,15 +181,17 @@ function seleccionarMarca(evento) {
 // No toca los filtros de genero ni precio para que se acumulen.
 function seleccionarCategoria(evento) {
 	evento.stopPropagation();
-	categoriaActiva = evento.currentTarget.dataset.category;
+	const categoria = evento.currentTarget.dataset.category;
+	categoriasActivas.clear();
+	categoriasActivas.add(categoria);
 	marcasActivas.clear();
 	textoSearchActivo = "";
 	if (searchInput) searchInput.value = "";
 	sincronizarCheckboxesFiltro();
-	alternarMarcas(categoriaActiva);
+	alternarMarcas(categoria);
 }
 
-// Panel "Filtrar": abre o cierra un grupo de opciones (género, marca, precio).
+// Panel "Filtrar": abre o cierra un grupo de opciones (tipo, género, marca, precio).
 function alternarGrupoFiltro(evento) {
 	const grupo = evento.currentTarget.closest(".filtro-grupo");
 	const abierto = grupo.classList.toggle("desplegado");
@@ -172,12 +211,13 @@ function manejarCambioFiltro(evento) {
 		textoSearchActivo = "";
 		if (searchInput) searchInput.value = "";
 	}
-	actualizarResumenFiltros();
+	sincronizarCheckboxesFiltro();
 	abrirCatalogo();
 }
 
 // Refleja el estado de los Set en los checkboxes y en los contadores.
 function sincronizarCheckboxesFiltro() {
+	actualizarOpcionesDisponibles();
 	document.querySelectorAll('.filtro-opciones input[type="checkbox"]').forEach((input) => {
 		input.checked = conjuntoDeGrupo(input.dataset.grupo).has(input.value);
 	});
@@ -186,30 +226,26 @@ function sincronizarCheckboxesFiltro() {
 
 // Actualiza los badges por grupo y muestra "Limpiar filtros" solo si hay alguno activo.
 function actualizarResumenFiltros() {
-	const conteos = { genero: generosActivos.size, marca: marcasActivas.size, precio: preciosActivos.size };
+	const conteos = { categoria: categoriasActivas.size, genero: generosActivos.size, marca: marcasActivas.size, precio: preciosActivos.size };
 	document.querySelectorAll(".filtro-grupo").forEach((grupo) => {
 		const badge = grupo.querySelector(".filtro-badge");
 		const cantidad = conteos[grupo.dataset.grupo] || 0;
 		badge.textContent = cantidad ? String(cantidad) : "";
 		badge.hidden = cantidad === 0;
 	});
-	const totalFiltros = conteos.genero + conteos.marca + conteos.precio;
+	const totalFiltros = conteos.categoria + conteos.genero + conteos.marca + conteos.precio;
 	limpiarFiltrosButton.hidden = totalFiltros === 0;
 }
 
-// Panel "Filtrar": limpia genero, marca y precio (mantiene la categoria de Explorar)
-// y refresca el catalogo con el resultado.
+// Panel "Filtrar": limpia tipo, genero, marca y precio y refresca el catalogo con el resultado.
 function limpiarFiltros() {
-	generosActivos.clear();
-	marcasActivas.clear();
-	preciosActivos.clear();
-	sincronizarCheckboxesFiltro();
+	reiniciarFiltros();
 	abrirCatalogo();
 }
 
 // Deja todos los filtros (categoria de Explorar + panel Filtrar) en su estado inicial.
 function reiniciarFiltros() {
-	categoriaActiva = "todos";
+	categoriasActivas.clear();
 	generosActivos.clear();
 	marcasActivas.clear();
 	preciosActivos.clear();
@@ -230,7 +266,7 @@ function verTodosLosPerfumes() {
 function conectarFiltros() {
 	categoryFilters.querySelectorAll(".filter-button").forEach((boton) => boton.addEventListener("click", seleccionarCategoria));
 	document.querySelectorAll(".filtro-toggle").forEach((boton) => boton.addEventListener("click", alternarGrupoFiltro));
-	[filtroGeneroContenedor, filtroMarcaContenedor, filtroPrecioContenedor].forEach((contenedor) => contenedor.addEventListener("change", manejarCambioFiltro));
+	[filtroCategoriaContenedor, filtroGeneroContenedor, filtroMarcaContenedor, filtroPrecioContenedor].forEach((contenedor) => contenedor.addEventListener("change", manejarCambioFiltro));
 }
 
 // Maneja la búsqueda con debounce simple para evitar filtrados excesivos.
