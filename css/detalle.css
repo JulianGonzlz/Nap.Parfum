@@ -116,6 +116,10 @@
     overflow-wrap: anywhere;
 }
 
+.detalle-notas dd::first-letter {
+    text-transform: uppercase;
+}
+
 .detalle-info .cart-actions {
     max-width: 26rem;
 }

@@ -7,9 +7,22 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "jengibre",
+                "mandarina",
+                "pimienta rosa"
+            ],
+            "corazon": [
+                "lavanda",
+                "praliné",
+                "cacao",
+                "jazmín"
+            ],
+            "fondo": [
+                "vainilla",
+                "ámbar",
+                "almizcle"
+            ]
         },
         "precio": 54600,
         "ml": 100,
@@ -33,9 +46,20 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "mandarina",
+                "pera"
+            ],
+            "corazon": [
+                "notas dulces",
+                "jazmín",
+                "rosa"
+            ],
+            "fondo": [
+                "almizcle",
+                "vainilla",
+                "frambuesa"
+            ]
         },
         "precio": 50500,
         "ml": 100,
@@ -58,9 +82,20 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "caramelo",
+                "leche",
+                "azúcar"
+            ],
+            "corazon": [
+                "miel",
+                "flores blancas"
+            ],
+            "fondo": [
+                "vainilla",
+                "praliné",
+                "almizcle"
+            ]
         },
         "precio": 74500,
         "ml": 100,
@@ -84,9 +119,21 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "frutas rojas",
+                "ruibarbo",
+                "lichi"
+            ],
+            "corazon": [
+                "rosa",
+                "incienso",
+                "cedro"
+            ],
+            "fondo": [
+                "vainilla",
+                "almizcle",
+                "ámbar gris"
+            ]
         },
         "precio": 79000,
         "ml": 100,
@@ -109,9 +156,21 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "bayas rojas",
+                "mandarina"
+            ],
+            "corazon": [
+                "vainilla",
+                "cacao",
+                "rosa"
+            ],
+            "fondo": [
+                "azúcar",
+                "haba tonka",
+                "ámbar",
+                "almizcle"
+            ]
         },
         "precio": 66000,
         "ml": 100,
@@ -138,6 +197,16 @@
             "corazon": [],
             "fondo": []
         },
+        "acordes": [
+            "dulce",
+            "atalcado",
+            "almendrado",
+            "avainillado",
+            "almizclado",
+            "amaderado",
+            "nueces",
+            "afrutado"
+        ],
         "precio": 51000,
         "ml": 100,
         "stock": true,
@@ -159,9 +228,20 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "pimienta rosa",
+                "mandarina"
+            ],
+            "corazon": [
+                "vaina de cacao",
+                "flor de azahar del naranjo",
+                "jazmín sambac"
+            ],
+            "fondo": [
+                "vainilla",
+                "haba tonka",
+                "pachulí"
+            ]
         },
         "precio": 45800,
         "ml": 100,
@@ -184,9 +264,20 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "grosellas negras",
+                "mandarina verde"
+            ],
+            "corazon": [
+                "caramelo de fresa efervescente",
+                "gardenia"
+            ],
+            "fondo": [
+                "vainilla",
+                "almizcle",
+                "ámbar",
+                "sándalo"
+            ]
         },
         "precio": 53600,
         "ml": 100,
@@ -210,9 +301,20 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "s'mores de fresa",
+                "grosellas negras"
+            ],
+            "corazon": [
+                "jazmín",
+                "flor de azahar del naranjo"
+            ],
+            "fondo": [
+                "vainilla",
+                "caramelo",
+                "ámbar",
+                "almizcle"
+            ]
         },
         "precio": 65800,
         "ml": 100,
@@ -235,9 +337,18 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "jazmín",
+                "durazno"
+            ],
+            "corazon": [
+                "caramelo",
+                "ámbar"
+            ],
+            "fondo": [
+                "pachulí",
+                "sándalo"
+            ]
         },
         "precio": 53600,
         "ml": 100,
@@ -264,6 +375,18 @@
             "corazon": [],
             "fondo": []
         },
+        "acordes": [
+            "dulce",
+            "avainillado",
+            "atalcado",
+            "tropical",
+            "almizclado",
+            "afrutado",
+            "floral",
+            "lactónico",
+            "amaderado",
+            "cítrico"
+        ],
         "precio": 59100,
         "ml": 100,
         "stock": true,
@@ -285,9 +408,21 @@
         "genero": "femenino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "mango",
+                "coco",
+                "maracuyá"
+            ],
+            "corazon": [
+                "jazmín",
+                "flor de azahar del naranjo",
+                "heliotropo"
+            ],
+            "fondo": [
+                "vainilla",
+                "almizcle",
+                "cachemira"
+            ]
         },
         "precio": 53600,
         "ml": 100,
@@ -314,6 +449,18 @@
             "corazon": [],
             "fondo": []
         },
+        "acordes": [
+            "avainillado",
+            "ámbar",
+            "cálido especiado",
+            "afrutado",
+            "canela",
+            "dulce",
+            "lavanda",
+            "aromático",
+            "fresco",
+            "atalcado"
+        ],
         "precio": 59900,
         "ml": 100,
         "stock": true,
@@ -336,9 +483,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "cardamomo",
+                "nuez moscada",
+                "elemí"
+            ],
+            "corazon": [
+                "pimienta de Jamaica",
+                "cuero",
+                "lavanda"
+            ],
+            "fondo": [
+                "vainilla",
+                "pachulí",
+                "ládano",
+                "heliántemo"
+            ]
         },
         "precio": 75500,
         "ml": 100,
@@ -362,9 +522,26 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "pitahaya",
+                "coñac",
+                "lavanda",
+                "manzana",
+                "bergamota"
+            ],
+            "corazon": [
+                "tófe",
+                "gamuza",
+                "cardamomo",
+                "cedro",
+                "Mahonial"
+            ],
+            "fondo": [
+                "haba tonka",
+                "Akigalawood",
+                "Ambrofix",
+                "pachulí"
+            ]
         },
         "precio": 101300,
         "ml": 100,
@@ -388,9 +565,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "pimienta negra",
+                "tabaco",
+                "piña"
+            ],
+            "corazon": [
+                "pachulí",
+                "café",
+                "iris"
+            ],
+            "fondo": [
+                "vainilla",
+                "ámbar",
+                "madera seca",
+                "benjuí",
+                "ládano"
+            ]
         },
         "precio": 62000,
         "ml": 100,
@@ -413,9 +604,21 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "lavanda",
+                "mirabelle",
+                "pimienta rosa"
+            ],
+            "corazon": [
+                "cacao",
+                "nuez moscada",
+                "davana"
+            ],
+            "fondo": [
+                "vainilla bourbon",
+                "ámbar",
+                "vetiver"
+            ]
         },
         "precio": 83300,
         "ml": 100,
@@ -439,9 +642,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "pimienta rosa",
+                "azafrán",
+                "toronja"
+            ],
+            "corazon": [
+                "tabaco",
+                "vainilla",
+                "cedro"
+            ],
+            "fondo": [
+                "ámbar ligero",
+                "incienso",
+                "pachulí",
+                "cachemira"
+            ]
         },
         "precio": 69000,
         "ml": 100,
@@ -489,9 +705,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "notas marinas",
+                "lavanda",
+                "pimienta rosa"
+            ],
+            "corazon": [
+                "jabón",
+                "cachemira",
+                "canela"
+            ],
+            "fondo": [
+                "ámbar",
+                "sándalo",
+                "cedro",
+                "haba tonka"
+            ]
         },
         "precio": 58000,
         "ml": 100,
@@ -515,9 +744,21 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "ciruela mirabel",
+                "notas afrutadas"
+            ],
+            "corazon": [
+                "acorde goloso",
+                "castaña",
+                "especias"
+            ],
+            "fondo": [
+                "sándalo",
+                "ámbar",
+                "notas atalcadas",
+                "notas balsámicas"
+            ]
         },
         "precio": 76000,
         "ml": 100,
@@ -540,9 +781,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "piña",
+                "bergamota",
+                "grosellas negras",
+                "manzana"
+            ],
+            "corazon": [
+                "abedul",
+                "jazmín",
+                "rosa"
+            ],
+            "fondo": [
+                "ámbar gris",
+                "almizcle",
+                "vainilla"
+            ]
         },
         "precio": 67900,
         "ml": 105,
@@ -565,9 +819,31 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "piña",
+                "limón",
+                "bergamota",
+                "caramelo",
+                "pimienta rosa",
+                "pera",
+                "pimienta negra"
+            ],
+            "corazon": [
+                "musgo de roble",
+                "madera blanca",
+                "jazmín",
+                "lirio de los valles",
+                "anís"
+            ],
+            "fondo": [
+                "ambroxan",
+                "almizcle blanco",
+                "cedro",
+                "pachulí",
+                "cuero",
+                "ámbar",
+                "vainilla"
+            ]
         },
         "precio": 103400,
         "ml": 100,
@@ -590,9 +866,27 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "bergamota",
+                "pimienta rosa",
+                "jazmín",
+                "flor de azahar del naranjo"
+            ],
+            "corazon": [
+                "lavanda",
+                "elemí",
+                "geranio",
+                "vetiver",
+                "azafrán",
+                "cempasúchil"
+            ],
+            "fondo": [
+                "ambroxan",
+                "ámbar",
+                "cedro",
+                "pachulí",
+                "ládano"
+            ]
         },
         "precio": 78900,
         "ml": 105,
@@ -615,9 +909,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "azafrán",
+                "bergamota",
+                "elemí"
+            ],
+            "corazon": [
+                "madera de oud",
+                "rosa de Bulgaria",
+                "lirio de los valles"
+            ],
+            "fondo": [
+                "haba tonka",
+                "ámbar",
+                "almizcle blanco",
+                "musgo de roble"
+            ]
         },
         "precio": 99000,
         "ml": 100,
@@ -640,9 +947,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "manzana",
+                "bergamota",
+                "jengibre"
+            ],
+            "corazon": [
+                "lavanda",
+                "salvia",
+                "bayas de enebro",
+                "geranio"
+            ],
+            "fondo": [
+                "haba tonka",
+                "cedro",
+                "Amberwood",
+                "vetiver"
+            ]
         },
         "precio": 56000,
         "ml": 100,
@@ -690,9 +1011,18 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "esclarea"
+            ],
+            "corazon": [
+                "notas marinas",
+                "jazmín egipcio"
+            ],
+            "fondo": [
+                "ámbar",
+                "notas minerales",
+                "ámbar gris"
+            ]
         },
         "precio": 71000,
         "ml": 100,
@@ -716,9 +1046,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "manzana",
+                "limón italiano",
+                "bergamota de Sicilia",
+                "anís estrellado"
+            ],
+            "corazon": [
+                "ciruela",
+                "flor de azahar del naranjo",
+                "cardamomo"
+            ],
+            "fondo": [
+                "almizcle",
+                "ámbar",
+                "madera a la deriva",
+                "musgo"
+            ]
         },
         "precio": 73600,
         "ml": 100,
@@ -741,9 +1085,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "piña",
+                "naranja",
+                "toronja"
+            ],
+            "corazon": [
+                "ámbar",
+                "raíz de lirio",
+                "lavanda"
+            ],
+            "fondo": [
+                "haba tonka",
+                "almizcle",
+                "pachulí",
+                "cachemira"
+            ]
         },
         "precio": 75000,
         "ml": 100,
@@ -766,7 +1123,13 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
+            "salida": [
+                "lima",
+                "romero",
+                "manzana verde",
+                "pachulí",
+                "ámbar"
+            ],
             "corazon": [],
             "fondo": []
         },
@@ -791,9 +1154,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "piña",
+                "crème brûlée"
+            ],
+            "corazon": [
+                "canela",
+                "cúrcuma",
+                "pimienta negra",
+                "benjuí"
+            ],
+            "fondo": [
+                "vainilla",
+                "sándalo",
+                "cachemira",
+                "musgo"
+            ]
         },
         "precio": 51200,
         "ml": 100,
@@ -817,9 +1193,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "jengibre",
+                "toronja",
+                "bergamota"
+            ],
+            "corazon": [
+                "romero",
+                "notas acuáticas",
+                "salvia",
+                "geranio"
+            ],
+            "fondo": [
+                "ambroxan",
+                "ámbar",
+                "ládano"
+            ]
         },
         "precio": 55900,
         "ml": 100,
@@ -846,6 +1235,16 @@
             "corazon": [],
             "fondo": []
         },
+        "acordes": [
+            "dulce",
+            "cálido especiado",
+            "avainillado",
+            "ámbar",
+            "canela",
+            "amaderado",
+            "fresco especiado",
+            "afrutado"
+        ],
         "precio": 57400,
         "ml": 100,
         "stock": true,
@@ -868,9 +1267,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "canela",
+                "cardamomo",
+                "jengibre"
+            ],
+            "corazon": [
+                "praliné",
+                "frutas confitadas",
+                "flores blancas"
+            ],
+            "fondo": [
+                "vainilla",
+                "café",
+                "haba tonka",
+                "benjuí",
+                "almizcle"
+            ]
         },
         "precio": 58000,
         "ml": 100,
@@ -922,6 +1335,15 @@
             "corazon": [],
             "fondo": []
         },
+        "acordes": [
+            "cítrico",
+            "caramelo",
+            "dulce",
+            "ámbar",
+            "aromático",
+            "avainillado",
+            "amaderado"
+        ],
         "precio": 59000,
         "ml": 100,
         "stock": true,
@@ -943,9 +1365,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "notas verdes",
+                "bergamota",
+                "mandarina"
+            ],
+            "corazon": [
+                "melón",
+                "ámbar",
+                "grosellas negras",
+                "piña"
+            ],
+            "fondo": [
+                "almizcle",
+                "petit grain",
+                "gálbano",
+                "vainilla"
+            ]
         },
         "precio": 59700,
         "ml": 100,
@@ -968,9 +1404,20 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "azafrán",
+                "nuez moscada",
+                "lavanda"
+            ],
+            "corazon": [
+                "madera de oud",
+                "pachulí"
+            ],
+            "fondo": [
+                "madera de oud",
+                "pachulí",
+                "almizcle"
+            ]
         },
         "precio": 51200,
         "ml": 100,
@@ -994,9 +1441,19 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "piña",
+                "azafrán"
+            ],
+            "corazon": [
+                "abeto balsámico",
+                "jazmín"
+            ],
+            "fondo": [
+                "cedro",
+                "ámbar",
+                "madera de oud"
+            ]
         },
         "precio": 43200,
         "ml": 90,
@@ -1020,9 +1477,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "cuero",
+                "hojas de violeta",
+                "nuez moscada",
+                "canela"
+            ],
+            "corazon": [
+                "violeta",
+                "madera de oud",
+                "rosa",
+                "cedro"
+            ],
+            "fondo": [
+                "vetiver",
+                "sándalo",
+                "ámbar"
+            ]
         },
         "precio": 76000,
         "ml": 100,
@@ -1045,9 +1516,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "lavanda",
+                "limón",
+                "bergamota"
+            ],
+            "corazon": [
+                "miel",
+                "canela",
+                "cachemira",
+                "jazmín"
+            ],
+            "fondo": [
+                "vainilla",
+                "hojas de tabaco",
+                "haba tonka"
+            ]
         },
         "precio": 97800,
         "ml": 100,
@@ -1070,9 +1554,19 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "bergamota"
+            ],
+            "corazon": [
+                "lavanda",
+                "pimienta de Sichuan",
+                "anís estrellado",
+                "nuez moscada"
+            ],
+            "fondo": [
+                "ambroxan",
+                "vainilla"
+            ]
         },
         "precio": 58400,
         "ml": 100,
@@ -1096,9 +1590,22 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "piña",
+                "bergamota",
+                "flores blancas",
+                "manzana"
+            ],
+            "corazon": [
+                "flor de azahar del naranjo",
+                "abedul",
+                "ámbar"
+            ],
+            "fondo": [
+                "musgo de roble",
+                "almizcle",
+                "ámbar gris"
+            ]
         },
         "precio": 124450,
         "ml": 100,
@@ -1121,9 +1628,21 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "lavanda",
+                "menta",
+                "salvia"
+            ],
+            "corazon": [
+                "vainilla",
+                "tabaco",
+                "flor de azahar del naranjo"
+            ],
+            "fondo": [
+                "haba tonka",
+                "benjuí",
+                "ládano"
+            ]
         },
         "precio": 58900,
         "ml": 100,
@@ -1147,9 +1666,18 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "cítricos"
+            ],
+            "corazon": [
+                "notas amaderadas",
+                "ámbar"
+            ],
+            "fondo": [
+                "almizcle",
+                "especias",
+                "pachulí"
+            ]
         },
         "precio": 71200,
         "ml": 90,
@@ -1172,9 +1700,21 @@
         "genero": "unisex",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "bergamota",
+                "notas verdes"
+            ],
+            "corazon": [
+                "melón",
+                "piña",
+                "ámbar",
+                "acorde goloso"
+            ],
+            "fondo": [
+                "vainilla",
+                "almizcle",
+                "notas amaderadas"
+            ]
         },
         "precio": 98000,
         "ml": 120,
@@ -1197,9 +1737,23 @@
         "genero": "unisex",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "notas verdes",
+                "bergamota",
+                "mandarina"
+            ],
+            "corazon": [
+                "melón",
+                "ámbar",
+                "grosellas negras",
+                "piña"
+            ],
+            "fondo": [
+                "almizcle",
+                "petit grain",
+                "gálbano",
+                "vainilla"
+            ]
         },
         "precio": 93100,
         "ml": 100,
@@ -1207,7 +1761,7 @@
         "decant": {
             "disponible": true,
             "precio5ml": 8500,
-            "precio10ml": 15000 
+            "precio10ml": 15000
         },
         "imagenes": [
             "assets/Arabes/Unisex/Aramain/Aqua Dubai/Aqua Dubai.webp"
@@ -1222,9 +1776,23 @@
         "genero": "unisex",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "mango",
+                "limón",
+                "jengibre"
+            ],
+            "corazon": [
+                "pimienta rosa",
+                "jazmín",
+                "violeta",
+                "praliné"
+            ],
+            "fondo": [
+                "haba tonka",
+                "cedro",
+                "ámbar gris",
+                "musgo"
+            ]
         },
         "precio": 83300,
         "ml": 100,
@@ -1272,9 +1840,22 @@
         "genero": "unisex",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "coco",
+                "piña",
+                "cítricos"
+            ],
+            "corazon": [
+                "ylang-ylang",
+                "frangipani",
+                "jazmín"
+            ],
+            "fondo": [
+                "vainilla",
+                "almizcle",
+                "sándalo",
+                "notas dulces"
+            ]
         },
         "precio": 36400,
         "ml": 90,
@@ -1323,9 +1904,19 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "notas marinas",
+                "bergamota"
+            ],
+            "corazon": [
+                "romero",
+                "esclarea",
+                "geranio"
+            ],
+            "fondo": [
+                "incienso de olíbano",
+                "pachulí"
+            ]
         },
         "precio": 214700,
         "ml": 100,
@@ -1348,9 +1939,15 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "iris de la Toscana"
+            ],
+            "corazon": [
+                "almizcle ambreta"
+            ],
+            "fondo": [
+                "cedro de Virginia"
+            ]
         },
         "precio": 225600,
         "ml": 100,
@@ -1373,17 +1970,31 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "bergamota de Calabria",
+                "pimienta"
+            ],
+            "corazon": [
+                "pimienta de Sichuan",
+                "lavanda",
+                "pimienta rosa",
+                "vetiver",
+                "pachulí",
+                "geranio",
+                "elemí"
+            ],
+            "fondo": [
+                "ambroxan",
+                "cedro",
+                "ládano"
+            ]
         },
         "precio": 192800,
         "ml": 100,
         "stock": true,
         "decant": {
             "disponible": true,
-            "precio5ml": 18500
-            ,
+            "precio5ml": 18500,
             "precio10ml": 33000
         },
         "imagenes": [
@@ -1399,9 +2010,18 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "naranja sanguina",
+                "limón siciliano"
+            ],
+            "corazon": [
+                "higo",
+                "azafrán"
+            ],
+            "fondo": [
+                "cuero",
+                "notas amaderadas"
+            ]
         },
         "precio": 170000,
         "ml": 100,
@@ -1449,9 +2069,18 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "cardamomo"
+            ],
+            "corazon": [
+                "lavanda",
+                "iris"
+            ],
+            "fondo": [
+                "vainilla",
+                "notas orientales",
+                "notas amaderadas"
+            ]
         },
         "precio": 164600,
         "ml": 125,
@@ -1476,8 +2105,23 @@
         "notas": {
             "salida": [],
             "corazon": [],
-            "fondo": []
+            "fondo": [],
+            "generales": [
+                "vainilla",
+                "tófe",
+                "canela",
+                "ámbar",
+                "haba tonka",
+                "pimienta rosa"
+            ]
         },
+        "acordes": [
+            "avainillado",
+            "dulce",
+            "ámbar",
+            "canela",
+            "cálido especiado"
+        ],
         "precio": 192800,
         "ml": 100,
         "stock": true,
@@ -1502,8 +2146,20 @@
         "notas": {
             "salida": [],
             "corazon": [],
-            "fondo": []
+            "fondo": [],
+            "generales": [
+                "lavanda",
+                "vainilla",
+                "vetiver"
+            ]
         },
+        "acordes": [
+            "lavanda",
+            "avainillado",
+            "aromático",
+            "amaderado",
+            "fresco especiado"
+        ],
         "precio": 262900,
         "ml": 100,
         "stock": true,
@@ -1526,9 +2182,23 @@
         "genero": "masculino",
         "descripcion": "Fragancia elegante y versátil con un perfil contemporáneo.",
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "menta",
+                "manzana verde",
+                "limón"
+            ],
+            "corazon": [
+                "haba tonka",
+                "ambroxan",
+                "geranio"
+            ],
+            "fondo": [
+                "vainilla de Madagascar",
+                "cedro de Virginia",
+                "cedro del Atlas",
+                "vetiver",
+                "musgo de roble"
+            ]
         },
         "precio": 151200,
         "ml": 100,

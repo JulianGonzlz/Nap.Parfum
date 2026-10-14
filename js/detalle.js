@@ -1,14 +1,17 @@
 /* VISTA DE DETALLE DEL PERFUME
-   Ficha individual con las fotos en grande, las notas (si estan cargadas) y las presentaciones. */
+   Ficha individual con las fotos en grande, las notas y acordes por escrito y las presentaciones. */
 
-const GRUPOS_NOTAS = [["salida", "Salida"], ["corazon", "Corazón"], ["fondo", "Fondo"]];
+// "generales" son notas que el perfume trae sin separar por etapa.
+const GRUPOS_NOTAS = [["generales", "Notas"], ["salida", "Notas de salida"], ["corazon", "Corazón"], ["fondo", "Base"]];
 
-// Las notas solo se muestran si el perfume tiene alguna cargada.
+// Solo se muestran los grupos que el perfume tiene cargados; sin ninguno, no aparece el bloque.
 function notasHTML(perfume) {
 	const notas = perfume.notas || {};
-	const filas = GRUPOS_NOTAS
-		.filter(([clave]) => Array.isArray(notas[clave]) && notas[clave].length)
-		.map(([clave, titulo]) => `<div><dt>${titulo}</dt><dd>${escaparHTML(notas[clave].join(", "))}</dd></div>`);
+	const grupos = GRUPOS_NOTAS.map(([clave, titulo]) => [titulo, notas[clave]]);
+	grupos.push(["Acordes principales", perfume.acordes]);
+	const filas = grupos
+		.filter(([, valores]) => Array.isArray(valores) && valores.length)
+		.map(([titulo, valores]) => `<div><dt>${titulo}</dt><dd>${escaparHTML(valores.join(", "))}</dd></div>`);
 	return filas.length ? `<dl class="detalle-notas">${filas.join("")}</dl>` : "";
 }
 
