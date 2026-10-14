@@ -1,6 +1,7 @@
 /* FILTROS Y BÚSQUEDA
    Gestiona el bloque "Explorar" (Árabe / Diseñador con sus marcas) y el panel "Filtrar"
-   de selección múltiple (tipo, género, marca, precio), más la búsqueda por texto y la carga de datos. */
+   de selección múltiple (tipo, género, marca, precio), más la búsqueda por texto, el orden,
+   las etiquetas de filtros activos y la carga de datos. */
 
 // Rangos de precio del frasco sellado. "test" recibe el precio del perfume;
 // los perfumes con precio 0 (sin cargar) quedan fuera de todos los rangos.
@@ -61,6 +62,36 @@ function nombreCategoria(categoria) {
 	return categoria === "arabe" ? "Árabe" : "Diseñador";
 }
 
+// Texto visible de un valor de filtro segun su grupo.
+function etiquetaDeValor(grupo, valor) {
+	if (grupo === "categoria") return nombreCategoria(valor);
+	if (grupo === "genero") return capitalizar(valor);
+	if (grupo === "precio") {
+		const rango = RANGOS_PRECIO.find((item) => item.clave === valor);
+		return rango ? rango.etiqueta : valor;
+	}
+	return valor;
+}
+
+// Valores aceptados por el selector "Ordenar" ("" = orden del catalogo).
+const ORDENES = ["precio-asc", "precio-desc", "nombre"];
+
+// Los perfumes sin precio cargado (0) van siempre al final al ordenar por precio.
+function ordenarPerfumes(lista) {
+	// Sin orden elegido se respeta el del catalogo, salvo con un filtro de precio activo:
+	// ahi se ordena de menor a mayor (los más baratos arriba).
+	const orden = ordenActivo || (preciosActivos.size ? "precio-asc" : "");
+	if (orden === "nombre") return lista.sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
+	if (orden === "precio-asc" || orden === "precio-desc") {
+		const sentido = orden === "precio-asc" ? 1 : -1;
+		return lista.sort((a, b) => {
+			if (!a.precio || !b.precio) return (a.precio ? 0 : 1) - (b.precio ? 0 : 1);
+			return (a.precio - b.precio) * sentido;
+		});
+	}
+	return lista;
+}
+
 // Arma el breadcrumb del catalogo enumerando los filtros activos.
 function construirTituloCatalogo() {
 	const partes = ["Catálogo"];
@@ -79,16 +110,51 @@ function construirTituloCatalogo() {
 
 // Muestra solo la pantalla de catalogo y conserva los filtros en su titulo.
 function abrirCatalogo() {
-	const lista = obtenerPerfumesFiltrados();
-	// Con un filtro de precio activo, se ordena de menor a mayor (los más baratos arriba).
-	if (preciosActivos.size) lista.sort((a, b) => a.precio - b.precio);
+	const lista = ordenarPerfumes(obtenerPerfumesFiltrados());
 	const partes = construirTituloCatalogo();
 	catalogoTitulo.innerHTML = partes.map((parte, indice) => `${indice ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : ""}<span>${escaparHTML(parte)}</span>`).join("");
+	catalogoConteo.textContent = lista.length === 1 ? "1 perfume" : `${lista.length} perfumes`;
+	renderizarFiltrosActivos();
 	mostrarPerfumes(lista, catalogoContainer);
-	inicio.classList.add("oculto");
-	destacados.classList.add("oculto");
-	preguntasFrecuentes.classList.add("oculto");
-	catalogo.classList.remove("oculto");
+	sincronizarURL(cambiarVista("catalogo"));
+}
+
+// Etiquetas sobre el catalogo: una por filtro activo, para quitarlo sin abrir el menu.
+function renderizarFiltrosActivos() {
+	const etiquetas = [];
+	GRUPOS_FILTRO.forEach((grupo) => {
+		conjuntoDeGrupo(grupo).forEach((valor) => etiquetas.push({ grupo, valor, texto: etiquetaDeValor(grupo, valor) }));
+	});
+	if (textoSearchActivo) etiquetas.push({ grupo: "busqueda", valor: "", texto: `"${textoSearchActivo}"` });
+	const limpiarHTML = etiquetas.length > 1 ? '<button class="filtro-activo-limpiar" type="button">Limpiar todo</button>' : "";
+	filtrosActivos.innerHTML = etiquetas.map((etiqueta) => `<button class="filtro-activo" type="button" data-grupo="${escaparHTML(etiqueta.grupo)}" data-valor="${escaparHTML(etiqueta.valor)}" aria-label="Quitar filtro ${escaparHTML(etiqueta.texto)}"><span>${escaparHTML(etiqueta.texto)}</span><span aria-hidden="true">×</span></button>`).join("") + limpiarHTML;
+}
+
+// Quita el filtro de la etiqueta tocada (o todos con "Limpiar todo") y refresca el catalogo.
+function quitarFiltroActivo(evento) {
+	const boton = evento.target.closest("button");
+	if (!boton) return;
+	if (boton.classList.contains("filtro-activo-limpiar")) {
+		reiniciarFiltros();
+		limpiarBusqueda();
+	} else if (boton.dataset.grupo === "busqueda") {
+		limpiarBusqueda();
+	} else {
+		conjuntoDeGrupo(boton.dataset.grupo).delete(boton.dataset.valor);
+		sincronizarCheckboxesFiltro();
+	}
+	abrirCatalogo();
+}
+
+function limpiarBusqueda() {
+	textoSearchActivo = "";
+	if (searchInput) searchInput.value = "";
+}
+
+// Selector "Ordenar" del catalogo.
+function manejarCambioOrden(evento) {
+	ordenActivo = ORDENES.includes(evento.currentTarget.value) ? evento.currentTarget.value : "";
+	abrirCatalogo();
 }
 
 // Plantilla de una opcion (checkbox) del panel "Filtrar".
@@ -290,6 +356,9 @@ async function cargarPerfumes() {
 		perfumes = datos;
 		renderizarFiltros();
 		mostrarPerfumes(perfumes.filter((perfume) => perfume.featured === true), featuredContainer);
+		// La direccion puede traer una vista para abrir (catalogo filtrado, detalle o preguntas).
+		restaurarDesdeURL();
+		irAlComienzoDeVista();
 	} catch (error) {
 		featuredContainer.innerHTML = "<p>No se pudo cargar el catálogo.</p>";
 	}

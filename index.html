@@ -6,15 +6,28 @@
     <!-- Seguridad: solo se permiten scripts, estilos e imagenes propios, mas las fuentes de Google. -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="description" content="NAP Parfum: perfumeria arabe, disenador y decants.">
-    <title>NAP Parfum | Perfumeria</title>
-    <link rel="icon" type="image/png" href="assets/Logo/Logo.jpg">
+    <meta name="description" content="NAP Parfum: perfumería árabe y de diseñador en Olavarría. Frascos sellados y decants, con envíos a todo el país.">
+    <title>NAP Parfum | Perfumería</title>
+    <!-- Vista previa al compartir el enlace (WhatsApp, Instagram, etc.). Requiere direcciones absolutas. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NAP Parfum">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:title" content="NAP Parfum | Perfumería">
+    <meta property="og:description" content="Perfumería árabe y de diseñador en Olavarría. Frascos sellados y decants, con envíos a todo el país.">
+    <meta property="og:url" content="https://juliangonzlz.github.io/Nap.Parfum/">
+    <meta property="og:image" content="https://juliangonzlz.github.io/Nap.Parfum/assets/Logo/Logo.jpg">
+    <meta property="og:image:width" content="1254">
+    <meta property="og:image:height" content="1254">
+    <meta property="og:image:alt" content="Logo de NAP Parfum">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/jpeg" href="assets/Logo/Logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/detalle.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -24,7 +37,7 @@
     <header class="glass">
         <!-- El encabezado reserva el mismo espacio a cada extremo para centrar la barra de busqueda. -->
         <div class="header-side header-side-left">
-            <button id="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+            <button id="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
         </div>
         <div class="search-container header-search">
             <input id="search-input" type="text" maxlength="60" autocomplete="off" placeholder="Buscar perfume..." aria-label="Buscar perfumes por nombre o marca">
@@ -34,15 +47,15 @@
         </div>
     </header>
 
-    <!-- Menu lateral para navegar y filtrar el catalogo. -->
+    <!-- Menú lateral para navegar y filtrar el catálogo. -->
     <div id="overlay" class="oculto" aria-hidden="true"></div>
-    <aside id="menu-lateral" class="glass" aria-label="Menu principal" aria-hidden="true">
-        <button id="close-menu" type="button" aria-label="Cerrar menu">×</button>
+    <aside id="menu-lateral" class="glass" aria-label="Menú principal" aria-hidden="true">
+        <button id="close-menu" type="button" aria-label="Cerrar menú">×</button>
         <h2>Explorar</h2>
         <button id="menu-home-button" type="button" class="filter-button menu-home">Volver al inicio</button>
         <button id="menu-faq-button" type="button" class="filter-button menu-faq">Preguntas frecuentes</button>
         <h3 class="menu-subtitulo">Categoría</h3>
-        <nav id="category-filters" aria-label="Filtros por categoria"></nav>
+        <nav id="category-filters" aria-label="Filtros por categoría"></nav>
         <div class="filtrar-panel">
             <h3>Filtrar</h3>
             <button id="ver-todos-button" type="button" class="filter-button ver-todos">Ver todos</button>
@@ -105,9 +118,28 @@
         <section id="catalogo" class="oculto">
             <!-- Vista independiente del catalogo completo filtrable. -->
             <h2 id="catalogo-titulo">Catálogo</h2>
+            <div class="catalogo-barra">
+                <p id="catalogo-conteo" role="status"></p>
+                <label class="orden-control">
+                    <span>Ordenar</span>
+                    <select id="orden-select">
+                        <option value="">Por defecto</option>
+                        <option value="precio-asc">Menor precio</option>
+                        <option value="precio-desc">Mayor precio</option>
+                        <option value="nombre">Nombre (A-Z)</option>
+                    </select>
+                </label>
+            </div>
+            <!-- JavaScript inyectara aqui una etiqueta por cada filtro activo. -->
+            <div id="filtros-activos" aria-label="Filtros activos"></div>
             <div id="catalogo-container">
                 <!-- JavaScript inyectara aqui los perfumes filtrados. -->
             </div>
+        </section>
+
+        <section id="detalle" class="oculto">
+            <!-- Ficha de un perfume: fotos en grande, notas y presentaciones. -->
+            <div id="detalle-container"></div>
         </section>
 
         <section id="preguntas-frecuentes" class="oculto">
@@ -182,6 +214,8 @@
     <script src="js/cards.js" defer></script>
     <script src="js/cart.js" defer></script>
     <script src="js/filters.js" defer></script>
+    <script src="js/detalle.js" defer></script>
+    <script src="js/navegacion.js" defer></script>
     <script src="js/header.js" defer></script>
     <script src="js/drawers.js" defer></script>
     <script src="js/app.js" defer></script>

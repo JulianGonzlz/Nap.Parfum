@@ -114,7 +114,7 @@ h2 {
 }
 
 .description {
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.5rem;
 }
 
 .stock,
@@ -133,6 +133,23 @@ h2 {
 
 .perfume-name {
     margin-bottom: 0.625rem;
+}
+
+.perfume-name .enlace-detalle:hover {
+    text-decoration: underline;
+}
+
+.ver-detalle {
+    color: var(--lilac);
+    display: inline-block;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    margin-bottom: 0.875rem;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.ver-detalle:hover {
+    color: var(--lilac-light);
 }
 
 .cart-actions {
@@ -188,11 +205,91 @@ h2 {
     font-size: clamp(0.8rem, 2vw, 0.95rem);
     font-weight: 500;
     letter-spacing: 0.12em;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
     max-width: 75rem;
     overflow-wrap: anywhere;
     padding: 0 clamp(1rem, 4vw, 2rem) 0.9rem;
     text-transform: uppercase;
+}
+
+/* Barra del catalogo: cantidad de resultados a la izquierda y orden a la derecha. */
+.catalogo-barra {
+    align-items: center;
+    color: var(--text-dim);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    justify-content: space-between;
+    margin: 0 auto 1rem;
+    max-width: 75rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.orden-control {
+    align-items: center;
+    display: flex;
+    gap: 0.6rem;
+}
+
+#orden-select {
+    background: var(--black-3);
+    border: 1px solid rgba(201, 174, 224, 0.3);
+    border-radius: 999px;
+    color: var(--lilac-light);
+    cursor: pointer;
+    font: inherit;
+    padding: 0.4rem 0.9rem;
+}
+
+#orden-select:focus-visible {
+    outline: 2px solid var(--lilac);
+    outline-offset: 2px;
+}
+
+/* Etiquetas de filtros activos: se quitan de un toque. */
+#filtros-activos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 auto 1.5rem;
+    max-width: 75rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+#filtros-activos:empty {
+    display: none;
+}
+
+.filtro-activo {
+    align-items: center;
+    background: rgba(201, 174, 224, 0.1);
+    border: 1px solid rgba(201, 174, 224, 0.3);
+    border-radius: 999px;
+    color: var(--lilac-light);
+    display: inline-flex;
+    font-size: 0.85rem;
+    gap: 0.45rem;
+    overflow-wrap: anywhere;
+    padding: 0.35rem 0.8rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.filtro-activo:hover {
+    background: rgba(201, 174, 224, 0.2);
+    border-color: var(--lilac);
+}
+
+.filtro-activo-limpiar {
+    background: transparent;
+    border: 0;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    padding: 0.35rem 0.5rem;
+    text-decoration: underline;
+}
+
+.filtro-activo-limpiar:hover {
+    color: var(--lilac);
 }
 
 #catalogo-titulo > span {

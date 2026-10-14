@@ -13,9 +13,14 @@ const inicio = document.getElementById("inicio");
 const destacados = document.getElementById("destacados");
 const catalogo = document.getElementById("catalogo");
 const preguntasFrecuentes = document.getElementById("preguntas-frecuentes");
+const detalle = document.getElementById("detalle");
+const detalleContainer = document.getElementById("detalle-container");
 const featuredContainer = document.getElementById("featured-container");
 const catalogoContainer = document.getElementById("catalogo-container");
 const catalogoTitulo = document.getElementById("catalogo-titulo");
+const catalogoConteo = document.getElementById("catalogo-conteo");
+const ordenSelect = document.getElementById("orden-select");
+const filtrosActivos = document.getElementById("filtros-activos");
 const categoryFilters = document.getElementById("category-filters");
 const filtroCategoriaContenedor = document.getElementById("filtro-categoria");
 const filtroGeneroContenedor = document.getElementById("filtro-genero");
@@ -48,6 +53,14 @@ let marcasActivas = new Set();
 let generosActivos = new Set();
 let preciosActivos = new Set();
 let textoSearchActivo = "";
+// Orden elegido en el catalogo ("" = orden del catalogo).
+let ordenActivo = "";
+
+// Vista visible ("inicio", "catalogo", "faq" o "detalle") y perfume abierto en el detalle.
+let vistaActual = "inicio";
+let perfumeDetalleId = "";
+// Mientras se restaura una vista desde la URL no se escriben entradas nuevas en el historial.
+let restaurandoHistorial = false;
 
 // Estado del scroll y header
 let ultimaPosicionScroll = window.scrollY;

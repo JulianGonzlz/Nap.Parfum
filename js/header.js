@@ -35,21 +35,14 @@ function manejarScroll() {
 
 // Vuelve a la vista de inicio y cierra el carrito
 function volverAlInicio() {
-	catalogo.classList.add("oculto");
-	preguntasFrecuentes.classList.add("oculto");
 	cerrarCarrito();
-	inicio.classList.remove("oculto");
-	destacados.classList.remove("oculto");
+	sincronizarURL(cambiarVista("inicio"));
 }
 
 // Muestra solo la pantalla de preguntas frecuentes, se abre desde el menu lateral.
 function abrirPreguntasFrecuentes() {
 	cerrarMenu();
-	inicio.classList.add("oculto");
-	destacados.classList.add("oculto");
-	catalogo.classList.add("oculto");
-	preguntasFrecuentes.classList.remove("oculto");
-	window.scrollTo({ top: 0, behavior: "smooth" });
+	sincronizarURL(cambiarVista("faq"));
 }
 
 // Vuelve al inicio desde el menu lateral: cierra el drawer y sube la vista
@@ -62,8 +55,7 @@ function manejarClickInicioMenu() {
 // Maneja el click en el logo para volver al inicio con scroll suave
 function manejarClickLogo(evento) {
 	evento.preventDefault();
-	const yaEnInicio = !inicio.classList.contains("oculto") && catalogo.classList.contains("oculto");
-	if (!yaEnInicio) {
+	if (vistaActual !== "inicio") {
 		volverAlInicio();
 	}
 	window.scrollTo({ top: 0, behavior: "smooth" });

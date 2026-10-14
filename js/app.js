@@ -10,6 +10,8 @@ menuHomeButton.addEventListener("click", manejarClickInicioMenu);
 menuFaqButton.addEventListener("click", abrirPreguntasFrecuentes);
 verTodosButton.addEventListener("click", verTodosLosPerfumes);
 limpiarFiltrosButton.addEventListener("click", limpiarFiltros);
+filtrosActivos.addEventListener("click", quitarFiltroActivo);
+ordenSelect.addEventListener("change", manejarCambioOrden);
 overlay.addEventListener("click", cerrarDrawers);
 
 // Event listeners para header y scroll
@@ -22,6 +24,9 @@ window.addEventListener("scroll", manejarScroll, { passive: true });
 if (searchInput) {
 	searchInput.addEventListener("input", manejarBusqueda);
 }
+
+// El boton "atras" del navegador vuelve a la vista anterior dentro del sitio.
+window.addEventListener("popstate", manejarHistorial);
 
 // Inicialización de la aplicación
 cargarPerfumes();

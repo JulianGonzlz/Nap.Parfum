@@ -103,7 +103,7 @@ function conectarBotonesCarrito(contenedor) {
 function renderizarCarrito() {
 	const carritoActual = leerCarrito();
 	if (!carritoActual.length) {
-		cartContainer.innerHTML = "<p>Tu carrito esta vacio.</p>";
+		cartContainer.innerHTML = "<p>Tu carrito está vacío.</p>";
 		return;
 	}
 	const total = carritoActual.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
