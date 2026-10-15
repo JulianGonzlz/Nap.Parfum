@@ -12,8 +12,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Evita que el celular agrande las letras por su cuenta al girar la pantalla
-   y desactiva el zoom con doble toque: la pagina siempre se ve al mismo tamaño. */
+/* Evita que el celular agrande las letras por su cuenta al girar la pantalla y que un
+   doble toque rapido (por ejemplo en "+" del carrito) acerque la pagina sin querer.
+   El zoom con dos dedos sigue disponible: lo decide la persona. */
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
