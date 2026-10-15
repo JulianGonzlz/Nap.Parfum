@@ -31,6 +31,14 @@ header.header-oculto {
     display: flex;
 }
 
+/* En celular los costados toman un ancho fijo e igual para que el buscador
+   aproveche el resto del espacio sin dejar de estar centrado. */
+@media (max-width: 767px) {
+    .header-side {
+        flex: 0 0 2.75rem;
+    }
+}
+
 .header-side-left {
     justify-content: flex-start;
 }

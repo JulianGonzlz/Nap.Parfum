@@ -99,7 +99,6 @@ function restaurarDesdeURL() {
 	ordenSelect.value = ordenActivo;
 	textoSearchActivo = (parametros.get("q") || "").slice(0, 60);
 	if (searchInput) searchInput.value = textoSearchActivo;
-	cerrarMarcas();
 	sincronizarCheckboxesFiltro();
 	cerrarDrawers();
 

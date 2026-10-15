@@ -164,17 +164,10 @@ function opcionFiltroHTML(grupo, valor, etiqueta) {
 
 // Las categorias, marcas y generos salen del JSON para aceptar valores nuevos.
 function renderizarFiltros() {
-	// Bloque "Explorar": solo categorias concretas (Árabe / Diseñador) con sus marcas.
-	const categorias = [...new Set(perfumes.map((perfume) => perfume.categoria))];
-	categoryFilters.innerHTML = categorias.map((categoria) => {
-		const texto = nombreCategoria(categoria);
-		const categoriaSegura = escaparHTML(categoria);
-		return `<button class="filter-button" type="button" data-category="${categoriaSegura}">${escaparHTML(texto)}</button><div class="brand-list" data-brands-for="${categoriaSegura}"></div>`;
-	}).join("");
-
 	// Panel "Filtrar".
 	verTodosButton.textContent = "Ver todos";
 
+	const categorias = [...new Set(perfumes.map((perfume) => perfume.categoria))];
 	filtroCategoriaContenedor.innerHTML = categorias.map((categoria) => opcionFiltroHTML("categoria", categoria, nombreCategoria(categoria))).join("");
 
 	const generos = [...new Set(perfumes.map((perfume) => perfume.genero))];
@@ -206,55 +199,6 @@ function actualizarOpcionesDisponibles() {
 			});
 		});
 	} while (huboDescarte);
-}
-
-// Deja todas las sublistas de marcas en su estado por defecto (cerradas).
-function cerrarMarcas(exceptoCategoria) {
-	categoryFilters.querySelectorAll(".brand-list").forEach((brandList) => {
-		if (brandList.dataset.brandsFor === exceptoCategoria) return;
-		brandList.classList.remove("desplegado");
-	});
-}
-
-// Al abrir una categoria, se muestran sus marcas unicas debajo del boton correspondiente.
-function alternarMarcas(categoria) {
-	const brandList = document.querySelector(`[data-brands-for="${CSS.escape(categoria)}"]`);
-	if (!brandList) return;
-	const marcas = [...new Set(perfumes.filter((perfume) => perfume.categoria === categoria).map((perfume) => perfume.marca))];
-	brandList.innerHTML = marcas.map((marca) => `<button class="brand-button" type="button" data-category="${escaparHTML(categoria)}" data-brand="${escaparHTML(marca)}">${escaparHTML(marca)}</button>`).join("");
-	// Solo una categoria puede tener su sublista abierta a la vez
-	cerrarMarcas(categoria);
-	// Toggle entre mostrado y ocultado
-	brandList.classList.toggle("desplegado");
-	brandList.querySelectorAll(".brand-button").forEach((boton) => boton.addEventListener("click", seleccionarMarca));
-}
-
-// Explorar > marca: salto directo a esa marca dentro de su categoria.
-function seleccionarMarca(evento) {
-	evento.stopPropagation();
-	categoriasActivas.clear();
-	categoriasActivas.add(evento.currentTarget.dataset.category);
-	marcasActivas.clear();
-	marcasActivas.add(evento.currentTarget.dataset.brand);
-	textoSearchActivo = "";
-	if (searchInput) searchInput.value = "";
-	sincronizarCheckboxesFiltro();
-	cerrarMenu();
-	abrirCatalogo();
-}
-
-// Explorar > categoria: acota a Árabe o Diseñador y despliega sus marcas.
-// No toca los filtros de genero ni precio para que se acumulen.
-function seleccionarCategoria(evento) {
-	evento.stopPropagation();
-	const categoria = evento.currentTarget.dataset.category;
-	categoriasActivas.clear();
-	categoriasActivas.add(categoria);
-	marcasActivas.clear();
-	textoSearchActivo = "";
-	if (searchInput) searchInput.value = "";
-	sincronizarCheckboxesFiltro();
-	alternarMarcas(categoria);
 }
 
 // Panel "Filtrar": abre o cierra un grupo de opciones (tipo, género, marca, precio).
@@ -309,13 +253,12 @@ function limpiarFiltros() {
 	abrirCatalogo();
 }
 
-// Deja todos los filtros (categoria de Explorar + panel Filtrar) en su estado inicial.
+// Deja todos los filtros del panel Filtrar en su estado inicial.
 function reiniciarFiltros() {
 	categoriasActivas.clear();
 	generosActivos.clear();
 	marcasActivas.clear();
 	preciosActivos.clear();
-	cerrarMarcas();
 	sincronizarCheckboxesFiltro();
 }
 
@@ -330,7 +273,6 @@ function verTodosLosPerfumes() {
 
 // Conecta los listeners de los botones de filtro
 function conectarFiltros() {
-	categoryFilters.querySelectorAll(".filter-button").forEach((boton) => boton.addEventListener("click", seleccionarCategoria));
 	document.querySelectorAll(".filtro-toggle").forEach((boton) => boton.addEventListener("click", alternarGrupoFiltro));
 	[filtroCategoriaContenedor, filtroGeneroContenedor, filtroMarcaContenedor, filtroPrecioContenedor].forEach((contenedor) => contenedor.addEventListener("change", manejarCambioFiltro));
 }
@@ -343,7 +285,20 @@ function manejarBusqueda(evento) {
 	clearTimeout(temporizadorSearch);
 	temporizadorSearch = setTimeout(() => {
 		abrirCatalogo();
+		bajarHastaResultados();
 	}, 150);
+}
+
+// En celular entra una sola tarjeta por pantalla: al buscar se baja hasta los resultados
+// para que se vea enseguida si hay coincidencias o el aviso de que no las hay.
+// En pantallas mas grandes solo se baja si el primer resultado quedo tapado (por ejemplo, por el teclado).
+function bajarHastaResultados() {
+	const inicioResultados = catalogoContainer.getBoundingClientRect().top;
+	const altoVisible = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+	const esCelular = window.matchMedia("(max-width: 767px)").matches;
+	if (!esCelular && inicioResultados + 80 <= altoVisible) return;
+	const destino = inicioResultados + window.scrollY - header.offsetHeight - 12;
+	window.scrollTo({ top: Math.max(destino, 0), behavior: "smooth" });
 }
 
 // El catalogo se carga al inicio para que las dos vistas usen los mismos datos.

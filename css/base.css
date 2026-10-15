@@ -12,6 +12,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Evita que el celular agrande las letras por su cuenta al girar la pantalla. */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 img,
 svg {
     display: block;

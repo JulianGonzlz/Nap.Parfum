@@ -2,9 +2,11 @@
    Gestiona la visibilidad del header según scroll y drawers, y la navegación entre vistas. */
 
 // Decide la visibilidad del encabezado considerando a la vez el scroll y los drawers.
+// Mientras se escribe en el buscador queda visible, aunque la pagina baje hasta los resultados.
 function actualizarVisibilidadHeader() {
 	const hayDrawerAbierto = menuLateral.classList.contains("abierto") || carrito.classList.contains("abierto");
-	header.classList.toggle("header-oculto", hayDrawerAbierto || scrollHaciaAbajo);
+	const buscando = document.activeElement === searchInput;
+	header.classList.toggle("header-oculto", hayDrawerAbierto || (scrollHaciaAbajo && !buscando));
 }
 
 // Registra la direccion del scroll y delega la visibilidad en una sola funcion.

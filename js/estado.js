@@ -21,7 +21,6 @@ const catalogoTitulo = document.getElementById("catalogo-titulo");
 const catalogoConteo = document.getElementById("catalogo-conteo");
 const ordenSelect = document.getElementById("orden-select");
 const filtrosActivos = document.getElementById("filtros-activos");
-const categoryFilters = document.getElementById("category-filters");
 const filtroCategoriaContenedor = document.getElementById("filtro-categoria");
 const filtroGeneroContenedor = document.getElementById("filtro-genero");
 const filtroMarcaContenedor = document.getElementById("filtro-marca");

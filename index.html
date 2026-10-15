@@ -49,57 +49,66 @@
 
     <!-- Menú lateral para navegar y filtrar el catálogo. -->
     <div id="overlay" class="oculto" aria-hidden="true"></div>
-    <aside id="menu-lateral" class="glass" aria-label="Menú principal" aria-hidden="true">
-        <button id="close-menu" type="button" aria-label="Cerrar menú">×</button>
-        <h2>Explorar</h2>
-        <button id="menu-home-button" type="button" class="filter-button menu-home">Volver al inicio</button>
-        <button id="menu-faq-button" type="button" class="filter-button menu-faq">Preguntas frecuentes</button>
-        <h3 class="menu-subtitulo">Categoría</h3>
-        <nav id="category-filters" aria-label="Filtros por categoría"></nav>
-        <div class="filtrar-panel">
-            <h3>Filtrar</h3>
-            <button id="ver-todos-button" type="button" class="filter-button ver-todos">Ver todos</button>
-            <div class="filtro-grupo" data-grupo="categoria">
-                <button class="filtro-toggle" type="button" aria-expanded="false">
-                    <span>Tipo de perfume</span>
-                    <span class="filtro-badge" aria-hidden="true" hidden></span>
-                </button>
-                <div id="filtro-categoria" class="filtro-opciones"></div>
+    <!-- Capa del tamaño exacto de la pantalla que recorta los drawers cerrados.
+         Sin ella, el carrito escondido a la derecha ensancha la pagina en celulares (sobre todo iPhone). -->
+    <div class="capa-drawers">
+        <aside id="menu-lateral" class="glass" aria-label="Menú principal" aria-hidden="true">
+            <button id="close-menu" type="button" aria-label="Cerrar menú">×</button>
+            <h2>Explorar</h2>
+            <button id="menu-home-button" type="button" class="filter-button menu-home">Volver al inicio</button>
+            <button id="menu-faq-button" type="button" class="filter-button menu-faq">Preguntas frecuentes</button>
+            <div class="filtrar-panel">
+                <h3>Filtrar</h3>
+                <button id="ver-todos-button" type="button" class="filter-button ver-todos">Ver todos</button>
+                <div class="filtro-grupo" data-grupo="categoria">
+                    <button class="filtro-toggle" type="button" aria-expanded="false">
+                        <span>Tipo de perfume</span>
+                        <span class="filtro-badge" aria-hidden="true" hidden></span>
+                    </button>
+                    <div id="filtro-categoria" class="filtro-opciones"></div>
+                </div>
+                <div class="filtro-grupo" data-grupo="genero">
+                    <button class="filtro-toggle" type="button" aria-expanded="false">
+                        <span>Género</span>
+                        <span class="filtro-badge" aria-hidden="true" hidden></span>
+                    </button>
+                    <div id="filtro-genero" class="filtro-opciones"></div>
+                </div>
+                <div class="filtro-grupo" data-grupo="marca">
+                    <button class="filtro-toggle" type="button" aria-expanded="false">
+                        <span>Marca</span>
+                        <span class="filtro-badge" aria-hidden="true" hidden></span>
+                    </button>
+                    <div id="filtro-marca" class="filtro-opciones"></div>
+                </div>
+                <div class="filtro-grupo" data-grupo="precio">
+                    <button class="filtro-toggle" type="button" aria-expanded="false">
+                        <span>Precio</span>
+                        <span class="filtro-badge" aria-hidden="true" hidden></span>
+                    </button>
+                    <div id="filtro-precio" class="filtro-opciones"></div>
+                </div>
+                <button id="limpiar-filtros-button" type="button" class="filtro-limpiar" hidden>Limpiar filtros</button>
             </div>
-            <div class="filtro-grupo" data-grupo="genero">
-                <button class="filtro-toggle" type="button" aria-expanded="false">
-                    <span>Género</span>
-                    <span class="filtro-badge" aria-hidden="true" hidden></span>
-                </button>
-                <div id="filtro-genero" class="filtro-opciones"></div>
+            <div class="menu-contactos" aria-label="Contactos de NAP Parfum">
+                <a class="menu-contact whatsapp-contact" href="https://wa.me/5492284232681" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">💬</span>
+                    <span>WhatsApp</span>
+                </a>
+                <a class="menu-contact instagram-contact" href="https://www.instagram.com/nap.parfum/" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">📸</span>
+                    <span>Instagram</span>
+                </a>
             </div>
-            <div class="filtro-grupo" data-grupo="marca">
-                <button class="filtro-toggle" type="button" aria-expanded="false">
-                    <span>Marca</span>
-                    <span class="filtro-badge" aria-hidden="true" hidden></span>
-                </button>
-                <div id="filtro-marca" class="filtro-opciones"></div>
-            </div>
-            <div class="filtro-grupo" data-grupo="precio">
-                <button class="filtro-toggle" type="button" aria-expanded="false">
-                    <span>Precio</span>
-                    <span class="filtro-badge" aria-hidden="true" hidden></span>
-                </button>
-                <div id="filtro-precio" class="filtro-opciones"></div>
-            </div>
-            <button id="limpiar-filtros-button" type="button" class="filtro-limpiar" hidden>Limpiar filtros</button>
-        </div>
-        <div class="menu-contactos" aria-label="Contactos de NAP Parfum">
-            <a class="menu-contact whatsapp-contact" href="https://wa.me/5492284232681" target="_blank" rel="noopener noreferrer">
-                <span aria-hidden="true">💬</span>
-                <span>WhatsApp</span>
-            </a>
-            <a class="menu-contact instagram-contact" href="https://www.instagram.com/nap.parfum/" target="_blank" rel="noopener noreferrer">
-                <span aria-hidden="true">📸</span>
-                <span>Instagram</span>
-            </a>
-        </div>
-    </aside>
+        </aside>
+
+        <!-- Drawer del carrito, sin pago online: el pedido se consulta por WhatsApp. -->
+        <aside id="carrito" class="glass" aria-label="Carrito de compras" aria-hidden="true">
+            <button id="cart-back-button" type="button">← Volver</button>
+            <h2>Tu carrito</h2>
+            <div id="cart-container"></div>
+        </aside>
+    </div>
 
     <main>
         <section id="inicio">
@@ -180,13 +189,6 @@
                 </details>
             </div>
         </section>
-
-        <!-- Drawer del carrito, sin pago online: el pedido se consulta por WhatsApp. -->
-        <aside id="carrito" class="glass" aria-label="Carrito de compras" aria-hidden="true">
-            <button id="cart-back-button" type="button">← Volver</button>
-            <h2>Tu carrito</h2>
-            <div id="cart-container"></div>
-        </aside>
     </main>
 
     <footer class="site-footer">

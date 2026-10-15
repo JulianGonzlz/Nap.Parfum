@@ -342,6 +342,22 @@ h2 {
     border-color: rgba(201, 174, 224, 0.4);
 }
 
+/* Capa fija del tamaño exacto de la pantalla que contiene a los dos drawers.
+   Recorta lo que queda afuera (el carrito cerrado vive a la derecha de la pantalla):
+   sin este recorte, Safari en iPhone y algunos Android ensanchan la pagina y permiten
+   deslizarla hacia el costado o alejar el zoom. */
+.capa-drawers {
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    z-index: 3;
+}
+
+.capa-drawers > aside {
+    pointer-events: auto;
+}
+
 /* Menu lateral con filtros */
 #menu-lateral {
     background: linear-gradient(180deg, rgba(20, 16, 24, 0.96) 0%, rgba(13, 10, 18, 0.96) 100%);
@@ -352,16 +368,15 @@ h2 {
     flex-direction: column;
     height: 100%;
     left: 0;
-    max-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    overscroll-behavior: contain;
     padding: clamp(1rem, 4vw, 1.5rem);
-    position: fixed;
+    position: absolute;
     top: 0;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
     width: min(85vw, 20rem);
-    z-index: 3;
 }
 
 #menu-lateral.glass {
@@ -401,21 +416,6 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-#menu-lateral nav {
-    display: grid;
-    min-width: 0;
-}
-
-#menu-lateral nav > * {
-    min-width: 0;
-}
-
-/* La separacion se aplica por boton para que las sublistas de marcas
-   colapsadas no agreguen espacio extra entre categorias. */
-#menu-lateral nav .filter-button {
-    margin-bottom: 1.5rem;
-}
-
 .filter-button {
     background: rgba(201, 174, 224, 0.05);
     border: 1px solid transparent;
@@ -433,58 +433,6 @@ h2 {
     border-color: rgba(201, 174, 224, 0.26);
     color: var(--lilac-light);
     transform: translateX(2px);
-}
-
-/* Subtitulo de seccion dentro del menu lateral (encima de las categorias). */
-.menu-subtitulo {
-    border-top: 1px solid var(--hairline);
-    color: var(--lilac-light);
-    font-size: clamp(1.1rem, 4vw, 1.3rem);
-    font-weight: 500;
-    margin-bottom: 0.9rem;
-    margin-top: 1.5rem;
-    overflow-wrap: anywhere;
-    padding-top: 1.25rem;
-    text-align: center;
-}
-
-.brand-list {
-    border-left: 1px solid rgba(201, 174, 224, 0.18);
-    display: grid;
-    gap: clamp(0.2rem, 1vw, 0.35rem);
-    margin: 0 0 0 clamp(0.7rem, 3vw, 1rem);
-    min-width: 0;
-    padding-left: clamp(0.5rem, 2vw, 0.75rem);
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.brand-list.desplegado {
-    max-height: 1000px;
-    opacity: 1;
-    pointer-events: auto;
-    margin-bottom: clamp(0.45rem, 2vw, 0.8rem);
-}
-
-.brand-button {
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 0.7rem;
-    color: var(--text-dim);
-    overflow-wrap: anywhere;
-    padding: clamp(0.45rem, 2vw, 0.7rem) clamp(0.55rem, 2vw, 0.8rem);
-    text-align: left;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    width: 100%;
-}
-
-.brand-button:hover {
-    background: rgba(201, 174, 224, 0.08);
-    border-color: rgba(201, 174, 224, 0.2);
-    color: var(--lilac-light);
 }
 
 /* Panel "Filtrar": seleccion multiple de genero, marca y precio. */
