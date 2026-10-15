@@ -289,6 +289,13 @@ function manejarBusqueda(evento) {
 	}, 150);
 }
 
+// Enter en el buscador: quita el foco para que el celular cierre el teclado y deje ver los resultados.
+function manejarTeclaBusqueda(evento) {
+	if (evento.key !== "Enter") return;
+	evento.preventDefault();
+	evento.currentTarget.blur();
+}
+
 // En celular entra una sola tarjeta por pantalla: al buscar se baja hasta los resultados
 // para que se vea enseguida si hay coincidencias o el aviso de que no las hay.
 // En pantallas mas grandes solo se baja si el primer resultado quedo tapado (por ejemplo, por el teclado).

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Seguridad: solo se permiten scripts, estilos e imagenes propios, mas las fuentes de Google. -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -40,7 +40,7 @@
             <button id="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
         </div>
         <div class="search-container header-search">
-            <input id="search-input" type="text" maxlength="60" autocomplete="off" placeholder="Buscar perfume..." aria-label="Buscar perfumes por nombre o marca">
+            <input id="search-input" type="text" maxlength="60" autocomplete="off" enterkeyhint="search" placeholder="Buscar perfume..." aria-label="Buscar perfumes por nombre o marca">
         </div>
         <div class="header-side header-side-right">
             <button id="cart-button" type="button" aria-label="Abrir carrito" aria-expanded="false">🛒 <span id="cart-count">0</span></button>

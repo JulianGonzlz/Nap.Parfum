@@ -12,10 +12,20 @@ body {
     overflow-x: hidden;
 }
 
-/* Evita que el celular agrande las letras por su cuenta al girar la pantalla. */
+/* Evita que el celular agrande las letras por su cuenta al girar la pantalla
+   y desactiva el zoom con doble toque: la pagina siempre se ve al mismo tamaño. */
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    touch-action: manipulation;
+}
+
+/* Safari en iPhone se acerca solo al tocar un campo con letra menor a 16px:
+   todos los campos de escritura y selectores usan al menos ese tamaño. */
+input,
+select,
+textarea {
+    font-size: max(16px, 1em);
 }
 
 img,

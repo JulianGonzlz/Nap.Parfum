@@ -23,7 +23,15 @@ window.addEventListener("scroll", manejarScroll, { passive: true });
 // Event listener para búsqueda
 if (searchInput) {
 	searchInput.addEventListener("input", manejarBusqueda);
+	searchInput.addEventListener("keydown", manejarTeclaBusqueda);
 }
+
+// Safari en iPhone ignora "user-scalable=no" del viewport: se frena aca el zoom con dos dedos
+// para que la pagina se vea siempre al mismo tamaño en cualquier dispositivo.
+["gesturestart", "gesturechange"].forEach((tipo) => document.addEventListener(tipo, (evento) => evento.preventDefault()));
+document.addEventListener("touchmove", (evento) => {
+	if (evento.touches.length > 1) evento.preventDefault();
+}, { passive: false });
 
 // El boton "atras" del navegador vuelve a la vista anterior dentro del sitio.
 window.addEventListener("popstate", manejarHistorial);
